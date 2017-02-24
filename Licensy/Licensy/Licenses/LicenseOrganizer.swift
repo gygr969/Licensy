@@ -8,14 +8,11 @@
 
 import UIKit
 
-/**
- *  Retrive the licenses by given name
- */
-public class LicenseOrganizer: NSObject {
+internal class LicenseOrganizer: NSObject {
     
-    var licenses: [String : License] = [:]
+    internal var licenses: [String : License] = [:]
     
-    func registerCommonLicenses() {
+    internal func registerCommonLicenses() {
         licenses = [:]
         registerLicense(ApacheSoftwareLicense20())
         registerLicense(BSD3ClauseLicense())
@@ -27,12 +24,7 @@ public class LicenseOrganizer: NSObject {
         registerLicense(GnuGeneralPublicLicense20())
     }
     
-    /**
-     Registers a license for the library
-     
-     - parameter license: A license to register with the library.
-     */
-    public func registerLicense(_ license: License) {
+    internal func registerLicense(_ license: License) {
         licenses.updateValue(license, forKey: license.name)
     }
     
@@ -41,7 +33,7 @@ public class LicenseOrganizer: NSObject {
         registerCommonLicenses()
     }
     
-    func licenseForName(_ name: String) -> License? {
+    internal func licenseForName(_ name: String) -> License? {
         return licenses[name]
     }
     

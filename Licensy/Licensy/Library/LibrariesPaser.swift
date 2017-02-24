@@ -13,10 +13,7 @@ import UIKit
  */
 public class LibrariesPaser: NSObject {
     
-    /**
-     *  The object used to resolve licenses.
-     */
-    public private(set) var organizer = LicenseOrganizer()
+    private(set) var organizer = LicenseOrganizer()
     
     /**
      Retrive libraries from a JSON file.
