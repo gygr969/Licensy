@@ -35,7 +35,7 @@ class CellView: UITableViewCell {
     fileprivate var section: Int = 0
     fileprivate var collapsedLicense: Bool!
     
-    open func configureCell(_ library: CellLibrary, section: Int, parentTable: LibrariesTable, delegate: CellViewDelegate) {
+    internal func configureCell(_ library: CellLibrary, section: Int, parentTable: LibrariesTable, delegate: CellViewDelegate) {
         self.section = section
         self.parentTable = parentTable
         self.delegate = delegate
