@@ -59,6 +59,6 @@ public class Appearance: NSObject {
         headerContentColor = UIColor.white
         headerBackgroundColor = UIColor(red:0.11, green:0.73, blue:0.84, alpha:1.0)
         accentColor = UIColor(red:0.11, green:0.67, blue:0.80, alpha:1.0)
-        roundLicenseButton = true;
+        roundLicenseButton = false;
     }
 }
