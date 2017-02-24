@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Appearance: NSObject {
+public class Appearance: NSObject {
 
     public var headerContentColor: UIColor!
     public var headerBackgroundColor: UIColor!

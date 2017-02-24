@@ -19,9 +19,9 @@ public class LibrariesPaser: NSObject {
     public private(set) var organizer = LicenseOrganizer()
     
     /**
-     Retrive notices from a JSON file.
+     Retrive libraries from a JSON file.
      
-     - parameter filepath: The file path to the JSON file containing the notices.
+     - parameter filepath: The file path to the JSON file containing the libraries.
      
      - returns: An array of libraries
      */

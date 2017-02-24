@@ -18,13 +18,13 @@ class HeaderView: UITableViewHeaderFooterView {
     @IBOutlet weak var arrow: UIImageView!
     @IBOutlet weak var footerView: UIView!
     
-    
-    var parentTable: LibrariesTable!
+    fileprivate var parentTable: LibrariesTable!
     fileprivate var delegate: HeaderViewDelegate!
     fileprivate var section: Int = 0
     
-    func configureHeader(_ name: String, section: Int, delegate: HeaderViewDelegate) {
+    func configureHeader(_ name: String, section: Int, parentTable: LibrariesTable, delegate: HeaderViewDelegate) {
         self.libraryLabel.text = name
+        self.parentTable = parentTable
         self.section = section
         self.delegate = delegate
         

@@ -8,11 +8,11 @@
 
 import UIKit
 
-class LicenseCellView: UITableViewCell {
+internal class LicenseCellView: UITableViewCell {
 
     @IBOutlet weak var licenseLabel: UILabel!
     
-    open func configureCell(_ library: CellLibrary) {
+    internal func configureCell(_ library: CellLibrary) {
         self.licenseLabel.text = !library.collapsedLicense ? library.license : ""
         self.collapseCell(library.collapsedLicense)
     }

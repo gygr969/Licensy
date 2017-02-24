@@ -8,7 +8,10 @@
 
 import UIKit
 
-class LibrariesTable: UITableView, UITableViewDelegate, UITableViewDataSource {
+/**
+ The table view for construct the list of 3rd Party Libraries
+ */
+public class LibrariesTable: UITableView {
 
     fileprivate var kHeaderCellHeight: CGFloat = 44.0
     fileprivate var kCellHeight: CGFloat = 125.0
@@ -19,17 +22,45 @@ class LibrariesTable: UITableView, UITableViewDelegate, UITableViewDataSource {
     fileprivate class var bundle: Bundle {
         return Bundle(for: LibraryEntity.self)
     }
+    
+    /**
+     The appearance of the table view
+     */
     public var appearance = Appearance()
     
+    //MARK: - Init Methods
+    
+    /**
+     Set libraries from a JSON file.
+     
+     - parameter resourceName: The resource name of the JSON with the 3rd Party Libraries.
+     */
     public func setLibraries(forJsonResourceName resourceName: String) {
         let path = LibrariesTable.bundle.path(forResource: resourceName, ofType: "json")!
-        setLibraries(forJsonResourcePath: path)
+        self.setLibraries(forJsonResourcePath: path)
     }
     
+    /**
+     Set libraries from a JSON file.
+     
+     - parameter resourcePath: The file path to the JSON file containing the libraries.
+     */
     public func setLibraries(forJsonResourcePath resourcePath: String) {
-        libraries = LibrariesPaser().setNoticesFromJSONFile(filepath: resourcePath)
-        configureView()
+        self.libraries = LibrariesPaser().setNoticesFromJSONFile(filepath: resourcePath)
+        self.configureView()
     }
+    
+    /**
+     Set libraries from a Libraries Entity Array.
+     
+     - parameter libraries: The array containing the libraries.
+     */
+    public func setLibraries(_ libraries: Array<LibraryEntity>) {
+        self.libraries = libraries
+        self.configureView()
+    }
+    
+    //MARK: - Layout
     
     fileprivate func configureView() {
         self.configureCellLibraries()
@@ -49,29 +80,32 @@ class LibrariesTable: UITableView, UITableViewDelegate, UITableViewDataSource {
         self.dataSource = self
         
         self.separatorColor = .clear
+        self.separatorStyle = .none
         self.allowsSelection = false
         
         self.register(UINib(nibName: "HeaderView", bundle: LibrariesTable.bundle), forHeaderFooterViewReuseIdentifier: "HeaderView")
         self.register(UINib(nibName: "CellView", bundle: LibrariesTable.bundle), forCellReuseIdentifier: "cell")
         self.register(UINib(nibName: "LicenseCellView", bundle: LibrariesTable.bundle), forCellReuseIdentifier: "licenseCell")
     }
+}
+
+//MARK: - UITableView Methods
+
+extension LibrariesTable: UITableViewDataSource, UITableViewDelegate {
     
-    
-    
-    
-    internal func numberOfSections(in tableView: UITableView) -> Int {
+    public func numberOfSections(in tableView: UITableView) -> Int {
         return cellsLibraries.count
     }
     
-    internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
     }
     
-    internal func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return kHeaderCellHeight
     }
     
-    internal func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.row {
         case 0:
             return cellsLibraries[indexPath.section].collapsed! ? 0.0 : kCellHeight
@@ -82,29 +116,27 @@ class LibrariesTable: UITableView, UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-    internal func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+    public func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
     
-    internal func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "HeaderView") as! HeaderView
         
-        header.parentTable = self
-        
-        header.configureHeader(cellsLibraries[section].name, section: section, delegate: self)
+        header.configureHeader(cellsLibraries[section].name, section: section, parentTable: self, delegate: self)
         header.setCollapsed(cellsLibraries[section].collapsed)
         
         return header
     }
     
-    internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CellView
             cell.configureCell(cellsLibraries[indexPath.section], section: indexPath.section,parentTable: self, delegate: self)
             
             return cell
-            
-        } else {
+        }
+        else {
             let licenseCell = tableView.dequeueReusableCell(withIdentifier: "licenseCell", for: indexPath) as! LicenseCellView
             licenseCell.configureCell(cellsLibraries[indexPath.section])
             return licenseCell
@@ -112,6 +144,7 @@ class LibrariesTable: UITableView, UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+//MARK: - HeaderViewDelegate
 
 extension LibrariesTable: HeaderViewDelegate {
     
@@ -124,13 +157,14 @@ extension LibrariesTable: HeaderViewDelegate {
         }
         header.setCollapsed(collapsed)
         
-        
         self.beginUpdates()
         self.reloadRows(at: [IndexPath(row: 0, section: section)], with: collapsed ? .top : .bottom)
         self.reloadRows(at: [IndexPath(row: 1, section: section)], with: collapsed ? .top : .bottom)
         self.endUpdates()
     }
 }
+
+//MARK: - CellViewDelegate
 
 extension LibrariesTable: CellViewDelegate {
     
