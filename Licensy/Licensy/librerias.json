@@ -2,29 +2,29 @@
     "notices": [
         {
             "name": "LicensesKit",
-            "url": "https://github.com/mattwyskiel/LicensesKit",
-            "copyright": "Copyright (C) 2014 Matthew Wyskiel",
+            "url": "https://github.com/guille969/Licensy",
+            "copyright": "Copyright (C) 2017 David Jimenez Guinaldo",
             "organization": "blbalbal",
             "license": "Apache Software License 2.0"
         },
         {
             "name": "LicensesKit",
-            "url": "https://github.com/mattwyskiel/LicensesKit",
-            "copyright": "Copyright (C) 2014 Matthew Wyskiel",
+            "url": "https://github.com/guille969/Licensy",
+            "copyright": "Copyright (C) 2017 David Jimenez Guinaldo",
             "organization": "blbalbal",
             "license": "Apache Software License 2.0"
         },
         {
             "name": "LicensesKit",
-            "url": "https://github.com/mattwyskiel/LicensesKit",
-            "copyright": "Copyright (C) 2014 Matthew Wyskiel",
+            "url": "https://github.com/guille969/Licensy",
+            "copyright": "Copyright (C) 2017 Guillermo Garcia Rebolo",
             "organization": "blbalbal",
             "license": "Apache Software License 2.0"
         },
         {
             "name": "StringBuilder",
-            "url": "https://github.com/mattwyskiel/StringBuilder",
-            "copyright": "Copyright (C) 2014 Matthew Wyskiel",
+            "url": "https://github.com/guille969/Licensy",
+            "copyright": "Copyright (C) 2017 Guillermo Garcia Rebolo",
             "organization": "blbalbal",
             "license": "Apache Software License 2.0"
         }
