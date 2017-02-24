@@ -1,0 +1,32 @@
+{
+    "notices": [
+        {
+            "name": "LicensesKit",
+            "url": "https://github.com/mattwyskiel/LicensesKit",
+            "copyright": "Copyright (C) 2014 Matthew Wyskiel",
+            "organization": "blbalbal",
+            "license": "Apache Software License 2.0"
+        },
+        {
+            "name": "LicensesKit",
+            "url": "https://github.com/mattwyskiel/LicensesKit",
+            "copyright": "Copyright (C) 2014 Matthew Wyskiel",
+            "organization": "blbalbal",
+            "license": "Apache Software License 2.0"
+        },
+        {
+            "name": "LicensesKit",
+            "url": "https://github.com/mattwyskiel/LicensesKit",
+            "copyright": "Copyright (C) 2014 Matthew Wyskiel",
+            "organization": "blbalbal",
+            "license": "Apache Software License 2.0"
+        },
+        {
+            "name": "StringBuilder",
+            "url": "https://github.com/mattwyskiel/StringBuilder",
+            "copyright": "Copyright (C) 2014 Matthew Wyskiel",
+            "organization": "blbalbal",
+            "license": "Apache Software License 2.0"
+        }
+    ]
+}
