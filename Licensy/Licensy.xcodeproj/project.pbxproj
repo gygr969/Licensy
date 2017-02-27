@@ -41,10 +41,8 @@
 		99BA09B11E60551F00CF8074 /* LicenseCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA098A1E60551F00CF8074 /* LicenseCustom.swift */; };
 		99BA09B21E60551F00CF8074 /* MITLicense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA098B1E60551F00CF8074 /* MITLicense.swift */; };
 		99BA09B31E60551F00CF8074 /* MozillaPublicLincese20.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA098C1E60551F00CF8074 /* MozillaPublicLincese20.swift */; };
-		99BA09CF1E60577900CF8074 /* librerias.json in Resources */ = {isa = PBXBuildFile; fileRef = 99BA09C01E60577900CF8074 /* librerias.json */; };
 		99BA09D91E60577900CF8074 /* CellLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA09CC1E60577900CF8074 /* CellLibrary.swift */; };
 		99BA09DA1E60577900CF8074 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA09CD1E60577900CF8074 /* Section.swift */; };
-		99BA09DB1E60577900CF8074 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA09CE1E60577900CF8074 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,10 +82,8 @@
 		99BA098A1E60551F00CF8074 /* LicenseCustom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicenseCustom.swift; sourceTree = "<group>"; };
 		99BA098B1E60551F00CF8074 /* MITLicense.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MITLicense.swift; sourceTree = "<group>"; };
 		99BA098C1E60551F00CF8074 /* MozillaPublicLincese20.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MozillaPublicLincese20.swift; sourceTree = "<group>"; };
-		99BA09C01E60577900CF8074 /* librerias.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = librerias.json; sourceTree = "<group>"; };
 		99BA09CC1E60577900CF8074 /* CellLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellLibrary.swift; sourceTree = "<group>"; };
 		99BA09CD1E60577900CF8074 /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
-		99BA09CE1E60577900CF8074 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,7 +150,6 @@
 				99BA096E1E60551F00CF8074 /* Library */,
 				99BA09731E60551F00CF8074 /* Licenses */,
 				99BA09671E60538300CF8074 /* Info.plist */,
-				99BA09C01E60577900CF8074 /* librerias.json */,
 			);
 			path = Licensy;
 			sourceTree = "<group>";
@@ -237,7 +232,6 @@
 				9987358F1E60A4B400FDEB2A /* Header */,
 				9987358A1E60A4B400FDEB2A /* Cells */,
 				998735921E60A4B400FDEB2A /* LibrariesTable.swift */,
-				99BA09CE1E60577900CF8074 /* ViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -332,7 +326,6 @@
 				99BA099F1E60551F00CF8074 /* bsd3.txt in Resources */,
 				99BA09A31E60551F00CF8074 /* isc.txt in Resources */,
 				99BA099E1E60551F00CF8074 /* asl_20.txt in Resources */,
-				99BA09CF1E60577900CF8074 /* librerias.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,7 +341,6 @@
 				99BA09A71E60551F00CF8074 /* LicenseOrganizer.swift in Sources */,
 				99BA09AA1E60551F00CF8074 /* ApacheSoftwareLicense20.swift in Sources */,
 				99BA09AE1E60551F00CF8074 /* GnuGeneralPublicLicense30.swift in Sources */,
-				99BA09DB1E60577900CF8074 /* ViewController.swift in Sources */,
 				99BA09B21E60551F00CF8074 /* MITLicense.swift in Sources */,
 				99BA09AB1E60551F00CF8074 /* BSD3ClauseLicense.swift in Sources */,
 				99BA09D91E60577900CF8074 /* CellLibrary.swift in Sources */,
