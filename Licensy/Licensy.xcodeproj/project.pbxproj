@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9974885C1E644F4D00BB1022 /* Resources.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9974885B1E644F4D00BB1022 /* Resources.xcassets */; };
 		998735931E60A4B400FDEB2A /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998735881E60A4B400FDEB2A /* Appearance.swift */; };
 		998735941E60A4B400FDEB2A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998735891E60A4B400FDEB2A /* Extensions.swift */; };
 		998735951E60A4B400FDEB2A /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9987358B1E60A4B400FDEB2A /* CellView.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9974885B1E644F4D00BB1022 /* Resources.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Resources.xcassets; sourceTree = "<group>"; };
 		998735881E60A4B400FDEB2A /* Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
 		998735891E60A4B400FDEB2A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		9987358B1E60A4B400FDEB2A /* CellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
@@ -97,6 +99,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9974885A1E644E6800BB1022 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9974885B1E644F4D00BB1022 /* Resources.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		998735871E60A4B400FDEB2A /* Appearance */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +159,7 @@
 				99BA09C11E60577900CF8074 /* Views */,
 				99BA096E1E60551F00CF8074 /* Library */,
 				99BA09731E60551F00CF8074 /* Licenses */,
+				9974885A1E644E6800BB1022 /* Resources */,
 				99BA09671E60538300CF8074 /* Info.plist */,
 			);
 			path = Licensy;
@@ -317,6 +328,7 @@
 			files = (
 				9987359A1E60A4B400FDEB2A /* HeaderView.xib in Resources */,
 				99BA09A61E60551F00CF8074 /* mpl_20.txt in Resources */,
+				9974885C1E644F4D00BB1022 /* Resources.xcassets in Resources */,
 				99BA09A51E60551F00CF8074 /* mit.txt in Resources */,
 				99BA09A21E60551F00CF8074 /* gpl_30.txt in Resources */,
 				998735961E60A4B400FDEB2A /* CellView.xib in Resources */,
