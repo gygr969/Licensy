@@ -20,6 +20,8 @@
 		3A36DACEF17342633EE4E1DB /* Pods_Licensy_Example_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Licensy_Example_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5753399D95D5958DC3223D56 /* Pods-Licensy-Example-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Licensy-Example-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Licensy-Example-Swift/Pods-Licensy-Example-Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		79B657AE66A2C48A12E159CC /* Pods-Licensy-Example-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Licensy-Example-Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-Licensy-Example-Swift/Pods-Licensy-Example-Swift.release.xcconfig"; sourceTree = "<group>"; };
+		9998E2011E64D1A500407BA9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		9998E2051E64D30400407BA9 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 		99E023761E640E6D00571C94 /* Licensy-Example-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Licensy-Example-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99E023791E640E6D00571C94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99E0237B1E640E6D00571C94 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				TargetAttributes = {
 					99E023751E640E6D00571C94 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = U72MCKUYLK;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -137,6 +140,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 99E0236D1E640E6D00571C94;
 			productRefGroup = 99E023771E640E6D00571C94 /* Products */;
@@ -227,6 +231,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				99E0237E1E640E6D00571C94 /* Base */,
+				9998E2011E64D1A500407BA9 /* en */,
+				9998E2051E64D30400407BA9 /* es */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -340,6 +346,7 @@
 			baseConfigurationReference = 5753399D95D5958DC3223D56 /* Pods-Licensy-Example-Swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = U72MCKUYLK;
 				INFOPLIST_FILE = "Licensy-Example-Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.RetoLabs.Licensy-Example-Swift";
@@ -353,6 +360,7 @@
 			baseConfigurationReference = 79B657AE66A2C48A12E159CC /* Pods-Licensy-Example-Swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = U72MCKUYLK;
 				INFOPLIST_FILE = "Licensy-Example-Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.RetoLabs.Licensy-Example-Swift";
@@ -380,6 +388,7 @@
 				99E0238A1E640E6D00571C94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
