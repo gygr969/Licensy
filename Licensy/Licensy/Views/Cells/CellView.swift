@@ -8,7 +8,8 @@
 
 import UIKit
 
-fileprivate var kUrlLabelTopMargin: CGFloat = 20.0
+fileprivate var kDefaultButtonHeight: CGFloat = 25.0
+fileprivate var kUrlLabelTopMargin: CGFloat = 13.0
 fileprivate var kCopyrightLabelTopMargin: CGFloat = 12.0
 fileprivate var kLicenseButtonTopMargin: CGFloat = 12.5
 fileprivate var kLicenseButtonBottomMargin: CGFloat = 16.0
@@ -21,12 +22,14 @@ internal protocol CellViewDelegate: NSObjectProtocol {
 
 class CellView: UITableViewCell {
 
-    @IBOutlet weak var urlLabel: UILabel!
+    @IBOutlet weak var urlButton: UIButton!
     @IBOutlet weak var copyrightLabel: UILabel!
     @IBOutlet weak var licenseButton: UIButton!
     
-    @IBOutlet weak var urlLabelTopConstraint: NSLayoutConstraint!
-    @IBOutlet weak var copyrightLabelTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var urlButtonHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var licenseButtonHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var urlButtonTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var copyrightUrlButtonTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var licenseButtonTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var licenseButtonBottomConstraint: NSLayoutConstraint!
     
@@ -39,7 +42,7 @@ class CellView: UITableViewCell {
         self.section = section
         self.parentTable = parentTable
         self.delegate = delegate
-        self.urlLabel.text = library.url
+        self.urlButton.setTitle(library.url, for: .normal)
         self.copyrightLabel.text = library.copyright
         self.collapseCell(library.collapsed)
         self.collapsedLicense = library.collapsedLicense
@@ -50,7 +53,7 @@ class CellView: UITableViewCell {
     func applyAppearance() {
         let appearance = parentTable.appearance
         
-        urlLabel.textColor = appearance.accentColor
+        urlButton.setTitleColor(appearance.accentColor, for: .normal)
     
         licenseButton.setBackgroundColor(color: appearance.accentColor, forState: .normal)
         
@@ -63,12 +66,15 @@ class CellView: UITableViewCell {
     
     
     fileprivate func collapseCell(_ collapse: Bool) {
-        self.urlLabel.isHidden = collapse == true ? true : false
+        self.urlButton.isHidden = collapse == true ? true : false
         self.copyrightLabel.isHidden = collapse == true ? true : false
         self.licenseButton.isHidden = collapse == true ? true : false
         
-        self.urlLabelTopConstraint.constant = collapse == true ? 0.0 : kUrlLabelTopMargin
-        self.copyrightLabelTopConstraint.constant = collapse == true ? 0.0 : kCopyrightLabelTopMargin
+        self.urlButtonHeightConstraint.constant = collapse == true ? 0.0 : kDefaultButtonHeight
+        self.licenseButtonHeightConstraint.constant = collapse == true ? 0.0 : kDefaultButtonHeight
+        
+        self.urlButtonTopConstraint.constant = collapse == true ? 0.0 : kUrlLabelTopMargin
+        self.copyrightUrlButtonTopConstraint.constant = collapse == true ? 0.0 : kCopyrightLabelTopMargin
         self.licenseButtonTopConstraint.constant = collapse == true ? 0.0 : kLicenseButtonTopMargin
         self.licenseButtonBottomConstraint.constant = collapse == true ? 0.0 : kLicenseButtonBottomMargin
     }
@@ -89,6 +95,11 @@ class CellView: UITableViewCell {
         DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(300), execute: {
             self.licenseButton.isEnabled = true
         })
+    }
+    @IBAction func openUrlLink(_ sender: UIButton) {
+        let targetURL = URL(string: (self.urlButton.titleLabel?.text)!)!
+        let application = UIApplication.shared
+        application.openURL(targetURL)
     }
     
 }

@@ -10,8 +10,6 @@
 		9974885C1E644F4D00BB1022 /* Resources.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9974885B1E644F4D00BB1022 /* Resources.xcassets */; };
 		998735931E60A4B400FDEB2A /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998735881E60A4B400FDEB2A /* Appearance.swift */; };
 		998735941E60A4B400FDEB2A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998735891E60A4B400FDEB2A /* Extensions.swift */; };
-		998735951E60A4B400FDEB2A /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9987358B1E60A4B400FDEB2A /* CellView.swift */; };
-		998735961E60A4B400FDEB2A /* CellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9987358C1E60A4B400FDEB2A /* CellView.xib */; };
 		998735971E60A4B400FDEB2A /* LicenseCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9987358D1E60A4B400FDEB2A /* LicenseCellView.swift */; };
 		998735981E60A4B400FDEB2A /* LicenseCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9987358E1E60A4B400FDEB2A /* LicenseCellView.xib */; };
 		998735991E60A4B400FDEB2A /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998735901E60A4B400FDEB2A /* HeaderView.swift */; };
@@ -44,14 +42,14 @@
 		99BA09B31E60551F00CF8074 /* MozillaPublicLincese20.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA098C1E60551F00CF8074 /* MozillaPublicLincese20.swift */; };
 		99BA09D91E60577900CF8074 /* CellLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA09CC1E60577900CF8074 /* CellLibrary.swift */; };
 		99BA09DA1E60577900CF8074 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA09CD1E60577900CF8074 /* Section.swift */; };
+		99E794661E64822500BECE1A /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E794641E64822500BECE1A /* CellView.swift */; };
+		99E794671E64822500BECE1A /* CellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99E794651E64822500BECE1A /* CellView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9974885B1E644F4D00BB1022 /* Resources.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Resources.xcassets; sourceTree = "<group>"; };
 		998735881E60A4B400FDEB2A /* Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
 		998735891E60A4B400FDEB2A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		9987358B1E60A4B400FDEB2A /* CellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
-		9987358C1E60A4B400FDEB2A /* CellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellView.xib; sourceTree = "<group>"; };
 		9987358D1E60A4B400FDEB2A /* LicenseCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicenseCellView.swift; sourceTree = "<group>"; };
 		9987358E1E60A4B400FDEB2A /* LicenseCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LicenseCellView.xib; sourceTree = "<group>"; };
 		998735901E60A4B400FDEB2A /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
@@ -86,6 +84,8 @@
 		99BA098C1E60551F00CF8074 /* MozillaPublicLincese20.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MozillaPublicLincese20.swift; sourceTree = "<group>"; };
 		99BA09CC1E60577900CF8074 /* CellLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellLibrary.swift; sourceTree = "<group>"; };
 		99BA09CD1E60577900CF8074 /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		99E794641E64822500BECE1A /* CellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
+		99E794651E64822500BECE1A /* CellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,8 +119,8 @@
 		9987358A1E60A4B400FDEB2A /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				9987358B1E60A4B400FDEB2A /* CellView.swift */,
-				9987358C1E60A4B400FDEB2A /* CellView.xib */,
+				99E794641E64822500BECE1A /* CellView.swift */,
+				99E794651E64822500BECE1A /* CellView.xib */,
 				9987358D1E60A4B400FDEB2A /* LicenseCellView.swift */,
 				9987358E1E60A4B400FDEB2A /* LicenseCellView.xib */,
 			);
@@ -326,12 +326,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99E794671E64822500BECE1A /* CellView.xib in Resources */,
 				9987359A1E60A4B400FDEB2A /* HeaderView.xib in Resources */,
 				99BA09A61E60551F00CF8074 /* mpl_20.txt in Resources */,
 				9974885C1E644F4D00BB1022 /* Resources.xcassets in Resources */,
 				99BA09A51E60551F00CF8074 /* mit.txt in Resources */,
 				99BA09A21E60551F00CF8074 /* gpl_30.txt in Resources */,
-				998735961E60A4B400FDEB2A /* CellView.xib in Resources */,
 				99BA09A41E60551F00CF8074 /* lgpl_21.txt in Resources */,
 				99BA09A01E60551F00CF8074 /* ccand_30.txt in Resources */,
 				998735981E60A4B400FDEB2A /* LicenseCellView.xib in Resources */,
@@ -352,6 +352,7 @@
 				998735971E60A4B400FDEB2A /* LicenseCellView.swift in Sources */,
 				99BA099C1E60551F00CF8074 /* LibraryEntity.swift in Sources */,
 				99BA09A71E60551F00CF8074 /* LicenseOrganizer.swift in Sources */,
+				99E794661E64822500BECE1A /* CellView.swift in Sources */,
 				99BA09AA1E60551F00CF8074 /* ApacheSoftwareLicense20.swift in Sources */,
 				99BA09AE1E60551F00CF8074 /* GnuGeneralPublicLicense30.swift in Sources */,
 				99BA09B21E60551F00CF8074 /* MITLicense.swift in Sources */,
@@ -371,7 +372,6 @@
 				99BA09AF1E60551F00CF8074 /* GnuLessetGeneralPublicLicense21.swift in Sources */,
 				99BA09AC1E60551F00CF8074 /* CreativeCommonsAttributionNoDerivs30Unported.swift in Sources */,
 				998735991E60A4B400FDEB2A /* HeaderView.swift in Sources */,
-				998735951E60A4B400FDEB2A /* CellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
