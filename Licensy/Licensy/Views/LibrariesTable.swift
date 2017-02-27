@@ -20,7 +20,9 @@ public class LibrariesTable: UITableView {
     fileprivate var libraries: Array<LibraryEntity> = []
     
     fileprivate class var bundle: Bundle {
-        return Bundle(for: LibraryEntity.self)
+        let podBundle =  Bundle(for: LibraryEntity.self)
+        let bundleURL = podBundle.url(forResource: "Licensy", withExtension: "bundle")
+        return Bundle(url: bundleURL!)!
     }
     
     /**
