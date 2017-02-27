@@ -8,6 +8,12 @@
 
 import UIKit
 
+fileprivate var bundle: Bundle {
+    let podBundle =  Bundle(for: LibraryEntity.self)
+    let bundleURL = podBundle.url(forResource: "Licensy", withExtension: "bundle")
+    return Bundle(url: bundleURL!)!
+}
+
 extension UIButton {
     func setBackgroundColor(color: UIColor, forState state: UIControlState) {
         UIGraphicsBeginImageContext(CGSize(width: 1, height: 1))
@@ -30,5 +36,11 @@ extension UIView {
         animation.fillMode = kCAFillModeForwards
         
         self.layer.add(animation, forKey: nil)
+    }
+}
+
+extension String {
+    var localized: String {
+        return NSLocalizedString(self, tableName: nil, bundle: bundle, value: "", comment: "")
     }
 }
