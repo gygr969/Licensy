@@ -1,6 +1,6 @@
 # Licensy
 
-[![CocoaPods compatible](https://img.shields.io/cocoapods/v/Licensy.svg?style=flat)](https://cocoapods.org/pods/Licensy) [![License: MIT](https://img.shields.io/cocoapods/l/Licensy.svg?style=flat)](http://opensource.org/licenses/MIT)
+[![CocoaPods compatible](https://img.shields.io/cocoapods/v/Licensy.svg?style=flat)](https://cocoapods.org/pods/Licensy) [![License: MIT](https://img.shields.io/cocoapods/l/Licensy.svg?style=flat)](http://opensource.org/licenses/MIT) [![Swift Version](https://img.shields.io/badge/Swift-3.0.2-orange.svg?style=flat)](https://developer.apple.com/swift/) [![Platform](https://img.shields.io/badge/platform-iOS-lightgrey.svg)](https://developer.apple.com/ios/)
 
 `Licensy` is an iOS drop-in class that allow you to display a table listing all the 3rd Party Libraries that you are using in your app, and preview some data about it's licenses and copyrights.
 
