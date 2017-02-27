@@ -11,7 +11,9 @@ import UIKit
 internal class LicenseParser: NSObject {
     
     fileprivate class var bundle: Bundle {
-        return Bundle(for: LibraryEntity.self)
+        let podBundle =  Bundle(for: LibraryEntity.self)
+        let bundleURL = podBundle.url(forResource: "Licensy", withExtension: "bundle")
+        return Bundle(url: bundleURL!)!
     }
     
     internal class func getContent(_ filename: String, inBundle bundle: Bundle = bundle) -> String! {
