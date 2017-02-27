@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.version = '1.0.0'
   s.license = { :type => 'MIT', :file => 'LICENSE' }
-  s.author = { 'David Jimenez Guinaldo' => 'djimenezgu@gmail.com', 'Guillermo Garcia Rebolo' => 'guillermogarcia_18@hotmail.com' }
+  s.authors = { 'David Jimenez Guinaldo' => 'djimenezgu@gmail.com', 'Guillermo Garcia Rebolo' => 'guillermogarcia_18@hotmail.com' }
   s.homepage = 'https://github.com/guille969/Licensy'
   s.source = { :git => 'https://github.com/guille969/Licensy.git', :tag => s.version.to_s}
   s.framework = 'UIKit'
