@@ -87,7 +87,7 @@ class CellView: UITableViewCell {
     }
     
     fileprivate func setLicenseButtonTitle() {
-        licenseButton.setTitle(!collapsedLicense ?NSLocalizedString("licensy.general.app.libraries.button.hide_license", comment: "") : NSLocalizedString("licensy.general.app.libraries.button.show_license", comment: ""), for: .normal)
+        licenseButton.setTitle(!collapsedLicense ? "licensy.general.app.libraries.button.hide_license".localized : "licensy.general.app.libraries.button.show_license".localized , for: .normal)
     }
     
     fileprivate func disableLicenseButton() {
