@@ -11,7 +11,7 @@ import Licensy
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableView: LibrariesTable!
     override func viewDidLoad() {
         super.viewDidLoad()
         

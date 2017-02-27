@@ -13,9 +13,13 @@
 		99E023811E640E6D00571C94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99E023801E640E6D00571C94 /* Assets.xcassets */; };
 		99E023841E640E6D00571C94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99E023821E640E6D00571C94 /* LaunchScreen.storyboard */; };
 		99E0238C1E640FE400571C94 /* librerias.json in Resources */ = {isa = PBXBuildFile; fileRef = 99E0238B1E640FE400571C94 /* librerias.json */; };
+		C1DB8682052F78737B239CED /* Pods_Licensy_Example_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A36DACEF17342633EE4E1DB /* Pods_Licensy_Example_Swift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A36DACEF17342633EE4E1DB /* Pods_Licensy_Example_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Licensy_Example_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5753399D95D5958DC3223D56 /* Pods-Licensy-Example-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Licensy-Example-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Licensy-Example-Swift/Pods-Licensy-Example-Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		79B657AE66A2C48A12E159CC /* Pods-Licensy-Example-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Licensy-Example-Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-Licensy-Example-Swift/Pods-Licensy-Example-Swift.release.xcconfig"; sourceTree = "<group>"; };
 		99E023761E640E6D00571C94 /* Licensy-Example-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Licensy-Example-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99E023791E640E6D00571C94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99E0237B1E640E6D00571C94 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1DB8682052F78737B239CED /* Pods_Licensy_Example_Swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13A19FDCE1EB248C496F9BB0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5753399D95D5958DC3223D56 /* Pods-Licensy-Example-Swift.debug.xcconfig */,
+				79B657AE66A2C48A12E159CC /* Pods-Licensy-Example-Swift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		1ADB5B858FAAD19E8A6C35CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A36DACEF17342633EE4E1DB /* Pods_Licensy_Example_Swift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		99E0236D1E640E6D00571C94 = {
 			isa = PBXGroup;
 			children = (
 				99E023781E640E6D00571C94 /* Licensy-Example-Swift */,
 				99E023771E640E6D00571C94 /* Products */,
+				13A19FDCE1EB248C496F9BB0 /* Pods */,
+				1ADB5B858FAAD19E8A6C35CB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 99E023881E640E6D00571C94 /* Build configuration list for PBXNativeTarget "Licensy-Example-Swift" */;
 			buildPhases = (
+				A8CAD21C4B72737D2ACE1D9E /* [CP] Check Pods Manifest.lock */,
 				99E023721E640E6D00571C94 /* Sources */,
 				99E023731E640E6D00571C94 /* Frameworks */,
 				99E023741E640E6D00571C94 /* Resources */,
+				0BF6128C14AE7FD642E1628C /* [CP] Embed Pods Frameworks */,
+				3F004AD7A84047369935FA2A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -134,6 +161,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0BF6128C14AE7FD642E1628C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Licensy-Example-Swift/Pods-Licensy-Example-Swift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3F004AD7A84047369935FA2A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Licensy-Example-Swift/Pods-Licensy-Example-Swift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8CAD21C4B72737D2ACE1D9E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		99E023721E640E6D00571C94 /* Sources */ = {
@@ -262,6 +337,7 @@
 		};
 		99E023891E640E6D00571C94 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5753399D95D5958DC3223D56 /* Pods-Licensy-Example-Swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Licensy-Example-Swift/Info.plist";
@@ -274,6 +350,7 @@
 		};
 		99E0238A1E640E6D00571C94 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79B657AE66A2C48A12E159CC /* Pods-Licensy-Example-Swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Licensy-Example-Swift/Info.plist";
