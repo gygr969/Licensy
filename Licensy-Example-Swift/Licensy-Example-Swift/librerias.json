@@ -1,28 +1,28 @@
 {
-    "notices": [
+    "libraries": [
         {
-            "name": "LicensesKit",
+            "name": "Library 1",
             "url": "https://github.com/guille969/Licensy",
             "copyright": "Copyright (C) 2017 David Jimenez Guinaldo",
             "organization": "blbalbal",
             "license": "Apache Software License 2.0"
         },
         {
-            "name": "LicensesKit",
+            "name": "Library 2",
             "url": "https://github.com/guille969/Licensy",
             "copyright": "Copyright (C) 2017 David Jimenez Guinaldo",
             "organization": "blbalbal",
             "license": "Apache Software License 2.0"
         },
         {
-            "name": "LicensesKit",
+            "name": "Library 3",
             "url": "https://github.com/guille969/Licensy",
             "copyright": "Copyright (C) 2017 Guillermo Garcia Rebolo",
             "organization": "blbalbal",
             "license": "Apache Software License 2.0"
         },
         {
-            "name": "StringBuilder",
+            "name": "Library 4",
             "url": "https://github.com/guille969/Licensy",
             "copyright": "Copyright (C) 2017 Guillermo Garcia Rebolo",
             "organization": "blbalbal",
