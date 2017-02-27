@@ -29,7 +29,7 @@ public class LibrariesPaser: NSObject {
             do {
                 let jsonArray = try JSONSerialization.jsonObject(with: jsonData as Data, options: JSONSerialization.ReadingOptions(rawValue: 0)) as! [String: [[String: String]]]
                 
-                if let librariesArray = jsonArray["notices"] {
+                if let librariesArray = jsonArray["libraries"] {
                     for libraryJSON in librariesArray {
                         let name = libraryJSON["name"]!
                         let organization = libraryJSON["organization"]!
