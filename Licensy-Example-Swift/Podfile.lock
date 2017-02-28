@@ -1,11 +1,11 @@
 PODS:
-  - Licensy (1.0.5)
+  - Licensy (1.0.6)
 
 DEPENDENCIES:
   - Licensy
 
 SPEC CHECKSUMS:
-  Licensy: 8728bcf4a6bf947256b1651abe74419baedf64a9
+  Licensy: dd53520f70b32a48a14ae1ef9a4d476f27c4158b
 
 PODFILE CHECKSUM: fc13bf2cf0ca2ca04f3e7c4f64a15d2ee58e9b00
 
