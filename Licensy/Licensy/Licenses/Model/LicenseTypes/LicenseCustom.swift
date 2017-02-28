@@ -8,18 +8,15 @@
 
 import UIKit
 
-/**
- Describes a custom license designated by the user.
- */
+/// Describes a custom license designated by the user.
 public class LicenseCustom: NSObject, License {
     
     fileprivate var company: String = ""
     fileprivate var copyright: String = ""
 
     fileprivate var privateName: String = ""
-    /**
-     The name of the license
-     */
+    
+    /// The name of the license
     public var name: String {
         get {
             return self.privateName
@@ -30,6 +27,7 @@ public class LicenseCustom: NSObject, License {
     }
     
     fileprivate var privateText: String = ""
+    
     /// The license full text
     public var text: String {
         get {
@@ -41,9 +39,8 @@ public class LicenseCustom: NSObject, License {
     }
     
     fileprivate var privateVersion: String = ""
-    /**
-     The license version
-     */
+    
+    /// The license version
     public var version: String {
         get {
             return self.privateVersion
@@ -54,9 +51,8 @@ public class LicenseCustom: NSObject, License {
     }
     
     fileprivate var privateURL: String = ""
-    /**
-     The license URL
-     */
+    
+    /// The license URL
     public var url: String {
         get {
             return self.privateURL
@@ -70,17 +66,14 @@ public class LicenseCustom: NSObject, License {
         
     }
     
-    /**
-     Initializer for a LicenseCustom object.
-     
-     - parameter name:        The name of the license
-     - parameter text:        The license text
-     - parameter version:     The license version
-     - parameter url:         The license URL
-     
-     - returns: An instance of LicenseCustom
-     */
     
+    /// Initializer for a LicenseCustom object.
+    ///
+    /// - Parameters:
+    ///   - name: The name of the license
+    ///   - text: The license text
+    ///   - version: The license version
+    ///   - url: The license URL
     public init(name: String, text: String, version: String, url: String) {
         super.init()
         self.name = name
@@ -89,18 +82,23 @@ public class LicenseCustom: NSObject, License {
         self.url = url
     }
     
-    /**
-     Configure the company and the copyright of the library for the license
-     */
+    /// Configure the company and the copyright of the library for the license
+    ///
+    /// - Parameters:
+    ///   - company: the company of the library
+    ///   - copyright: the copyright of the library
     public func formatLicenseTextWithCompany(_ company: String, andCopyRight copyright: String) {
         self.company = company
         self.copyright = copyright
     }
 }
 
-/**
- Equatable conformance - defining equivalence for 'LicenseCustom'
- */
+/// Equatable conformance - defining equivalence for 'LicenseCustom'
+///
+/// - Parameters:
+///   - lhs: first license
+///   - rhs: seconde license
+/// - Returns: if first license is equal to the second for property name
 public func ==(lhs: LicenseCustom, rhs: LicenseCustom) -> Bool {
     return lhs.name == rhs.name
 }

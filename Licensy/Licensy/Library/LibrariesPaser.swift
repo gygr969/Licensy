@@ -8,20 +8,15 @@
 
 import UIKit
 
-/**
- *  Parses the libraries from a given JSON
- */
+/// Parses the libraries from a given JSON
 public class LibrariesPaser: NSObject {
     
     private(set) var organizer = LicenseOrganizer()
     
-    /**
-     Retrive libraries from a JSON file.
-     
-     - parameter filepath: The file path to the JSON file containing the libraries.
-     
-     - returns: An array of libraries
-     */
+    /// Retrive libraries from a JSON file.
+    ///
+    /// - Parameter filepath: The file path to the JSON file containing the libraries
+    /// - Returns: An array of libraries
     public func setNoticesFromJSONFile(filepath: String) -> Array<LibraryEntity> {
         var libraries : Array<LibraryEntity> = []
         

@@ -8,53 +8,45 @@
 
 import UIKit
 
-/**
- MIT License
- */
+/// MIT License
 public class MITLicense: NSObject, License {
     
     fileprivate var company: String = ""
     fileprivate var copyright: String = ""
     
-    /**
-     The name of the license
-     */
+    /// The name of the license
     public var name: String {
         get {
             return "MIT License"
         }
     }
-
-    /**
-     The license text
-     */
+    
+    /// The license text
     public var text: String {
         get {
             return LicenseParser.getContent("mit")
         }
     }
     
-    /**
-     The license version
-     */
+    /// The license version
     public var version: String {
         get {
             return ""
         }
     }
     
-    /**
-     The license URL
-     */
+    /// The license URL
     public var url: String {
         get {
             return "http://opensource.org/licenses/MIT"
         }
     }
     
-    /**
-     Configure the company and the copyright of the library for the license
-     */
+    /// Configure the company and the copyright of the library for the license
+    ///
+    /// - Parameters:
+    ///   - company: the company of the library
+    ///   - copyright: the copyright of the library
     public func formatLicenseTextWithCompany(_ company: String, andCopyRight copyright: String) {
         self.company = company
         self.copyright = copyright

@@ -63,8 +63,6 @@ class CellView: UITableViewCell {
         }
     }
     
-    
-    
     fileprivate func collapseCell(_ collapse: Bool) {
         self.urlButton.isHidden = collapse == true ? true : false
         self.copyrightLabel.isHidden = collapse == true ? true : false
@@ -79,6 +77,10 @@ class CellView: UITableViewCell {
         self.licenseButtonBottomConstraint.constant = collapse == true ? 0.0 : kLicenseButtonBottomMargin
     }
     
+    
+    /// Method that triggers the collapse of the license cell
+    ///
+    /// - Parameter sender: UIButton
     @IBAction func collapseLicense(_ sender: UIButton) {
         collapsedLicense = !collapsedLicense
         setLicenseButtonTitle()
@@ -96,6 +98,11 @@ class CellView: UITableViewCell {
             self.licenseButton.isEnabled = true
         })
     }
+    
+    
+    /// Open a given url for the selected library
+    ///
+    /// - Parameter sender: UIButton
     @IBAction func openUrlLink(_ sender: UIButton) {
         let targetURL = URL(string: (self.urlButton.titleLabel?.text)!)!
         let application = UIApplication.shared
