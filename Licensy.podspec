@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
               Licensy lets an user to list all 3rd Party Libraries which use in his project.
               DESC
   s.requires_arc = true
-  s.version = '1.0.5'
+  s.version = '1.0.6'
   s.license = { :type => 'MIT', :file => 'LICENSE' }
   s.authors = { 'David Jimenez Guinaldo' => 'djimenezgu@gmail.com', 'Guillermo Garcia Rebolo' => 'guillermogarcia_18@hotmail.com' }
   s.homepage = 'https://github.com/guille969/Licensy'
