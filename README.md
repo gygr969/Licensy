@@ -17,13 +17,11 @@ You will need the latest developer tools in order to build `Licensy`. Old Xcode 
 
 [CocoaPods](http://cocoapods.org) is the recommended way to add Licensy to your project.
 
-1. Add a pod entry for Licensy to your Podfile `pod 'Licensy'`
-
 ```ruby
 pod 'Licensy'
 ```
-2. Install the pod(s) by running `pod install`.
-3. Include Licensy wherever you need it with `@import Licensy` if your project is in Objective-C or `import Licensy` if your project is in Swift.
+1. Install the pod(s) by running `pod install`.
+2. Include Licensy wherever you need it with `@import Licensy` if your project is in Objective-C or `import Licensy` if your project is in Swift.
 
 ## Usage
 Basic usage of this library involves creating a `UITableView` with the class `LicensyTable that provides our pod and adding the libraries included in your app.
