@@ -17,7 +17,7 @@ public class LibrariesPaser: NSObject {
     ///
     /// - Parameter filepath: The file path to the JSON file containing the libraries
     /// - Returns: An array of libraries
-    public func setNoticesFromJSONFile(filepath: String) -> Array<LibraryEntity> {
+    public func setLibrariesFromJSONFile(filepath: String) -> Array<LibraryEntity> {
         var libraries : Array<LibraryEntity> = []
         
         if let jsonData = NSData(contentsOfFile: filepath) {

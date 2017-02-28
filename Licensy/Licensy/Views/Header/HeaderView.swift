@@ -15,14 +15,14 @@ internal protocol HeaderViewDelegate {
 class HeaderView: UITableViewHeaderFooterView {
 
     @IBOutlet weak var libraryLabel: UILabel!
-    @IBOutlet weak var arrow: UIImageView!
+    @IBOutlet weak var accesoryImage: UIImageView!
     @IBOutlet weak var footerView: UIView!
     
-    fileprivate var parentTable: LibrariesTable!
+    fileprivate var parentTable: LicensyTable!
     fileprivate var delegate: HeaderViewDelegate!
     fileprivate var section: Int = 0
     
-    func configureHeader(_ name: String, section: Int, parentTable: LibrariesTable, delegate: HeaderViewDelegate) {
+    func configureHeader(_ name: String, section: Int, parentTable: LicensyTable, delegate: HeaderViewDelegate) {
         self.libraryLabel.text = name
         self.parentTable = parentTable
         self.section = section
@@ -46,13 +46,22 @@ class HeaderView: UITableViewHeaderFooterView {
         let appearance = parentTable.appearance
         
         libraryLabel.textColor = appearance.headerContentColor
-        arrow.tintColor = appearance.headerContentColor
+        accesoryImage.tintColor = appearance.headerContentColor
         footerView.backgroundColor = appearance.headerContentColor
         contentView.backgroundColor = appearance.headerBackgroundColor
+        
+        accesoryImage.image = appearance.accesory == .arrow ? UIImage(named: "Arrow") : UIImage(named: "Plus")
     }
     
     func setCollapsed(_ collapsed: Bool) {
-        arrow.rotate(collapsed ? 0.0 : CGFloat(M_PI_2))
+        let appearance = parentTable.appearance
+        
+        if appearance.accesory == .arrow {
+            accesoryImage.rotate(collapsed ? 0.0 : CGFloat(M_PI_2))
+        } else if appearance.accesory == .plus {
+            accesoryImage.image = !collapsed ? UIImage(named: "Plus") : UIImage(named: "Minus")
+        }
+        
         self.isUserInteractionEnabled = false
         DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(300), execute: {
             self.isUserInteractionEnabled = true

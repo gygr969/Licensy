@@ -1,5 +1,5 @@
 //
-//  LibrariesTable.swift
+//  LicensyTable.swift
 //  Licensy
 //
 //  Created by David Jiménez Guinaldo on 22/2/17.
@@ -9,12 +9,12 @@
 import UIKit
 
 /// The table view for construct the list of 3rd Party Libraries
-public class LibrariesTable: UITableView {
+public class LicensyTable: UITableView {
 
     fileprivate var kHeaderCellHeight: CGFloat = 44.0
     fileprivate var kCellHeight: CGFloat = 125.0
     
-    fileprivate var cellsLibraries: Array<CellLibrary> = []
+    fileprivate var cellsLibraries: Array<LibraryCell> = []
     fileprivate var libraries: Array<LibraryEntity> = []
     
     fileprivate class var bundle: Bundle {
@@ -32,7 +32,7 @@ public class LibrariesTable: UITableView {
     ///
     /// - Parameter resourceName: The resource name of the JSON with the 3rd Party Libraries
     public func setLibraries(forJsonResourceName resourceName: String) {
-        let path = LibrariesTable.bundle.path(forResource: resourceName, ofType: "json")!
+        let path = Bundle.main.path(forResource: resourceName, ofType: "json")!
         self.setLibraries(forJsonResourcePath: path)
     }
     
@@ -40,7 +40,7 @@ public class LibrariesTable: UITableView {
     ///
     /// - Parameter resourcePath: The file path to the JSON file containing the libraries.
     public func setLibraries(forJsonResourcePath resourcePath: String) {
-        self.libraries = LibrariesPaser().setNoticesFromJSONFile(filepath: resourcePath)
+        self.libraries = LibrariesPaser().setLibrariesFromJSONFile(filepath: resourcePath)
         self.configureView()
     }
     
@@ -62,7 +62,7 @@ public class LibrariesTable: UITableView {
     
     fileprivate func configureCellLibraries() {
         for library in self.libraries {
-            self.cellsLibraries.append(CellLibrary(name: library.name, url: library.url, copyright: library.copyright, organization: library.organization, license: (library.license?.text)!))
+            self.cellsLibraries.append(LibraryCell(name: library.name, url: library.url, copyright: library.copyright, organization: library.organization, license: (library.license?.text)!))
         }
     }
     
@@ -75,15 +75,15 @@ public class LibrariesTable: UITableView {
         self.separatorStyle = .none
         self.allowsSelection = false
         
-        self.register(UINib(nibName: "HeaderView", bundle: LibrariesTable.bundle), forHeaderFooterViewReuseIdentifier: "HeaderView")
-        self.register(UINib(nibName: "CellView", bundle: LibrariesTable.bundle), forCellReuseIdentifier: "cell")
-        self.register(UINib(nibName: "LicenseCellView", bundle: LibrariesTable.bundle), forCellReuseIdentifier: "licenseCell")
+        self.register(UINib(nibName: "HeaderView", bundle: LicensyTable.bundle), forHeaderFooterViewReuseIdentifier: "HeaderView")
+        self.register(UINib(nibName: "InfoCellView", bundle: LicensyTable.bundle), forCellReuseIdentifier: "cell")
+        self.register(UINib(nibName: "LicenseCellView", bundle: LicensyTable.bundle), forCellReuseIdentifier: "licenseCell")
     }
 }
 
 //MARK: - UITableView Methods
 
-extension LibrariesTable: UITableViewDataSource, UITableViewDelegate {
+extension LicensyTable: UITableViewDataSource, UITableViewDelegate {
     
     /// The number of sections in table
     ///
@@ -125,9 +125,9 @@ extension LibrariesTable: UITableViewDataSource, UITableViewDelegate {
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.row {
         case 0:
-            return cellsLibraries[indexPath.section].collapsed! ? 0.0 : kCellHeight
+            return cellsLibraries[indexPath.section].infoCollapsed! ? 0.0 : kCellHeight
         case 1:
-            return cellsLibraries[indexPath.section].collapsedLicense! || cellsLibraries[indexPath.section].collapsed! ? 0.0 : UITableViewAutomaticDimension
+            return cellsLibraries[indexPath.section].licenseCollapsed! || cellsLibraries[indexPath.section].infoCollapsed! ? 0.0 : UITableViewAutomaticDimension
         default:
             return 0.0
         }
@@ -155,7 +155,7 @@ extension LibrariesTable: UITableViewDataSource, UITableViewDelegate {
         let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "HeaderView") as! HeaderView
         
         header.configureHeader(cellsLibraries[section].name, section: section, parentTable: self, delegate: self)
-        header.setCollapsed(cellsLibraries[section].collapsed)
+        header.setCollapsed(cellsLibraries[section].infoCollapsed)
         
         return header
     }
@@ -169,7 +169,7 @@ extension LibrariesTable: UITableViewDataSource, UITableViewDelegate {
     /// - Returns: returns the custom cell for a given index path
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CellView
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! InfoCellView
             cell.configureCell(cellsLibraries[indexPath.section], section: indexPath.section,parentTable: self, delegate: self)
             
             return cell
@@ -184,35 +184,35 @@ extension LibrariesTable: UITableViewDataSource, UITableViewDelegate {
 
 //MARK: - HeaderViewDelegate
 
-extension LibrariesTable: HeaderViewDelegate {
+extension LicensyTable: HeaderViewDelegate {
     
     internal func toggleSection(header: HeaderView, section: Int) {
-        let collapsed = !cellsLibraries[section].collapsed
+        let isCollapsed = !cellsLibraries[section].infoCollapsed
         
-        cellsLibraries[section].collapsed = collapsed
-        if collapsed {
-            cellsLibraries[section].collapsedLicense = collapsed
+        cellsLibraries[section].infoCollapsed = isCollapsed
+        if isCollapsed {
+            cellsLibraries[section].licenseCollapsed = isCollapsed
         }
-        header.setCollapsed(collapsed)
+        header.setCollapsed(isCollapsed)
         
         self.beginUpdates()
-        self.reloadRows(at: [IndexPath(row: 0, section: section)], with: collapsed ? .top : .bottom)
-        self.reloadRows(at: [IndexPath(row: 1, section: section)], with: collapsed ? .top : .bottom)
+        self.reloadRows(at: [IndexPath(row: 0, section: section)], with: isCollapsed ? .top : .bottom)
+        self.reloadRows(at: [IndexPath(row: 1, section: section)], with: isCollapsed ? .top : .bottom)
         self.endUpdates()
     }
 }
 
 //MARK: - CellViewDelegate
 
-extension LibrariesTable: CellViewDelegate {
+extension LicensyTable: InfoCellViewDelegate {
     
-    internal func toggleLicense(license: CellView, section: Int) {
-        let collapsed = !cellsLibraries[section].collapsedLicense
+    internal func toggleLicense(license: InfoCellView, section: Int) {
+        let isCollapsed = !cellsLibraries[section].licenseCollapsed
         
-        cellsLibraries[section].collapsedLicense = collapsed
+        cellsLibraries[section].licenseCollapsed = isCollapsed
         
         self.beginUpdates()
-        self.reloadRows(at: [IndexPath(row: 1, section: section)], with: collapsed ? .top : .bottom)
+        self.reloadRows(at: [IndexPath(row: 1, section: section)], with: isCollapsed ? .top : .bottom)
         self.endUpdates()
     }
 }
