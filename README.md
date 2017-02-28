@@ -34,7 +34,7 @@ A `Library` is an object containing all the information about the library being 
  Property | Description | Example
  -------- | ----------- | -------
  name | The name of the library | `"Licensy"`
- company | The name of the company that created the library | `RetoLabs`
+ company | The name of the company that created the library | `"RetoLabs"`
  url | The url where you can found the library | `"https://github.com/guille969/Licensy"`
  copyright | The copyright information for the library | `"Copyright (c) 2017 RetoLabs"`
  license | The license the library uses | `MITLicense()`
@@ -51,9 +51,9 @@ A `Library` is an object containing all the information about the library being 
  - MIT License
  - Mozilla Public License, Version 2.0
 
- Also you can create your custom license with the object class `CustomLicense` to build one license that is not listed above.
+Also you can create your custom license with the object class `CustomLicense` to build one license that is not listed above.
 
- ### Add Libraries from JSON
+### Add Libraries from JSON
 You can list all of your libraries and their licenses in a json file included in your app bundle, with a format as such:
 
 ``` json
