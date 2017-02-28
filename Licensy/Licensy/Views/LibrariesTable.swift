@@ -8,9 +8,7 @@
 
 import UIKit
 
-/**
- The table view for construct the list of 3rd Party Libraries
- */
+/// The table view for construct the list of 3rd Party Libraries
 public class LibrariesTable: UITableView {
 
     fileprivate var kHeaderCellHeight: CGFloat = 44.0
@@ -25,38 +23,30 @@ public class LibrariesTable: UITableView {
         return Bundle(url: bundleURL!)!
     }
     
-    /**
-     The appearance of the table view
-     */
+    /// The appearance of the table view
     public var appearance = Appearance()
     
     //MARK: - Init Methods
     
-    /**
-     Set libraries from a JSON file.
-     
-     - parameter resourceName: The resource name of the JSON with the 3rd Party Libraries.
-     */
+    /// Set libraries from a JSON file.
+    ///
+    /// - Parameter resourceName: The resource name of the JSON with the 3rd Party Libraries
     public func setLibraries(forJsonResourceName resourceName: String) {
         let path = LibrariesTable.bundle.path(forResource: resourceName, ofType: "json")!
         self.setLibraries(forJsonResourcePath: path)
     }
     
-    /**
-     Set libraries from a JSON file.
-     
-     - parameter resourcePath: The file path to the JSON file containing the libraries.
-     */
+    /// Set libraries from a JSON file.
+    ///
+    /// - Parameter resourcePath: The file path to the JSON file containing the libraries.
     public func setLibraries(forJsonResourcePath resourcePath: String) {
         self.libraries = LibrariesPaser().setNoticesFromJSONFile(filepath: resourcePath)
         self.configureView()
     }
     
-    /**
-     Set libraries from a Libraries Entity Array.
-     
-     - parameter libraries: The array containing the libraries.
-     */
+    /// Set libraries from a Libraries Entity Array.
+    ///
+    /// - Parameter libraries: The array containing the libraries.
     public func setLibraries(_ libraries: Array<LibraryEntity>) {
         self.libraries = libraries
         self.configureView()
@@ -95,18 +85,43 @@ public class LibrariesTable: UITableView {
 
 extension LibrariesTable: UITableViewDataSource, UITableViewDelegate {
     
+    /// The number of sections in table
+    ///
+    /// - Parameter tableView: the given tableview
+    /// - Returns: the number of sections in the datasource
     public func numberOfSections(in tableView: UITableView) -> Int {
         return cellsLibraries.count
     }
     
+    
+    /// The number of row in a given section of the table view
+    ///
+    /// - Parameters:
+    ///   - tableView: the table view
+    ///   - section: the given section
+    /// - Returns: the number of rows in the given section
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
     }
     
+    
+    /// The height for the header section view
+    ///
+    /// - Parameters:
+    ///   - tableView: the table view
+    ///   - section: the given section
+    /// - Returns: the height of the header section view
     public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return kHeaderCellHeight
     }
     
+    
+    /// The height for a row in a given index path
+    ///
+    /// - Parameters:
+    ///   - tableView: the table view
+    ///   - indexPath: the given index path
+    /// - Returns: the cell height
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.row {
         case 0:
@@ -118,10 +133,24 @@ extension LibrariesTable: UITableViewDataSource, UITableViewDelegate {
         }
     }
     
+    
+    /// The estimated cell height for the table view at a given index path
+    ///
+    /// - Parameters:
+    ///   - tableView: the table view
+    ///   - indexPath: the given index path
+    /// - Returns: the estimated height for the row
     public func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
     
+    
+    /// The view for a given section
+    ///
+    /// - Parameters:
+    ///   - tableView: the table view
+    ///   - section: the given section
+    /// - Returns: returns the custom view for a given section
     public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "HeaderView") as! HeaderView
         
@@ -131,6 +160,13 @@ extension LibrariesTable: UITableViewDataSource, UITableViewDelegate {
         return header
     }
     
+    
+    /// Method for construct the cell for a given index path
+    ///
+    /// - Parameters:
+    ///   - tableView: the table view
+    ///   - indexPath: the given index path
+    /// - Returns: returns the custom cell for a given index path
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CellView

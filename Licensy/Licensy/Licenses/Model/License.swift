@@ -7,39 +7,36 @@
 //
 
 import UIKit
-/**
- Describes a library's license
- */
+
+/// Describes a library's license
 public protocol License: NSObjectProtocol {
     
-    /**
-     The name of the license
-     */
+    /// The name of the license
     var name: String {
         get
     }
     
-    /**
-     The license text
-     */
+    /// The license text
     var text: String {
         get
     }
     
-    /**
-     The license version
-     */
+    /// The license version
     var version: String {
         get
     }
     
-    /**
-     The license URL
-     */
+    /// The license URL
     var url: String {
         get
     }
     
+    
+    /// Format the license text with a given company and copyright
+    ///
+    /// - Parameters:
+    ///   - company: the name of the company of the library
+    ///   - copyright: the copyright of the library
     func formatLicenseTextWithCompany(_ company: String, andCopyRight copyright: String)
     
 }

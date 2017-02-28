@@ -8,53 +8,45 @@
 
 import UIKit
 
-/**
- GNU General Public License 2.0
- */
+/// GNU General Public License 2.0
 public class GnuGeneralPublicLicense20: NSObject, License {
     
     fileprivate var company: String = ""
     fileprivate var copyright: String = ""
     
-    /**
-     The name of the license
-     */
+    /// The name of the license
     public var name: String {
         get {
             return "GNU General Public License 2.0"
         }
     }
-
-    /**
-     The license text
-     */
+    
+    /// The license text
     public var text: String {
         get {
             return String.init(format: LicenseParser.getContent("gpl_20"), copyright, copyright)
         }
     }
     
-    /**
-     The license version
-     */
+    /// The license version
     public var version: String {
         get {
             return "2.0"
         }
     }
     
-    /**
-     The license URL
-     */
+    /// The license URL
     public var url: String {
         get {
             return "http://www.gnu.org/licenses/"
         }
     }
     
-    /**
-     Configure the company and the copyright of the library for the license
-     */
+    /// Configure the company and the copyright of the library for the license
+    ///
+    /// - Parameters:
+    ///   - company: the company of the library
+    ///   - copyright: the copyright of the library
     public func formatLicenseTextWithCompany(_ company: String, andCopyRight copyright: String) {
         self.company = company
         self.copyright = copyright

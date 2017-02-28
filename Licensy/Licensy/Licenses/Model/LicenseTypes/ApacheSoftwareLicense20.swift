@@ -8,52 +8,45 @@
 
 import UIKit
 
-/**
- Apache Software License, Version 2.0
- */
+/// Apache Software License, Version 2.0
 public class ApacheSoftwareLicense20: NSObject, License {
     
     fileprivate var company: String = ""
     fileprivate var copyright: String = ""
     
-    /**
-     The name of the license
-     */
+    /// The name of the license
     public var name: String {
         get {
             return "Apache Software License 2.0"
         }
     }
     
-    /**
-     The license text
-     */
+    /// The license text
     public var text: String {
         get {
             return String.init(format: LicenseParser.getContent("asl_20"), copyright)
         }
     }
     
-    /**
-     The version text
-     */
+    /// The version text
     public var version: String {
         get {
             return "2.0"
         }
     }
-    /**
-     The license URL
-     */
+    
+    /// The license URL
     public var url: String {
         get {
             return "http://www.apache.org/licenses/LICENSE-2.0.txt"
         }
     }
     
-    /**
-     Configure the company and the copyright of the library for the license
-     */
+    /// Configure the company and the copyright of the library for the license
+    ///
+    /// - Parameters:
+    ///   - company: the company of the library
+    ///   - copyright: the copyright of the library
     public func formatLicenseTextWithCompany(_ company: String, andCopyRight copyright: String) {
         self.company = company
         self.copyright = copyright
