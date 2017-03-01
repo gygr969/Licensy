@@ -26,6 +26,9 @@ public class LicensyTable: UITableView {
     /// The appearance of the table view
     public var appearance = Appearance()
     
+    /// The license organizer of the framework
+    public private(set) var organizer = LicenseOrganizer.sharedInstance
+    
     //MARK: - Init Methods
     
     /// Set libraries from a JSON file.

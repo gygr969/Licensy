@@ -8,33 +8,42 @@
 
 import UIKit
 
-internal class LicenseOrganizer: NSObject {
+/// Organizes the licenses of the framework and let and some more custom
+public class LicenseOrganizer: NSObject {
+    
+    /// The shared instance of the license organizer
+    public static let sharedInstance = LicenseOrganizer()
     
     internal var licenses: [String : License] = [:]
     
     internal func registerCommonLicenses() {
-        licenses = [:]
-        registerLicense(ApacheSoftwareLicense20())
-        registerLicense(BSD3ClauseLicense())
-        registerLicense(ISCLicense())
-        registerLicense(MITLicense())
-        registerLicense(GnuLesserGeneralPublicLicense21())
-        registerLicense(CreativeCommonsAttributionNoDerivs30Unported())
-        registerLicense(GnuGeneralPublicLicense30())
-        registerLicense(GnuGeneralPublicLicense20())
+        self.licenses = [:]
+        self.registerLicense(ApacheSoftwareLicense20())
+        self.registerLicense(BSD3ClauseLicense())
+        self.registerLicense(ISCLicense())
+        self.registerLicense(MITLicense())
+        self.registerLicense(GnuLesserGeneralPublicLicense21())
+        self.registerLicense(CreativeCommonsAttributionNoDerivs30Unported())
+        self.registerLicense(GnuGeneralPublicLicense30())
+        self.registerLicense(GnuGeneralPublicLicense20())
+        self.registerLicense(MozillaPublicLincese20())
     }
     
-    internal func registerLicense(_ license: License) {
-        licenses.updateValue(license, forKey: license.name)
+    /// Register a new license in the framework
+    ///
+    /// - Parameter license: The new license
+    public func registerLicense(_ license: License) {
+        self.licenses.updateValue(license, forKey: license.name)
+        print(self.licenses.count)
     }
     
     override init() {
         super.init()
-        registerCommonLicenses()
+        self.registerCommonLicenses()
     }
     
     internal func licenseForName(_ name: String) -> License? {
-        return licenses[name]
+        return self.licenses[name]
     }
     
 
