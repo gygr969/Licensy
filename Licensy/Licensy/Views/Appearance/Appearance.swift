@@ -25,6 +25,9 @@ public class Appearance: NSObject {
     
     /// Accesory image type
     public var accesory: AccesoryType = .arrow
+    
+    /// Licenses text size
+    public var licenseSize: LicenseSize = .minimal
 
     override init() {
         super.init()
@@ -63,6 +66,11 @@ public extension Appearance {
     public enum AccesoryType {
         case arrow
         case plus
+    }
+    
+    public enum LicenseSize {
+        case minimal
+        case extended
     }
     
 }

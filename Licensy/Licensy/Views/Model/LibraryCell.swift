@@ -13,16 +13,18 @@ struct LibraryCell {
     var url: String!
     var organization: String!
     var copyright: String!
-    var license: String!
+    var licenseExtented: String!
+    var licenseMinimal: String!
     var infoCollapsed: Bool!
     var licenseCollapsed: Bool!
     
-    init(name: String, url: String, copyright: String, organization: String, license: String, infoCollapsed: Bool = true, licenseCollapsed: Bool = true) {
+    init(name: String, url: String, copyright: String, organization: String, license: License, infoCollapsed: Bool = true, licenseCollapsed: Bool = true) {
         self.name = name
         self.url = url
         self.organization = organization
         self.copyright = copyright
-        self.license = license
+        self.licenseExtented = license.text
+        self.licenseMinimal = license.minimalText
         self.infoCollapsed = infoCollapsed
         self.licenseCollapsed = licenseCollapsed
     }

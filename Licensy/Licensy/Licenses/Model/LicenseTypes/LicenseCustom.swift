@@ -28,13 +28,25 @@ public class LicenseCustom: NSObject, License {
     
     fileprivate var privateText: String = ""
     
-    /// The license full text
+    /// The license text
     public var text: String {
         get {
             return String.init(format: "%@\n", self.privateText)
         }
         set {
             self.privateText = newValue
+        }
+    }
+    
+    fileprivate var privateMinimalText: String = ""
+    
+    /// The minimal license text
+    public var minimalText: String {
+        get {
+            return String.init(format: "%@\n", self.privateMinimalText)
+        }
+        set {
+            self.privateMinimalText = newValue
         }
     }
     
@@ -66,18 +78,19 @@ public class LicenseCustom: NSObject, License {
         
     }
     
-    
     /// Initializer for a LicenseCustom object.
     ///
     /// - Parameters:
     ///   - name: The name of the license
     ///   - text: The license text
+    ///   - minimalText: The minimal text of the license
     ///   - version: The license version
     ///   - url: The license URL
-    public init(name: String, text: String, version: String, url: String) {
+    public init(name: String, text: String, minimalText: String, version: String, url: String) {
         super.init()
         self.name = name
         self.text = text
+        self.minimalText = minimalText
         self.version = version
         self.url = url
     }

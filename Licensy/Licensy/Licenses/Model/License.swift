@@ -21,6 +21,11 @@ public protocol License: NSObjectProtocol {
         get
     }
     
+    /// The minimal license text
+    var minimalText: String {
+        get
+    }
+    
     /// The license version
     var version: String {
         get

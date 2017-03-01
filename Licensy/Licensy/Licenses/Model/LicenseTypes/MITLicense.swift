@@ -28,6 +28,13 @@ public class MITLicense: NSObject, License {
         }
     }
     
+    /// The minimal license text
+    public var minimalText: String {
+        get {
+            return LicenseParser.getContent("mit_minimal")
+        }
+    }
+    
     /// The license version
     public var version: String {
         get {

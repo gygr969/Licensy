@@ -43,6 +43,15 @@
 		99BA09B21E60551F00CF8074 /* MITLicense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA098B1E60551F00CF8074 /* MITLicense.swift */; };
 		99BA09B31E60551F00CF8074 /* MozillaPublicLincese20.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA098C1E60551F00CF8074 /* MozillaPublicLincese20.swift */; };
 		99BA09D91E60577900CF8074 /* LibraryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA09CC1E60577900CF8074 /* LibraryCell.swift */; };
+		99C6C5491E66FBFE00E57A58 /* asl_20_minimal.txt in Resources */ = {isa = PBXBuildFile; fileRef = 99C6C5401E66FBFE00E57A58 /* asl_20_minimal.txt */; };
+		99C6C54A1E66FBFE00E57A58 /* bsd3_minimal.txt in Resources */ = {isa = PBXBuildFile; fileRef = 99C6C5411E66FBFE00E57A58 /* bsd3_minimal.txt */; };
+		99C6C54B1E66FBFE00E57A58 /* ccand_30_minimal.txt in Resources */ = {isa = PBXBuildFile; fileRef = 99C6C5421E66FBFE00E57A58 /* ccand_30_minimal.txt */; };
+		99C6C54C1E66FBFE00E57A58 /* gpl_20_minimal.txt in Resources */ = {isa = PBXBuildFile; fileRef = 99C6C5431E66FBFE00E57A58 /* gpl_20_minimal.txt */; };
+		99C6C54D1E66FBFE00E57A58 /* gpl_30_minimal.txt in Resources */ = {isa = PBXBuildFile; fileRef = 99C6C5441E66FBFE00E57A58 /* gpl_30_minimal.txt */; };
+		99C6C54E1E66FBFE00E57A58 /* isc_minimal.txt in Resources */ = {isa = PBXBuildFile; fileRef = 99C6C5451E66FBFE00E57A58 /* isc_minimal.txt */; };
+		99C6C54F1E66FBFE00E57A58 /* lgpl_21_minimal.txt in Resources */ = {isa = PBXBuildFile; fileRef = 99C6C5461E66FBFE00E57A58 /* lgpl_21_minimal.txt */; };
+		99C6C5501E66FBFE00E57A58 /* mit_minimal.txt in Resources */ = {isa = PBXBuildFile; fileRef = 99C6C5471E66FBFE00E57A58 /* mit_minimal.txt */; };
+		99C6C5511E66FBFE00E57A58 /* mpl_20_minimal.txt in Resources */ = {isa = PBXBuildFile; fileRef = 99C6C5481E66FBFE00E57A58 /* mpl_20_minimal.txt */; };
 		99E794661E64822500BECE1A /* InfoCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E794641E64822500BECE1A /* InfoCellView.swift */; };
 		99E794671E64822500BECE1A /* InfoCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99E794651E64822500BECE1A /* InfoCellView.xib */; };
 		99E794741E648C2300BECE1A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 99E794761E648C2300BECE1A /* Localizable.strings */; };
@@ -87,6 +96,15 @@
 		99BA098B1E60551F00CF8074 /* MITLicense.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MITLicense.swift; sourceTree = "<group>"; };
 		99BA098C1E60551F00CF8074 /* MozillaPublicLincese20.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MozillaPublicLincese20.swift; sourceTree = "<group>"; };
 		99BA09CC1E60577900CF8074 /* LibraryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryCell.swift; sourceTree = "<group>"; };
+		99C6C5401E66FBFE00E57A58 /* asl_20_minimal.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = asl_20_minimal.txt; sourceTree = "<group>"; };
+		99C6C5411E66FBFE00E57A58 /* bsd3_minimal.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bsd3_minimal.txt; sourceTree = "<group>"; };
+		99C6C5421E66FBFE00E57A58 /* ccand_30_minimal.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ccand_30_minimal.txt; sourceTree = "<group>"; };
+		99C6C5431E66FBFE00E57A58 /* gpl_20_minimal.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gpl_20_minimal.txt; sourceTree = "<group>"; };
+		99C6C5441E66FBFE00E57A58 /* gpl_30_minimal.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gpl_30_minimal.txt; sourceTree = "<group>"; };
+		99C6C5451E66FBFE00E57A58 /* isc_minimal.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = isc_minimal.txt; sourceTree = "<group>"; };
+		99C6C5461E66FBFE00E57A58 /* lgpl_21_minimal.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lgpl_21_minimal.txt; sourceTree = "<group>"; };
+		99C6C5471E66FBFE00E57A58 /* mit_minimal.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mit_minimal.txt; sourceTree = "<group>"; };
+		99C6C5481E66FBFE00E57A58 /* mpl_20_minimal.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mpl_20_minimal.txt; sourceTree = "<group>"; };
 		99E794641E64822500BECE1A /* InfoCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCellView.swift; sourceTree = "<group>"; };
 		99E794651E64822500BECE1A /* InfoCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoCellView.xib; sourceTree = "<group>"; };
 		99E794751E648C2300BECE1A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -212,6 +230,15 @@
 		99BA09741E60551F00CF8074 /* Files */ = {
 			isa = PBXGroup;
 			children = (
+				99C6C5401E66FBFE00E57A58 /* asl_20_minimal.txt */,
+				99C6C5411E66FBFE00E57A58 /* bsd3_minimal.txt */,
+				99C6C5421E66FBFE00E57A58 /* ccand_30_minimal.txt */,
+				99C6C5431E66FBFE00E57A58 /* gpl_20_minimal.txt */,
+				99C6C5441E66FBFE00E57A58 /* gpl_30_minimal.txt */,
+				99C6C5451E66FBFE00E57A58 /* isc_minimal.txt */,
+				99C6C5461E66FBFE00E57A58 /* lgpl_21_minimal.txt */,
+				99C6C5471E66FBFE00E57A58 /* mit_minimal.txt */,
+				99C6C5481E66FBFE00E57A58 /* mpl_20_minimal.txt */,
 				99BA09751E60551F00CF8074 /* asl_20.txt */,
 				99BA09761E60551F00CF8074 /* bsd3.txt */,
 				99BA09771E60551F00CF8074 /* ccand_30.txt */,
@@ -343,17 +370,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				99E794671E64822500BECE1A /* InfoCellView.xib in Resources */,
+				99C6C5491E66FBFE00E57A58 /* asl_20_minimal.txt in Resources */,
 				9987359A1E60A4B400FDEB2A /* HeaderView.xib in Resources */,
 				99BA09A61E60551F00CF8074 /* mpl_20.txt in Resources */,
+				99C6C54E1E66FBFE00E57A58 /* isc_minimal.txt in Resources */,
+				99C6C5501E66FBFE00E57A58 /* mit_minimal.txt in Resources */,
 				99E794741E648C2300BECE1A /* Localizable.strings in Resources */,
+				99C6C54B1E66FBFE00E57A58 /* ccand_30_minimal.txt in Resources */,
+				99C6C54D1E66FBFE00E57A58 /* gpl_30_minimal.txt in Resources */,
 				63A510A51E65D7F000B90D19 /* Arrow.png in Resources */,
 				63A510A71E65D7F000B90D19 /* Plus.png in Resources */,
 				99BA09A51E60551F00CF8074 /* mit.txt in Resources */,
 				99BA09A21E60551F00CF8074 /* gpl_30.txt in Resources */,
+				99C6C5511E66FBFE00E57A58 /* mpl_20_minimal.txt in Resources */,
+				99C6C54C1E66FBFE00E57A58 /* gpl_20_minimal.txt in Resources */,
 				63A510A61E65D7F000B90D19 /* Minus.png in Resources */,
 				99BA09A41E60551F00CF8074 /* lgpl_21.txt in Resources */,
 				99BA09A01E60551F00CF8074 /* ccand_30.txt in Resources */,
+				99C6C54A1E66FBFE00E57A58 /* bsd3_minimal.txt in Resources */,
 				998735981E60A4B400FDEB2A /* LicenseCellView.xib in Resources */,
+				99C6C54F1E66FBFE00E57A58 /* lgpl_21_minimal.txt in Resources */,
 				99BA09A11E60551F00CF8074 /* gpl_20.txt in Resources */,
 				99BA099F1E60551F00CF8074 /* bsd3.txt in Resources */,
 				99BA09A31E60551F00CF8074 /* isc.txt in Resources */,

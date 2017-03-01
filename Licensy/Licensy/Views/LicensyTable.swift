@@ -65,7 +65,7 @@ public class LicensyTable: UITableView {
     
     fileprivate func configureCellLibraries() {
         for library in self.libraries {
-            self.cellsLibraries.append(LibraryCell(name: library.name, url: library.url, copyright: library.copyright, organization: library.organization, license: (library.license?.text)!))
+            self.cellsLibraries.append(LibraryCell(name: library.name, url: library.url, copyright: library.copyright, organization: library.organization, license: library.license!))
         }
     }
     
@@ -178,7 +178,7 @@ extension LicensyTable: UITableViewDataSource, UITableViewDelegate {
         }
         else {
             let licenseCell = tableView.dequeueReusableCell(withIdentifier: "licenseCell", for: indexPath) as! LicenseCellView
-            licenseCell.configureCell(cellsLibraries[indexPath.section])
+            licenseCell.configureCell(cellsLibraries[indexPath.section], parentTable: self)
             return licenseCell
         }
     }

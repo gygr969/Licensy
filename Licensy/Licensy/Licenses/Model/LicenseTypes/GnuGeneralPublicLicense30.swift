@@ -28,6 +28,13 @@ public class GnuGeneralPublicLicense30: NSObject, License {
         }
     }
     
+    /// The minimal license text
+    public var minimalText: String {
+        get {
+            return LicenseParser.getContent("gpl_30_minimal")
+        }
+    }
+    
     /// The license version
     public var version: String {
         get {

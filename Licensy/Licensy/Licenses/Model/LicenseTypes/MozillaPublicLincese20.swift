@@ -28,6 +28,13 @@ public class MozillaPublicLincese20: NSObject, License {
         }
     }
     
+    /// The minimal license text
+    public var minimalText: String {
+        get {
+            return LicenseParser.getContent("mpl_minimal")
+        }
+    }
+    
     /// The license version
     public var version: String {
         get {

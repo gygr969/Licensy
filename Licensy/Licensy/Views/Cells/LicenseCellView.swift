@@ -12,8 +12,14 @@ internal class LicenseCellView: UITableViewCell {
 
     @IBOutlet weak var licenseLabel: UILabel!
     
-    internal func configureCell(_ library: LibraryCell) {
-        self.licenseLabel.text = !library.licenseCollapsed ? library.license : ""
+    fileprivate var parentTable: LicensyTable!
+    
+    internal func configureCell(_ library: LibraryCell, parentTable: LicensyTable) {
+        self.parentTable = parentTable
+        
+        let text = parentTable.appearance.licenseSize == .minimal ? library.licenseMinimal : library.licenseExtented
+        
+        self.licenseLabel.text = !library.licenseCollapsed ? text : ""
         self.collapseCell(library.licenseCollapsed)
     }
     
