@@ -21,6 +21,11 @@ class HeaderView: UITableViewHeaderFooterView {
     fileprivate var parentTable: LicensyTable!
     fileprivate var delegate: HeaderViewDelegate!
     fileprivate var section: Int = 0
+    fileprivate var bundle: Bundle {
+        let podBundle =  Bundle(for: LibraryEntity.self)
+        let bundleURL = podBundle.url(forResource: "Licensy", withExtension: "bundle")
+        return Bundle(url: bundleURL!)!
+    }
     
     func configureHeader(_ name: String, section: Int, parentTable: LicensyTable, delegate: HeaderViewDelegate) {
         self.libraryLabel.text = name
@@ -45,12 +50,12 @@ class HeaderView: UITableViewHeaderFooterView {
     func applyAppearance() {
         let appearance = parentTable.appearance
         
+        accesoryImage.image = appearance.accesory == .arrow ? UIImage(named: "Arrow.png", in: bundle, compatibleWith: nil)?.withRenderingMode(.alwaysTemplate) : UIImage(named: "Plus.png", in: bundle, compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
+        
         libraryLabel.textColor = appearance.headerContentColor
         accesoryImage.tintColor = appearance.headerContentColor
         footerView.backgroundColor = appearance.headerContentColor
         contentView.backgroundColor = appearance.headerBackgroundColor
-        
-        accesoryImage.image = appearance.accesory == .arrow ? UIImage(named: "Arrow") : UIImage(named: "Plus")
     }
     
     func setCollapsed(_ collapsed: Bool) {
@@ -59,7 +64,7 @@ class HeaderView: UITableViewHeaderFooterView {
         if appearance.accesory == .arrow {
             accesoryImage.rotate(collapsed ? 0.0 : CGFloat(M_PI_2))
         } else if appearance.accesory == .plus {
-            accesoryImage.image = !collapsed ? UIImage(named: "Plus") : UIImage(named: "Minus")
+            accesoryImage.image = collapsed ? UIImage(named: "Plus.png", in: bundle, compatibleWith: nil)?.withRenderingMode(.alwaysTemplate) : UIImage(named: "Minus.png", in: bundle, compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
         }
         
         self.isUserInteractionEnabled = false

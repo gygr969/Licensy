@@ -17,7 +17,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SGu-JR-Spt">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow" highlightedImage="Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="D21-6p-dba">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="D21-6p-dba">
                             <rect key="frame" x="287" y="15" width="15" height="15"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="15" id="Sf1-03-0lY"/>
@@ -64,7 +64,4 @@
             </connections>
         </view>
     </objects>
-    <resources>
-        <image name="Arrow" width="15" height="15"/>
-    </resources>
 </document>

@@ -24,7 +24,7 @@ public class Appearance: NSObject {
     public var roundLicenseButton: Bool!
     
     /// Accesory image type
-    public var accesory: AccesoryType!
+    public var accesory: AccesoryType = .arrow
 
     override init() {
         super.init()
@@ -36,7 +36,7 @@ public class Appearance: NSObject {
         self.headerBackgroundColor = UIColor.lightGray
         self.accentColor = UIColor(red:0.00, green:0.48, blue:1.00, alpha:1.0)
         self.roundLicenseButton = false;
-        self.accesory = .plus
+        self.accesory = .arrow
     }
 
     /// Set a blue/green configuration appearance for the table
@@ -58,7 +58,7 @@ public class Appearance: NSObject {
     }
 }
 
-extension Appearance {
+public extension Appearance {
     
     public enum AccesoryType {
         case arrow
