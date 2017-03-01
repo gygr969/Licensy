@@ -31,7 +31,7 @@ public class LicenseCustom: NSObject, License {
     /// The license full text
     public var text: String {
         get {
-            return self.privateText
+            return String.init(format: "%@\n", self.privateText)
         }
         set {
             self.privateText = newValue

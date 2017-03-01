@@ -11,7 +11,7 @@ import UIKit
 /// Parses the libraries from a given JSON
 public class LibrariesPaser: NSObject {
     
-    private(set) var organizer = LicenseOrganizer()
+    private(set) var organizer = LicenseOrganizer.sharedInstance
     
     /// Retrive libraries from a JSON file.
     ///

@@ -15,6 +15,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Customize one license
+        
+        let customLicense = LicenseCustom(name: "Custom License",
+                                          text: "This is a custom license which you can use for edit your custom license that you have in your application.",
+                                          version: "2017",
+                                          url: "url.com")
+        
+        self.tableView.organizer.registerLicense(customLicense)
+        
         ////Option 1
         
         //Load tableView with a path for resource JSON
