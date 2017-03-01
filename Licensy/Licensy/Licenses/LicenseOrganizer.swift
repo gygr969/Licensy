@@ -34,7 +34,6 @@ public class LicenseOrganizer: NSObject {
     /// - Parameter license: The new license
     public func registerLicense(_ license: License) {
         self.licenses.updateValue(license, forKey: license.name)
-        print(self.licenses.count)
     }
     
     override init() {
