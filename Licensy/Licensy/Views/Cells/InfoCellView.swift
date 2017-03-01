@@ -58,7 +58,7 @@ class InfoCellView: UITableViewCell {
         licenseButton.setBackgroundColor(color: appearance.accentColor, forState: .normal)
         
         if appearance.roundLicenseButton == true {
-            licenseButton.layer.cornerRadius = licenseButton.frame.height / 2
+            licenseButton.layer.cornerRadius = 5
             licenseButton.clipsToBounds = true
         }
     }

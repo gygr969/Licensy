@@ -17,6 +17,8 @@ class HeaderView: UITableViewHeaderFooterView {
     @IBOutlet weak var libraryLabel: UILabel!
     @IBOutlet weak var accesoryImage: UIImageView!
     @IBOutlet weak var footerView: UIView!
+    @IBOutlet weak var containerView: UIView!
+    
     
     fileprivate var parentTable: LicensyTable!
     fileprivate var delegate: HeaderViewDelegate!
@@ -26,6 +28,7 @@ class HeaderView: UITableViewHeaderFooterView {
         let bundleURL = podBundle.url(forResource: "Licensy", withExtension: "bundle")
         return Bundle(url: bundleURL!)!
     }
+    
     
     func configureHeader(_ name: String, section: Int, parentTable: LicensyTable, delegate: HeaderViewDelegate) {
         self.libraryLabel.text = name
@@ -55,7 +58,7 @@ class HeaderView: UITableViewHeaderFooterView {
         libraryLabel.textColor = appearance.headerContentColor
         accesoryImage.tintColor = appearance.headerContentColor
         footerView.backgroundColor = appearance.headerContentColor
-        contentView.backgroundColor = appearance.headerBackgroundColor
+        containerView.backgroundColor = appearance.headerBackgroundColor
     }
     
     func setCollapsed(_ collapsed: Bool) {

@@ -59,6 +59,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="accesoryImage" destination="D21-6p-dba" id="AaL-9b-bB7"/>
+                <outlet property="containerView" destination="SGu-JR-Spt" id="a6s-VI-Khz"/>
                 <outlet property="footerView" destination="57f-q4-mzV" id="dvh-NC-ZhM"/>
                 <outlet property="libraryLabel" destination="uCj-XR-QTH" id="8xw-nE-zSs"/>
             </connections>
