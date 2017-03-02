@@ -2,11 +2,11 @@
 <img src="readme-resources/logo.png" style="max-height: 300px;" alt="Licensy for iOS">
 </p>
 
-<p align="center">
+
 
 [![CocoaPods compatible](https://img.shields.io/cocoapods/v/Licensy.svg?style=flat)](https://cocoapods.org/pods/Licensy) [![License: MIT](https://img.shields.io/cocoapods/l/Licensy.svg?style=flat)](http://opensource.org/licenses/MIT) [![Swift Version](https://img.shields.io/badge/Swift-3.0.2-orange.svg?style=flat)](https://developer.apple.com/swift/) [![Platform](https://img.shields.io/badge/platform-iOS-lightgrey.svg)](https://developer.apple.com/ios/)
 
-</p>
+
 
 <p align="center">
 <img src="readme-resources/example.gif" style="max-height: 569px;" alt="Licensy for iOS">
@@ -83,8 +83,8 @@ You can list all of your libraries and their licenses in a json file included in
             "license": "MIT License"
         }
     ]
-}```
-
+}
+```
 
 ### Customize appearance
 You are able to customize some style properties:
@@ -100,12 +100,10 @@ You are able to customize some style properties:
 
  Example of customization: 
 
-```
- tableView.appearance.accentColor = UIColor.red
+```tableView.appearance.accentColor = UIColor.red
  tableView.appearance.roundLicenseButton = true
  tableView.appearance.accesory = .plus
- tableView.appearance.licenseSize = .extended
-```
+ tableView.appearance.licenseSize = .extended```
 
 We provide you 3 different predefined styles:
 
@@ -125,12 +123,7 @@ We provide you 3 different predefined styles:
 
  Applying a predefined style: 
 
- ```
-tableView.appearance.setIOSDefaultAppearance() //iOS style
-tableView.appearance.setLightBlueAppearance() //Light blue
-```
-
-
-
+ ```tableView.appearance.setIOSDefaultAppearance() //iOS style
+tableView.appearance.setLightBlueAppearance() //Light blue```
 
 
