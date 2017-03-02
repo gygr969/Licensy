@@ -1,5 +1,5 @@
 //
-//  LibrariesTable.swift
+//  LicensyTable.swift
 //  Licensy
 //
 //  Created by David Jiménez Guinaldo on 22/2/17.
@@ -9,12 +9,13 @@
 import UIKit
 
 /// The table view for construct the list of 3rd Party Libraries
-public class LibrariesTable: UITableView {
+public class LicensyTable: UITableView {
 
     fileprivate var kHeaderCellHeight: CGFloat = 44.0
     fileprivate var kCellHeight: CGFloat = 125.0
+    fileprivate var openCells: Array<IndexPath> = []
     
-    fileprivate var cellsLibraries: Array<CellLibrary> = []
+    fileprivate var cellsLibraries: Array<LibraryCell> = []
     fileprivate var libraries: Array<LibraryEntity> = []
     
     fileprivate class var bundle: Bundle {
@@ -26,13 +27,16 @@ public class LibrariesTable: UITableView {
     /// The appearance of the table view
     public var appearance = Appearance()
     
+    /// The license organizer of the framework
+    public private(set) var organizer = LicenseOrganizer.sharedInstance
+    
     //MARK: - Init Methods
     
     /// Set libraries from a JSON file.
     ///
     /// - Parameter resourceName: The resource name of the JSON with the 3rd Party Libraries
     public func setLibraries(forJsonResourceName resourceName: String) {
-        let path = LibrariesTable.bundle.path(forResource: resourceName, ofType: "json")!
+        let path = Bundle.main.path(forResource: resourceName, ofType: "json")!
         self.setLibraries(forJsonResourcePath: path)
     }
     
@@ -40,7 +44,7 @@ public class LibrariesTable: UITableView {
     ///
     /// - Parameter resourcePath: The file path to the JSON file containing the libraries.
     public func setLibraries(forJsonResourcePath resourcePath: String) {
-        self.libraries = LibrariesPaser().setNoticesFromJSONFile(filepath: resourcePath)
+        self.libraries = LibrariesPaser().setLibrariesFromJSONFile(filepath: resourcePath)
         self.configureView()
     }
     
@@ -62,7 +66,7 @@ public class LibrariesTable: UITableView {
     
     fileprivate func configureCellLibraries() {
         for library in self.libraries {
-            self.cellsLibraries.append(CellLibrary(name: library.name, url: library.url, copyright: library.copyright, organization: library.organization, license: (library.license?.text)!))
+            self.cellsLibraries.append(LibraryCell(name: library.name, url: library.url, copyright: library.copyright, organization: library.organization, license: library.license!))
         }
     }
     
@@ -75,22 +79,24 @@ public class LibrariesTable: UITableView {
         self.separatorStyle = .none
         self.allowsSelection = false
         
-        self.register(UINib(nibName: "HeaderView", bundle: LibrariesTable.bundle), forHeaderFooterViewReuseIdentifier: "HeaderView")
-        self.register(UINib(nibName: "CellView", bundle: LibrariesTable.bundle), forCellReuseIdentifier: "cell")
-        self.register(UINib(nibName: "LicenseCellView", bundle: LibrariesTable.bundle), forCellReuseIdentifier: "licenseCell")
+        self.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        
+        self.register(UINib(nibName: "HeaderView", bundle: LicensyTable.bundle), forHeaderFooterViewReuseIdentifier: "HeaderView")
+        self.register(UINib(nibName: "InfoCellView", bundle: LicensyTable.bundle), forCellReuseIdentifier: "infoCell")
+        self.register(UINib(nibName: "LicenseCellView", bundle: LicensyTable.bundle), forCellReuseIdentifier: "licenseCell")
     }
 }
 
 //MARK: - UITableView Methods
 
-extension LibrariesTable: UITableViewDataSource, UITableViewDelegate {
+extension LicensyTable: UITableViewDataSource, UITableViewDelegate {
     
     /// The number of sections in table
     ///
     /// - Parameter tableView: the given tableview
     /// - Returns: the number of sections in the datasource
     public func numberOfSections(in tableView: UITableView) -> Int {
-        return cellsLibraries.count
+        return self.cellsLibraries.count
     }
     
     
@@ -101,7 +107,7 @@ extension LibrariesTable: UITableViewDataSource, UITableViewDelegate {
     ///   - section: the given section
     /// - Returns: the number of rows in the given section
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return self.cellsLibraries[section].numRows
     }
     
     
@@ -125,12 +131,16 @@ extension LibrariesTable: UITableViewDataSource, UITableViewDelegate {
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.row {
         case 0:
-            return cellsLibraries[indexPath.section].collapsed! ? 0.0 : kCellHeight
+            return cellsLibraries[indexPath.section].infoCollapsed! ? 0.0 : kCellHeight
         case 1:
-            return cellsLibraries[indexPath.section].collapsedLicense! || cellsLibraries[indexPath.section].collapsed! ? 0.0 : UITableViewAutomaticDimension
+            return cellsLibraries[indexPath.section].licenseCollapsed! || cellsLibraries[indexPath.section].infoCollapsed! ? 0.0 : UITableViewAutomaticDimension
         default:
             return 0.0
         }
+    }
+    
+    public func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return UIView()
     }
     
     
@@ -141,6 +151,10 @@ extension LibrariesTable: UITableViewDataSource, UITableViewDelegate {
     ///   - indexPath: the given index path
     /// - Returns: the estimated height for the row
     public func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 128.0
+    }
+    
+    public func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
     
@@ -155,7 +169,7 @@ extension LibrariesTable: UITableViewDataSource, UITableViewDelegate {
         let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "HeaderView") as! HeaderView
         
         header.configureHeader(cellsLibraries[section].name, section: section, parentTable: self, delegate: self)
-        header.setCollapsed(cellsLibraries[section].collapsed)
+        header.setCollapsed(cellsLibraries[section].infoCollapsed)
         
         return header
     }
@@ -169,51 +183,107 @@ extension LibrariesTable: UITableViewDataSource, UITableViewDelegate {
     /// - Returns: returns the custom cell for a given index path
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CellView
-            cell.configureCell(cellsLibraries[indexPath.section], section: indexPath.section,parentTable: self, delegate: self)
-            
-            return cell
+            let infoCell = tableView.dequeueReusableCell(withIdentifier: "infoCell", for: indexPath) as! InfoCellView
+            infoCell.configureCell(cellsLibraries[indexPath.section], section: indexPath.section,parentTable: self, delegate: self)
+            return infoCell
         }
         else {
             let licenseCell = tableView.dequeueReusableCell(withIdentifier: "licenseCell", for: indexPath) as! LicenseCellView
-            licenseCell.configureCell(cellsLibraries[indexPath.section])
+            licenseCell.configureCell(cellsLibraries[indexPath.section], parentTable: self)
             return licenseCell
+        }
+    }
+    
+    
+    internal func scrollToSection(_ section: Int) {
+        var sectionRect = self.rect(forSection: section)
+        sectionRect.size.height = self.bounds.size.height
+        self.scrollRectToVisible(sectionRect, animated: true)
+    }
+    
+    internal func deleteOpenCells() {
+        if self.openCells.count != 0 {
+            for indexPath in self.openCells {
+                self.cellsLibraries[indexPath.section].numRows = 0
+                self.cellsLibraries[indexPath.section].infoCollapsed = true
+                self.cellsLibraries[indexPath.section].licenseCollapsed = true
+            }
+            
+            self.deleteRows(at: self.openCells, with: .top)
+            self.openCells.removeAll()
         }
     }
 }
 
 //MARK: - HeaderViewDelegate
 
-extension LibrariesTable: HeaderViewDelegate {
+extension LicensyTable: HeaderViewDelegate {
     
     internal func toggleSection(header: HeaderView, section: Int) {
-        let collapsed = !cellsLibraries[section].collapsed
+        let isCollapsed = cellsLibraries[section].infoCollapsed as Bool
         
-        cellsLibraries[section].collapsed = collapsed
-        if collapsed {
-            cellsLibraries[section].collapsedLicense = collapsed
+        cellsLibraries[section].infoCollapsed = !isCollapsed
+        if isCollapsed {
+            cellsLibraries[section].licenseCollapsed = isCollapsed
         }
-        header.setCollapsed(collapsed)
+        header.setCollapsed(!isCollapsed)
+        
+        CATransaction.begin()
+        CATransaction.setCompletionBlock { () -> Void in
+//            if isCollapsed {
+//                self.scrollToSection(section)
+//            }
+            self.contentInset.top = 0
+        }
         
         self.beginUpdates()
-        self.reloadRows(at: [IndexPath(row: 0, section: section)], with: collapsed ? .top : .bottom)
-        self.reloadRows(at: [IndexPath(row: 1, section: section)], with: collapsed ? .top : .bottom)
+        if isCollapsed {
+            self.deleteOpenCells()
+            self.openCells.append(IndexPath(row: 0, section: section))
+            self.cellsLibraries[section].numRows = 1
+            self.insertRows(at:[IndexPath(row: 0, section: section)] , with: .top)
+        }
+        else {
+            self.deleteOpenCells()
+        }
+
         self.endUpdates()
+        
+        CATransaction.commit()
     }
 }
 
 //MARK: - CellViewDelegate
 
-extension LibrariesTable: CellViewDelegate {
+extension LicensyTable: InfoCellViewDelegate {
     
-    internal func toggleLicense(license: CellView, section: Int) {
-        let collapsed = !cellsLibraries[section].collapsedLicense
+    internal func toggleLicense(license: InfoCellView, section: Int) {
+        let isCollapsed = cellsLibraries[section].licenseCollapsed as Bool
         
-        cellsLibraries[section].collapsedLicense = collapsed
+        cellsLibraries[section].licenseCollapsed = !isCollapsed
+        
+        CATransaction.begin()
+        CATransaction.setCompletionBlock { () -> Void in
+            if isCollapsed {
+                self.scrollToSection(section)
+            }
+            self.contentInset.top = 0
+        }
         
         self.beginUpdates()
-        self.reloadRows(at: [IndexPath(row: 1, section: section)], with: collapsed ? .top : .bottom)
+        if isCollapsed {
+            self.cellsLibraries[section].numRows = 2
+            self.openCells.append(IndexPath(row: 1, section: section))
+            self.insertRows(at:[IndexPath(row: 1, section: section)] , with: .fade)
+        }
+        else {
+            self.cellsLibraries[section].numRows = 1
+            self.openCells.removeLast()
+            self.deleteRows(at:[IndexPath(row: 1, section: section)] , with: .fade)
+        }
         self.endUpdates()
+        
+        CATransaction.commit()
     }
 }
 

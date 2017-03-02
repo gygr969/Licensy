@@ -28,6 +28,13 @@ public class BSD3ClauseLicense: NSObject, License {
         }
     }
     
+    /// The minimal license text
+    public var minimalText: String {
+        get {
+            return String.init(format: LicenseParser.getContent("bsd3_minimal"), company)
+        }
+    }
+    
     /// The license version
     public var version: String {
         get {

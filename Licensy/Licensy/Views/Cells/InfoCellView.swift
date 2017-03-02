@@ -1,5 +1,5 @@
 //
-//  CellView.swift
+//  InfoCellView.swift
 //  Licensy
 //
 //  Created by David Jiménez Guinaldo on 22/2/17.
@@ -15,12 +15,12 @@ fileprivate var kLicenseButtonTopMargin: CGFloat = 12.5
 fileprivate var kLicenseButtonBottomMargin: CGFloat = 16.0
 
 
-internal protocol CellViewDelegate: NSObjectProtocol {
-    func toggleLicense(license: CellView, section: Int)
+internal protocol InfoCellViewDelegate: NSObjectProtocol {
+    func toggleLicense(license: InfoCellView, section: Int)
 }
 
 
-class CellView: UITableViewCell {
+class InfoCellView: UITableViewCell {
 
     @IBOutlet weak var urlButton: UIButton!
     @IBOutlet weak var copyrightLabel: UILabel!
@@ -33,19 +33,19 @@ class CellView: UITableViewCell {
     @IBOutlet weak var licenseButtonTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var licenseButtonBottomConstraint: NSLayoutConstraint!
     
-    fileprivate var parentTable: LibrariesTable!
-    fileprivate var delegate: CellViewDelegate?
+    fileprivate var parentTable: LicensyTable!
+    fileprivate var delegate: InfoCellViewDelegate?
     fileprivate var section: Int = 0
-    fileprivate var collapsedLicense: Bool!
+    fileprivate var licenseCollapsed: Bool!
     
-    internal func configureCell(_ library: CellLibrary, section: Int, parentTable: LibrariesTable, delegate: CellViewDelegate) {
+    internal func configureCell(_ library: LibraryCell, section: Int, parentTable: LicensyTable, delegate: InfoCellViewDelegate) {
         self.section = section
         self.parentTable = parentTable
         self.delegate = delegate
         self.urlButton.setTitle(library.url, for: .normal)
         self.copyrightLabel.text = library.copyright
-        self.collapseCell(library.collapsed)
-        self.collapsedLicense = library.collapsedLicense
+        //self.collapseCell(library.infoCollapsed)
+        self.licenseCollapsed = library.licenseCollapsed
         applyAppearance()
         setLicenseButtonTitle()
     }
@@ -56,9 +56,14 @@ class CellView: UITableViewCell {
         urlButton.setTitleColor(appearance.accentColor, for: .normal)
     
         licenseButton.setBackgroundColor(color: appearance.accentColor, forState: .normal)
+        licenseButton.setTitleColor(appearance.licenseContentBackgroundColor, for: .normal)
+        
+        self.contentView.backgroundColor = appearance.licenseContentBackgroundColor
+        
+        self.copyrightLabel.textColor = appearance.copyrightLabelColor
         
         if appearance.roundLicenseButton == true {
-            licenseButton.layer.cornerRadius = licenseButton.frame.height / 2
+            licenseButton.layer.cornerRadius = 5
             licenseButton.clipsToBounds = true
         }
     }
@@ -82,14 +87,14 @@ class CellView: UITableViewCell {
     ///
     /// - Parameter sender: UIButton
     @IBAction func collapseLicense(_ sender: UIButton) {
-        collapsedLicense = !collapsedLicense
+        licenseCollapsed = !licenseCollapsed
         setLicenseButtonTitle()
         disableLicenseButton()
         delegate?.toggleLicense(license: self, section: section)
     }
     
     fileprivate func setLicenseButtonTitle() {
-        licenseButton.setTitle(!collapsedLicense ? "licensy.general.app.libraries.button.hide_license".localized : "licensy.general.app.libraries.button.show_license".localized , for: .normal)
+        licenseButton.setTitle(!licenseCollapsed ? "licensy.general.app.libraries.button.hide_license".localized : "licensy.general.app.libraries.button.show_license".localized , for: .normal)
     }
     
     fileprivate func disableLicenseButton() {

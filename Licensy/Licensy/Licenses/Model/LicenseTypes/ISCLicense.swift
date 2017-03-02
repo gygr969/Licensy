@@ -28,6 +28,13 @@ public class ISCLicense: NSObject, License {
         }
     }
     
+    /// The minimal license text
+    public var minimalText: String {
+        get {
+            return LicenseParser.getContent("isc_minimal")
+        }
+    }
+    
     /// The license version
     public var version: String {
         get {

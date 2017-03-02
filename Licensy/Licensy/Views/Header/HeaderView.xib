@@ -17,14 +17,14 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SGu-JR-Spt">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow" highlightedImage="Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="D21-6p-dba">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="D21-6p-dba">
                             <rect key="frame" x="287" y="15" width="15" height="15"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="15" id="Sf1-03-0lY"/>
                                 <constraint firstAttribute="width" constant="15" id="pzu-Ro-ogS"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sección" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uCj-XR-QTH">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sección" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uCj-XR-QTH">
                             <rect key="frame" x="18" y="10" width="72" height="24"/>
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -58,13 +58,11 @@
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="arrow" destination="D21-6p-dba" id="np0-lZ-uz4"/>
+                <outlet property="accesoryImage" destination="D21-6p-dba" id="AaL-9b-bB7"/>
+                <outlet property="containerView" destination="SGu-JR-Spt" id="a6s-VI-Khz"/>
                 <outlet property="footerView" destination="57f-q4-mzV" id="dvh-NC-ZhM"/>
                 <outlet property="libraryLabel" destination="uCj-XR-QTH" id="8xw-nE-zSs"/>
             </connections>
         </view>
     </objects>
-    <resources>
-        <image name="Arrow" width="15" height="15"/>
-    </resources>
 </document>

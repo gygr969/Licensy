@@ -28,6 +28,13 @@ public class ApacheSoftwareLicense20: NSObject, License {
         }
     }
     
+    /// The minimal license text
+    public var minimalText: String {
+        get {
+            return LicenseParser.getContent("asl_20_minimal")
+        }
+    }
+    
     /// The version text
     public var version: String {
         get {
