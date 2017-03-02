@@ -35,19 +35,19 @@ public class Appearance: NSObject {
     }
     
     fileprivate func setDefaultAppearance() {
-        self.headerContentColor = UIColor.black
-        self.headerBackgroundColor = UIColor.lightGray
-        self.accentColor = UIColor(red:0.00, green:0.48, blue:1.00, alpha:1.0)
-        self.roundLicenseButton = false;
-        self.accesory = .arrow
-    }
-
-    /// Set a blue/green configuration appearance for the table
-    public func setBlueGreenAppearance() {
         self.headerContentColor = UIColor.white
         self.headerBackgroundColor = UIColor(red:0.15, green:0.30, blue:0.38, alpha:1.0)
         self.accentColor = UIColor(red:0.00, green:0.50, blue:0.50, alpha:1.0)
         self.roundLicenseButton = true;
+        self.accesory = .arrow
+    }
+
+    /// Set an iOS style default colors based configuration appearance for the table
+    public func setIOSDefaultAppearance() {
+        self.headerContentColor = UIColor.gray
+        self.headerBackgroundColor = UIColor(red:0.97, green:0.97, blue:0.97, alpha:1.0)
+        self.accentColor = UIColor(red:0.00, green:0.48, blue:1.00, alpha:1.0)
+        self.roundLicenseButton = false;
         self.accesory = .arrow
     }
     

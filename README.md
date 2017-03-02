@@ -1,6 +1,17 @@
-# Licensy
+<p align="center">
+<img src="readme-resources/logo.png" style="max-height: 300px;" alt="Licensy for iOS">
+</p>
+
+<p align="center">
 
 [![CocoaPods compatible](https://img.shields.io/cocoapods/v/Licensy.svg?style=flat)](https://cocoapods.org/pods/Licensy) [![License: MIT](https://img.shields.io/cocoapods/l/Licensy.svg?style=flat)](http://opensource.org/licenses/MIT) [![Swift Version](https://img.shields.io/badge/Swift-3.0.2-orange.svg?style=flat)](https://developer.apple.com/swift/) [![Platform](https://img.shields.io/badge/platform-iOS-lightgrey.svg)](https://developer.apple.com/ios/)
+
+</p>
+
+<p align="center">
+<img src="readme-resources/example.gif" style="max-height: 569px;" alt="Licensy for iOS">
+</p>
+
 
 `Licensy` is an iOS drop-in class that allow you to display a table listing all the 3rd Party Libraries that you are using in your app, and preview some data about it's licenses and copyrights.
 
@@ -32,7 +43,7 @@ A `Library` is an object containing all the information about the library being 
  Property | Description | Example
  -------- | ----------- | -------
  name | The name of the library | `"Licensy"`
- company | The name of the company that created the library | `"RetoLabs"`
+ organization | The name of the organization that created the library | `"RetoLabs"`
  url | The url where you can found the library | `"https://github.com/guille969/Licensy"`
  copyright | The copyright information for the library | `"Copyright (c) 2017 RetoLabs"`
  license | The license the library uses | `MITLicense()`
@@ -59,18 +70,67 @@ You can list all of your libraries and their licenses in a json file included in
     "libraries": [
         {
             "name": "Licensy",
-            "company": "RetoLabs",
+            "organization": "RetoLabs",
             "url": "https://github.com/guille969/Licensy",
             "copyright": "Copyright (C) 2017 RetoLabs",
             "license": "MIT License"
         },
         {
             "name": "MGBottomSheet",
-            "company": "Guillermo Garcia Rebolo",
+            "organization": "Guillermo Garcia Rebolo",
             "url": "https://github.com/guille969/MGBottomSheet",
             "copyright": "Copyright (C) 2017 Guillermo Garcia Rebolo",
             "license": "MIT License"
         }
     ]
-}
+}```
+
+
+### Customize appearance
+You are able to customize some style properties:
+
+ Property | Description | Example
+ -------- | ----------- | -------
+ headerContentColor | An UIColor for the header title, underline header and his accesory | `UIColor.white`
+ headerBackgroundColor | An UIColor for the header background | `UIColor(red:0.15, green:0.30, blue:0.38, alpha:1.0)`
+ accentColor | An UIColor for the library link and the license button | `UIColor(red:0.00, green:0.50, blue:0.50, alpha:1.0)`
+ roundLicenseButton | A boolean property to round or not the license button corners | `true`
+ accesory | An enumaration property to choose between 2 different kind of accesory styles (.arrow or .plus) | `.arrow`
+ licenseSize | An enumaration property to choose between 2 different kind of license formats (.minimal or .extended) | `.minimal`
+
+ Example of customization: 
+
+```
+ tableView.appearance.accentColor = UIColor.red
+ tableView.appearance.roundLicenseButton = true
+ tableView.appearance.accesory = .plus
+ tableView.appearance.licenseSize = .extended
+```
+
+We provide you 3 different predefined styles:
+
+<table align="center", cellpadding=10>
+<tr>
+   <td><img src="readme-resources/default-style.png" style="max-height: 800px;" alt="Licensy for iOS"></td>
+    <td><img src="readme-resources/ios-style.png" style="max-height: 800px;" alt="Licensy for iOS"></td>
+    <td><img src="readme-resources/lightblue-style.png" style="max-height: 800px;" alt="Licensy for iOS"></td>
+  </tr>
+  <tr>
+       <td align="center">Default style</td>
+       <td align="center">iOS style</td>
+       <td align="center">Light blue</td>
+  </tr>
+</table>
+
+
+ Applying a predefined style: 
+
+ ```
+tableView.appearance.setIOSDefaultAppearance() //iOS style
+tableView.appearance.setLightBlueAppearance() //Light blue
+```
+
+
+
+
 
