@@ -101,8 +101,11 @@ You are able to customize some style properties:
  Example of customization: 
 
 ```tableView.appearance.accentColor = UIColor.red
+
  tableView.appearance.roundLicenseButton = true
+
  tableView.appearance.accesory = .plus
+
  tableView.appearance.licenseSize = .extended```
 
 We provide you 3 different predefined styles:
@@ -124,6 +127,7 @@ We provide you 3 different predefined styles:
  Applying a predefined style: 
 
  ```tableView.appearance.setIOSDefaultAppearance() //iOS style
+ 
 tableView.appearance.setLightBlueAppearance() //Light blue```
 
 
