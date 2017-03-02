@@ -17,7 +17,6 @@ struct LibraryCell {
     var licenseMinimal: String!
     var infoCollapsed: Bool!
     var licenseCollapsed: Bool!
-    var numRows: Int! = 0
     
     init(name: String, url: String, copyright: String, organization: String, license: License, infoCollapsed: Bool = true, licenseCollapsed: Bool = true) {
         self.name = name

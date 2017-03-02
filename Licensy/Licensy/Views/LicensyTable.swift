@@ -93,7 +93,7 @@ extension LicensyTable: UITableViewDataSource, UITableViewDelegate {
     /// - Parameter tableView: the given tableview
     /// - Returns: the number of sections in the datasource
     public func numberOfSections(in tableView: UITableView) -> Int {
-        return self.cellsLibraries.count
+        return cellsLibraries.count
     }
     
     
@@ -104,7 +104,7 @@ extension LicensyTable: UITableViewDataSource, UITableViewDelegate {
     ///   - section: the given section
     /// - Returns: the number of rows in the given section
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.cellsLibraries[section].numRows
+        return 2
     }
     
     
@@ -163,11 +163,6 @@ extension LicensyTable: UITableViewDataSource, UITableViewDelegate {
         return header
     }
     
-
-    public func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        return UIView()
-    }
-    
     
     /// Method for construct the cell for a given index path
     ///
@@ -194,29 +189,17 @@ extension LicensyTable: UITableViewDataSource, UITableViewDelegate {
 extension LicensyTable: HeaderViewDelegate {
     
     internal func toggleSection(header: HeaderView, section: Int) {
-        let isCollapsed = cellsLibraries[section].infoCollapsed as Bool
+        let isCollapsed = !cellsLibraries[section].infoCollapsed
         
-        cellsLibraries[section].infoCollapsed = !isCollapsed
+        cellsLibraries[section].infoCollapsed = isCollapsed
         if isCollapsed {
             cellsLibraries[section].licenseCollapsed = isCollapsed
         }
         header.setCollapsed(isCollapsed)
         
         self.beginUpdates()
-        if isCollapsed {
-            self.cellsLibraries[section].numRows = 1
-            self.insertRows(at:[IndexPath(row: 0, section: section)] , with: .fade)
-        }
-        else {
-            let previousRows = self.cellsLibraries[section].numRows
-            self.cellsLibraries[section].numRows = 0
-            if previousRows == 2 {
-                self.deleteRows(at: [IndexPath(row: 0, section: section), IndexPath(row: 1, section: section)], with: .fade)
-            }
-            else {
-                self.deleteRows(at: [IndexPath(row: 0, section: section)], with: .fade)
-            }
-        }
+        self.reloadRows(at: [IndexPath(row: 0, section: section)], with: isCollapsed ? .top : .bottom)
+        self.reloadRows(at: [IndexPath(row: 1, section: section)], with: isCollapsed ? .top : .bottom)
         self.endUpdates()
     }
 }
@@ -226,27 +209,13 @@ extension LicensyTable: HeaderViewDelegate {
 extension LicensyTable: InfoCellViewDelegate {
     
     internal func toggleLicense(license: InfoCellView, section: Int) {
-        let isCollapsed = cellsLibraries[section].licenseCollapsed as Bool
+        let isCollapsed = !cellsLibraries[section].licenseCollapsed
         
-        cellsLibraries[section].licenseCollapsed = !isCollapsed
+        cellsLibraries[section].licenseCollapsed = isCollapsed
         
         self.beginUpdates()
-        if isCollapsed {
-            self.cellsLibraries[section].numRows = 2
-            self.insertRows(at:[IndexPath(row: 1, section: section)] , with: .fade)
-        }
-        else {
-            self.cellsLibraries[section].numRows = 1
-            self.deleteRows(at:[IndexPath(row: 1, section: section)] , with: .fade)
-        }
+        self.reloadRows(at: [IndexPath(row: 1, section: section)], with: isCollapsed ? .top : .bottom)
         self.endUpdates()
-        
-        if self.cellsLibraries[section].numRows == 2 {
-            self.scrollToRow(at: IndexPath(row: 0, section: section), at: .middle, animated: true)
-        }
-        else {
-            self.scrollToRow(at: IndexPath(row: 0, section: section), at: .middle, animated: true)
-        }
     }
 }
 

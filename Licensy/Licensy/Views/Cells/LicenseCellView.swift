@@ -20,7 +20,7 @@ internal class LicenseCellView: UITableViewCell {
         let text = parentTable.appearance.licenseSize == .minimal ? library.licenseMinimal : library.licenseExtented
         
         self.licenseLabel.text = !library.licenseCollapsed ? text : ""
-        //self.collapseCell(library.licenseCollapsed)
+        self.collapseCell(library.licenseCollapsed)
     }
     
     fileprivate func collapseCell(_ collapseLicense: Bool) {
