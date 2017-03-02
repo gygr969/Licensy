@@ -127,7 +127,7 @@ We provide you 3 different predefined styles:
 
  ``` swift
  tableView.appearance.setIOSDefaultAppearance() //iOS style
- tableView.appearance.setOrangeFitAppearance() //Orange fit style
+ tableView.appearance.setOrangeFitAppearance() //Orange fit
  ```
 
 
