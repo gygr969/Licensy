@@ -198,7 +198,7 @@ extension LicensyTable: UITableViewDataSource, UITableViewDelegate {
     internal func scrollToSection(_ section: Int) {
         var sectionRect = self.rect(forSection: section)
         sectionRect.size.height = self.bounds.size.height
-        self.scrollRectToVisible(sectionRect, animated: false)
+        self.scrollRectToVisible(sectionRect, animated: true)
     }
     
     internal func deleteOpenCells() {
@@ -209,7 +209,7 @@ extension LicensyTable: UITableViewDataSource, UITableViewDelegate {
                 self.cellsLibraries[indexPath.section].licenseCollapsed = true
             }
             
-            self.deleteRows(at: self.openCells, with: .fade)
+            self.deleteRows(at: self.openCells, with: .top)
             self.openCells.removeAll()
         }
     }
@@ -230,7 +230,9 @@ extension LicensyTable: HeaderViewDelegate {
         
         CATransaction.begin()
         CATransaction.setCompletionBlock { () -> Void in
-            self.scrollToSection(section)
+//            if isCollapsed {
+//                self.scrollToSection(section)
+//            }
             self.contentInset.top = 0
         }
         
@@ -239,7 +241,7 @@ extension LicensyTable: HeaderViewDelegate {
             self.deleteOpenCells()
             self.openCells.append(IndexPath(row: 0, section: section))
             self.cellsLibraries[section].numRows = 1
-            self.insertRows(at:[IndexPath(row: 0, section: section)] , with: .fade)
+            self.insertRows(at:[IndexPath(row: 0, section: section)] , with: .top)
         }
         else {
             self.deleteOpenCells()
@@ -262,7 +264,9 @@ extension LicensyTable: InfoCellViewDelegate {
         
         CATransaction.begin()
         CATransaction.setCompletionBlock { () -> Void in
-            self.scrollToSection(section)
+            if isCollapsed {
+                self.scrollToSection(section)
+            }
             self.contentInset.top = 0
         }
         

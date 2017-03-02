@@ -21,7 +21,17 @@ internal class LicenseCellView: UITableViewCell {
         
         self.licenseLabel.text = !library.licenseCollapsed ? text : ""
         //self.collapseCell(library.licenseCollapsed)
+        applyAppearance()
     }
+    
+    func applyAppearance() {
+
+        let appearance = parentTable.appearance
+        
+        self.contentView.backgroundColor = appearance.licenseContentBackgroundColor
+        self.licenseLabel.textColor = appearance.licenseLabelColor
+    }
+
     
     fileprivate func collapseCell(_ collapseLicense: Bool) {
         self.licenseLabel.isHidden = collapseLicense == true ? true : false

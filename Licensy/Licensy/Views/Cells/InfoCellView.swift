@@ -56,6 +56,11 @@ class InfoCellView: UITableViewCell {
         urlButton.setTitleColor(appearance.accentColor, for: .normal)
     
         licenseButton.setBackgroundColor(color: appearance.accentColor, forState: .normal)
+        licenseButton.setTitleColor(appearance.licenseContentBackgroundColor, for: .normal)
+        
+        self.contentView.backgroundColor = appearance.licenseContentBackgroundColor
+        
+        self.copyrightLabel.textColor = appearance.copyrightLabelColor
         
         if appearance.roundLicenseButton == true {
             licenseButton.layer.cornerRadius = 5

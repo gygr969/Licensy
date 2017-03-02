@@ -100,30 +100,34 @@ You are able to customize some style properties:
 
  Example of customization: 
 
-```tableView.appearance.accentColor = UIColor.red
-   tableView.appearance.roundLicenseButton = true
-   tableView.appearance.accesory = .plus
-   tableView.appearance.licenseSize = .extended```
+``` swift
+tableView.appearance.accentColor = UIColor.red
+tableView.appearance.roundLicenseButton = true
+tableView.appearance.accesory = .plus
+tableView.appearance.licenseSize = .extended
+```
 
 We provide you 3 different predefined styles:
 
 <table align="center", cellpadding=10>
 <tr>
-   <td><img src="readme-resources/default-style.png" style="max-height: 800px;" alt="Licensy for iOS"></td>
-    <td><img src="readme-resources/ios-style.png" style="max-height: 800px;" alt="Licensy for iOS"></td>
-    <td><img src="readme-resources/lightblue-style.png" style="max-height: 800px;" alt="Licensy for iOS"></td>
+   <td><img src="readme-resources/default-style.png" style="max-height: 1100px;" alt="Licensy for iOS"></td>
+    <td><img src="readme-resources/ios-style.png" style="max-height: 1100px;" alt="Licensy for iOS"></td>
+    <td><img src="readme-resources/orangefit-style.png" style="max-height: 1100px;" alt="Licensy for iOS"></td>
   </tr>
   <tr>
        <td align="center">Default style</td>
        <td align="center">iOS style</td>
-       <td align="center">Light blue</td>
+       <td align="center">Orange fit</td>
   </tr>
 </table>
 
 
  Applying a predefined style: 
 
- ```tableView.appearance.setIOSDefaultAppearance() //iOS style
-    tableView.appearance.setLightBlueAppearance() //Light blue```
+ ``` swift
+ tableView.appearance.setIOSDefaultAppearance() //iOS style
+ tableView.appearance.setOrangeFitAppearance() //Orange fit style
+ ```
 
 
