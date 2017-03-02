@@ -44,7 +44,7 @@ class InfoCellView: UITableViewCell {
         self.delegate = delegate
         self.urlButton.setTitle(library.url, for: .normal)
         self.copyrightLabel.text = library.copyright
-        self.collapseCell(library.infoCollapsed)
+        //self.collapseCell(library.infoCollapsed)
         self.licenseCollapsed = library.licenseCollapsed
         applyAppearance()
         setLicenseButtonTitle()
