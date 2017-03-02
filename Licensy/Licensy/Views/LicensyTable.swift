@@ -78,6 +78,8 @@ public class LicensyTable: UITableView {
         self.separatorStyle = .none
         self.allowsSelection = false
         
+        self.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        
         self.register(UINib(nibName: "HeaderView", bundle: LicensyTable.bundle), forHeaderFooterViewReuseIdentifier: "HeaderView")
         self.register(UINib(nibName: "InfoCellView", bundle: LicensyTable.bundle), forCellReuseIdentifier: "infoCell")
         self.register(UINib(nibName: "LicenseCellView", bundle: LicensyTable.bundle), forCellReuseIdentifier: "licenseCell")
@@ -136,6 +138,10 @@ extension LicensyTable: UITableViewDataSource, UITableViewDelegate {
         }
     }
     
+    public func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return UIView()
+    }
+    
     
     /// The estimated cell height for the table view at a given index path
     ///
@@ -182,6 +188,13 @@ extension LicensyTable: UITableViewDataSource, UITableViewDelegate {
             return licenseCell
         }
     }
+    
+    
+    internal func scrollToSection(_ section: Int) {
+        var sectionRect = self.rect(forSection: section)
+        sectionRect.size.height = self.bounds.size.height
+        self.scrollRectToVisible(sectionRect, animated: true)
+    }
 }
 
 //MARK: - HeaderViewDelegate
@@ -197,10 +210,17 @@ extension LicensyTable: HeaderViewDelegate {
         }
         header.setCollapsed(isCollapsed)
         
+        CATransaction.begin()
+        CATransaction.setCompletionBlock { () -> Void in
+            self.scrollToSection(section)
+        }
+        
         self.beginUpdates()
         self.reloadRows(at: [IndexPath(row: 0, section: section)], with: isCollapsed ? .top : .bottom)
         self.reloadRows(at: [IndexPath(row: 1, section: section)], with: isCollapsed ? .top : .bottom)
         self.endUpdates()
+        
+        CATransaction.commit()
     }
 }
 
@@ -213,9 +233,16 @@ extension LicensyTable: InfoCellViewDelegate {
         
         cellsLibraries[section].licenseCollapsed = isCollapsed
         
+        CATransaction.begin()
+        CATransaction.setCompletionBlock { () -> Void in
+            self.scrollToSection(section)
+        }
+        
         self.beginUpdates()
         self.reloadRows(at: [IndexPath(row: 1, section: section)], with: isCollapsed ? .top : .bottom)
         self.endUpdates()
+        
+        CATransaction.commit()
     }
 }
 
