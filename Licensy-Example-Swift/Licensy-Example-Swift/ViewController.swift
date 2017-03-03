@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         ////Option 3
         
         //Load tableView with an array on Library
-        //        var librariesArray: Array<LibraryEntity> = [
+        //        let librariesArray: Array<LibraryEntity> = [
         //            LibraryEntity(name: "Library 1", organization: "RetoLabs", url: "info@github.com", copyright: "Guillermo Garcia Rebolo", license: MITLicense()),
         //            LibraryEntity(name: "Library 2", organization: "RetoLabs", url: "info@github.com", copyright: "David Jiménez Guinaldo", license: ApacheSoftwareLicense20()),
         //            LibraryEntity(name: "Library 3", organization: "RetoLabs", url: "info@github.com", copyright: "Guillermo Garcia Rebolo", license: GnuGeneralPublicLicense30()),
