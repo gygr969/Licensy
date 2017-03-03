@@ -128,7 +128,6 @@
 				TargetAttributes = {
 					99E023751E640E6D00571C94 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = YMMQ7XG3VU;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -348,7 +347,7 @@
 			baseConfigurationReference = 5753399D95D5958DC3223D56 /* Pods-Licensy-Example-Swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = YMMQ7XG3VU;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Licensy-Example-Swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -363,7 +362,7 @@
 			baseConfigurationReference = 79B657AE66A2C48A12E159CC /* Pods-Licensy-Example-Swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = YMMQ7XG3VU;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Licensy-Example-Swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

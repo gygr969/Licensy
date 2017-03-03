@@ -12,7 +12,7 @@
 <img src="readme-resources/example.gif" style="max-height: 569px;" alt="Licensy for iOS">
 </p>
 
-Crated by David Jimenez Guinaldo & Guillermo Garcia Rebolo.
+Copyright © David Jimenez Guinaldo & Guillermo Garcia Rebolo.
 
 `Licensy` is an iOS drop-in class that allow you to display a table listing all the 3rd Party Libraries that you are using in your app, and preview some data about it's licenses and copyrights.
 
