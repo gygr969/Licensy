@@ -221,9 +221,13 @@ extension LicensyTable: UITableViewDataSource, UITableViewDelegate {
                 self.cellsLibraries[indexPath.section].numRows = 0
                 self.cellsLibraries[indexPath.section].infoCollapsed = true
                 self.cellsLibraries[indexPath.section].licenseCollapsed = true
+                
+                let header = self.headerView(forSection: indexPath.section) as! HeaderView
+                header.setCollapsed(true)
             }
             
-            self.deleteRows(at: self.openCells, with: .top)
+            self.deleteRows(at: self.openCells, with: .fade)
+            
             self.openCells.removeAll()
         }
     }
@@ -255,7 +259,7 @@ extension LicensyTable: HeaderViewDelegate {
             self.deleteOpenCells()
             self.openCells.append(IndexPath(row: 0, section: section))
             self.cellsLibraries[section].numRows = 1
-            self.insertRows(at:[IndexPath(row: 0, section: section)] , with: .top)
+            self.insertRows(at:[IndexPath(row: 0, section: section)] , with: .fade)
         }
         else {
             self.deleteOpenCells()
