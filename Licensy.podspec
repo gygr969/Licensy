@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.platform = :ios
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '8.0'
   s.name = 'Licensy'
   s.summary = <<-DESC
               Licensy lets an user to list all 3rd Party Libraries which use in his project.

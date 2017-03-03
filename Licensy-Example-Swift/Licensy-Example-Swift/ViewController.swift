@@ -11,7 +11,7 @@ import Licensy
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var tableView: LibrariesTable!
+    @IBOutlet weak var tableView: LicensyTable!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,6 +19,7 @@ class ViewController: UIViewController {
         
         let customLicense = LicenseCustom(name: "Custom License",
                                           text: "This is a custom license which you can use for edit your custom license that you have in your application.",
+                                          minimalText: "This is the minimal text",
                                           version: "2017",
                                           url: "url.com")
         
@@ -53,7 +54,7 @@ class ViewController: UIViewController {
         ////Appearance
         
         //Change table view appearance with predefined style
-        tableView.appearance.setBlueGreenAppearance()
+        tableView.appearance.setOrangeFitAppearance()
         
         //Change table view appearance with custom values
         //        tableView.appearance.headerContentColor = UIColor.yellow
