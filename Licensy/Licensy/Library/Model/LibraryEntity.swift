@@ -8,9 +8,7 @@
 
 import UIKit
 
-/**
- *  The Library object is made up of the its name, url, copyright, and license.
- */
+/// The Library object is made up of the its name, url, copyright, and license.
 public class LibraryEntity: NSObject {
     
     /// The name of the library

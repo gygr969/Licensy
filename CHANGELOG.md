@@ -2,6 +2,13 @@
 
 Note: This is in reverse chronological order, so newer entries are added to the top.
 
+## Licensy 1.0.7
+
+- Updated collapsable cells behavior.
+- Added new predifined styles.
+- Fixed creation of custom licenses.
+- Fixed internal bundle localizations.
+
 ## Licensy 1.0.6
 
 - Updated project of example with localized strings.
