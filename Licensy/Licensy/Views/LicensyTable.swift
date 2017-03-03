@@ -139,6 +139,13 @@ extension LicensyTable: UITableViewDataSource, UITableViewDelegate {
         }
     }
     
+    
+    /// The footer view for a section
+    ///
+    /// - Parameters:
+    ///   - tableView: the table view
+    ///   - section: the given section
+    /// - Returns: the view for the given section
     public func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         return UIView()
     }
@@ -154,6 +161,13 @@ extension LicensyTable: UITableViewDataSource, UITableViewDelegate {
         return 128.0
     }
     
+    
+    /// The cell height for the table view at a given index path
+    ///
+    /// - Parameters:
+    ///   - tableView: the table view
+    ///   - indexPath: the given index path
+    /// - Returns: the height for the row
     public func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
