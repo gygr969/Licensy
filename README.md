@@ -51,7 +51,7 @@ A `Library` is an object containing all the information about the library being 
 
  As you can tell from above the `license` is a property of type `License`, there are some of the more usually used and that `Licensy` provides:
 
- Name | Indetifier
+ Name | JSON Indetifier
  -------- | -------
  Apache Software License 2.0 | `"ASL20"`
  BSD 3-Clause License | `"BSD3"`
@@ -61,7 +61,7 @@ A `Library` is an object containing all the information about the library being 
  GNU Lesser General Public License 2.1 | `"LGPL"`
  ISC License | `"ISC"`
  MIT License | `"MIT"`
- Mozilla Public License, Version 2.0 | `"MPL20"
+ Mozilla Public License, Version 2.0 | `"MPL20"`
 
 Also you can create your custom license with the object class `CustomLicense` to build one license that is not listed above.
 
