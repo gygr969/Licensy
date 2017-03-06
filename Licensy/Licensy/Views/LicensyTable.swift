@@ -211,7 +211,7 @@ extension LicensyTable: UITableViewDataSource, UITableViewDelegate {
     
     internal func scrollToSection(_ section: Int) {
         var sectionRect = self.rect(forSection: section)
-        sectionRect.size.height = self.bounds.size.height
+        sectionRect.size.height = self.frame.size.height
         self.scrollRectToVisible(sectionRect, animated: true)
     }
     
