@@ -33,7 +33,7 @@ public class LicenseOrganizer: NSObject {
     ///
     /// - Parameter license: The new license
     public func registerLicense(_ license: License) {
-        self.licenses.updateValue(license, forKey: license.name)
+        self.licenses.updateValue(license, forKey: license.identifier)
     }
     
     override init() {
@@ -41,8 +41,8 @@ public class LicenseOrganizer: NSObject {
         self.registerCommonLicenses()
     }
     
-    internal func licenseForName(_ name: String) -> License? {
-        return self.licenses[name]
+    internal func licenseForIndetifier(_ identifier: String) -> License? {
+        return self.licenses[identifier]
     }
     
 

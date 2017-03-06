@@ -14,6 +14,13 @@ public class GnuGeneralPublicLicense30: NSObject, License {
     fileprivate var company: String = ""
     fileprivate var copyright: String = ""
     
+    /// The identifier of the license
+    public var identifier: String {
+        get {
+            return "GPL30"
+        }
+    }
+    
     /// The name of the license
     public var name: String {
         get {

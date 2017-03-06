@@ -14,6 +14,13 @@ public class GnuLesserGeneralPublicLicense21: NSObject, License {
     fileprivate var company: String = ""
     fileprivate var copyright: String = ""
     
+    /// The identifier of the license
+    public var identifier: String {
+        get {
+            return "LGPL"
+        }
+    }
+    
     /// The name of the license
     public var name: String {
         get {

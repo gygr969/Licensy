@@ -11,6 +11,11 @@ import UIKit
 /// Describes a library's license
 public protocol License: NSObjectProtocol {
     
+    /// The identifier of the license
+    var identifier: String {
+        get
+    }
+    
     /// The name of the license
     var name: String {
         get
