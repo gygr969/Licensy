@@ -17,7 +17,8 @@ class ViewController: UIViewController {
         
         //Customize one license
         
-        let customLicense = LicenseCustom(name: "Custom License",
+        let customLicense = LicenseCustom(identifier: "MY_CUSTOM_LICENSE",
+                                          name: "Custom License",
                                           text: "This is a custom license which you can use for edit your custom license that you have in your application.",
                                           minimalText: "This is the minimal text",
                                           version: "2017",
