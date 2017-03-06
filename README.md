@@ -51,15 +51,17 @@ A `Library` is an object containing all the information about the library being 
 
  As you can tell from above the `license` is a property of type `License`, there are some of the more usually used and that `Licensy` provides:
 
- - Apache Software License 2.0
- - BSD 3-Clause License
- - Creative Commons Attribution-NoDerivs 3.0 Unported
- - GNU General Public License 2.0
- - GNU General Public License 3.0
- - GNU Lesser General Public License 2.1
- - ISC License
- - MIT License
- - Mozilla Public License, Version 2.0
+ Name | Indetifier
+ -------- | -------
+ Apache Software License 2.0 | `"ASL20"`
+ BSD 3-Clause License | `"BSD3"`
+ Creative Commons Attribution-NoDerivs 3.0 Unported | `"CCAND"`
+ GNU General Public License 2.0 | `"GPL20"`
+ GNU General Public License 3.0 | `"GPL30"`
+ GNU Lesser General Public License 2.1 | `"LGPL"`
+ ISC License | `"ISC"`
+ MIT License | `"MIT"`
+ Mozilla Public License, Version 2.0 | `"MPL20"
 
 Also you can create your custom license with the object class `CustomLicense` to build one license that is not listed above.
 
@@ -91,14 +93,14 @@ You can list all of your libraries and their licenses in a json file included in
             "organization": "RetoLabs",
             "url": "https://github.com/guille969/Licensy",
             "copyright": "Copyright (C) 2017 RetoLabs",
-            "license": "MIT License"
+            "license": "MIT"
         },
         {
             "name": "MGBottomSheet",
             "organization": "Guillermo Garcia Rebolo",
             "url": "https://github.com/guille969/MGBottomSheet",
             "copyright": "Copyright (C) 2017 Guillermo Garcia Rebolo",
-            "license": "MIT License"
+            "license": "MIT"
         }
     ]
 }
