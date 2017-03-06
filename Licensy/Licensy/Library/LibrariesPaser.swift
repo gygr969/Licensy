@@ -30,7 +30,7 @@ public class LibrariesPaser: NSObject {
                         let organization = libraryJSON["organization"]!
                         let url = libraryJSON["url"]!
                         let copyright = libraryJSON["copyright"]!
-                        let license = self.organizer.licenseForName(libraryJSON["license"]!)
+                        let license = self.organizer.licenseForIndetifier(libraryJSON["license"]!)
                         
                         if let licenseType = license {
                             libraries.append(LibraryEntity(name: name, organization: organization, url: url, copyright: copyright, license: licenseType))

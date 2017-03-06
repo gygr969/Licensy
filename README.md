@@ -12,6 +12,7 @@
 <img src="readme-resources/example.gif" style="max-height: 569px;" alt="Licensy for iOS">
 </p>
 
+Copyright © David Jimenez Guinaldo & Guillermo Garcia Rebolo.
 
 `Licensy` is an iOS drop-in class that allow you to display a table listing all the 3rd Party Libraries that you are using in your app, and preview some data about it's licenses and copyrights.
 
@@ -37,7 +38,7 @@ pod 'Licensy'
 ## Usage
 Basic usage of this library involves creating a `UITableView` with the class `LicensyTable that provides our pod and adding the libraries included in your app.
 
-### Adding 'Libraries'
+### 'Libraries' Structure
 A `Library` is an object containing all the information about the library being used and its license:
 
  Property | Description | Example
@@ -50,17 +51,36 @@ A `Library` is an object containing all the information about the library being 
 
  As you can tell from above the `license` is a property of type `License`, there are some of the more usually used and that `Licensy` provides:
 
- - Apache Software License 2.0
- - BSD 3-Clause License
- - Creative Commons Attribution-NoDerivs 3.0 Unported
- - GNU General Public License 2.0
- - GNU General Public License 3.0
- - GNU Lesser General Public License 2.1
- - ISC License
- - MIT License
- - Mozilla Public License, Version 2.0
+ Name | JSON Indetifier
+ -------- | -------
+ Apache Software License 2.0 | `"ASL20"`
+ BSD 3-Clause License | `"BSD3"`
+ Creative Commons Attribution-NoDerivs 3.0 Unported | `"CCAND"`
+ GNU General Public License 2.0 | `"GPL20"`
+ GNU General Public License 3.0 | `"GPL30"`
+ GNU Lesser General Public License 2.1 | `"LGPL"`
+ ISC License | `"ISC"`
+ MIT License | `"MIT"`
+ Mozilla Public License, Version 2.0 | `"MPL20"`
 
 Also you can create your custom license with the object class `CustomLicense` to build one license that is not listed above.
+
+### Add Libraries from objects
+
+You can create yout library objects and provide them to the 'Licensy' table to list them.
+You can see the detailed examples in the example in this repository.
+
+``` swift
+//Load tableView with an array on Library
+let librariesArray: Array<LibraryEntity> = [
+    LibraryEntity(name: "Library 1", organization: "RetoLabs", url: "info@github.com", copyright: "Guillermo Garcia Rebolo", license: MITLicense()),
+    LibraryEntity(name: "Library 2", organization: "RetoLabs", url: "info@github.com", copyright: "David Jiménez Guinaldo", license: ApacheSoftwareLicense20()),
+    LibraryEntity(name: "Library 3", organization: "RetoLabs", url: "info@github.com", copyright: "Guillermo Garcia Rebolo", license: GnuGeneralPublicLicense30()),
+    LibraryEntity(name: "Library 4", organization: "RetoLabs", url: "info@github.com", copyright: "David Jiménez Guinaldo", license: GnuGeneralPublicLicense30())
+]
+tableView.setLibraries(librariesArray)
+```
+
 
 ### Add Libraries from JSON
 You can list all of your libraries and their licenses in a json file included in your app bundle, with a format as such:
@@ -73,17 +93,30 @@ You can list all of your libraries and their licenses in a json file included in
             "organization": "RetoLabs",
             "url": "https://github.com/guille969/Licensy",
             "copyright": "Copyright (C) 2017 RetoLabs",
-            "license": "MIT License"
+            "license": "MIT"
         },
         {
             "name": "MGBottomSheet",
             "organization": "Guillermo Garcia Rebolo",
             "url": "https://github.com/guille969/MGBottomSheet",
             "copyright": "Copyright (C) 2017 Guillermo Garcia Rebolo",
-            "license": "MIT License"
+            "license": "MIT"
         }
     ]
 }
+```
+For use it you can call in your view controller the next code:
+
+```swift
+//libraries is the name of the JSON file in your project with your 3rd Party libraries
+let path = Bundle.main.path(forResource: "libraries", ofType: "json")!
+self.tableView.setLibraries(forJsonResourcePath: path)
+```
+
+or this other way, only providing the name of the JSON resource:
+
+```swift
+tableView.setLibraries(forJsonResourceName: "librerias")
 ```
 
 ### Customize appearance

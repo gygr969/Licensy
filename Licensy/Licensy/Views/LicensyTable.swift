@@ -139,6 +139,13 @@ extension LicensyTable: UITableViewDataSource, UITableViewDelegate {
         }
     }
     
+    
+    /// The footer view for a section
+    ///
+    /// - Parameters:
+    ///   - tableView: the table view
+    ///   - section: the given section
+    /// - Returns: the view for the given section
     public func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         return UIView()
     }
@@ -154,6 +161,13 @@ extension LicensyTable: UITableViewDataSource, UITableViewDelegate {
         return 128.0
     }
     
+    
+    /// The cell height for the table view at a given index path
+    ///
+    /// - Parameters:
+    ///   - tableView: the table view
+    ///   - indexPath: the given index path
+    /// - Returns: the height for the row
     public func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
@@ -197,7 +211,7 @@ extension LicensyTable: UITableViewDataSource, UITableViewDelegate {
     
     internal func scrollToSection(_ section: Int) {
         var sectionRect = self.rect(forSection: section)
-        sectionRect.size.height = self.bounds.size.height
+        sectionRect.size.height = self.frame.size.height
         self.scrollRectToVisible(sectionRect, animated: true)
     }
     
@@ -207,9 +221,13 @@ extension LicensyTable: UITableViewDataSource, UITableViewDelegate {
                 self.cellsLibraries[indexPath.section].numRows = 0
                 self.cellsLibraries[indexPath.section].infoCollapsed = true
                 self.cellsLibraries[indexPath.section].licenseCollapsed = true
+                
+                let header = self.headerView(forSection: indexPath.section) as! HeaderView
+                header.setCollapsed(true)
             }
             
-            self.deleteRows(at: self.openCells, with: .top)
+            self.deleteRows(at: self.openCells, with: .fade)
+            
             self.openCells.removeAll()
         }
     }
@@ -241,7 +259,7 @@ extension LicensyTable: HeaderViewDelegate {
             self.deleteOpenCells()
             self.openCells.append(IndexPath(row: 0, section: section))
             self.cellsLibraries[section].numRows = 1
-            self.insertRows(at:[IndexPath(row: 0, section: section)] , with: .top)
+            self.insertRows(at:[IndexPath(row: 0, section: section)] , with: .fade)
         }
         else {
             self.deleteOpenCells()

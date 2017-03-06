@@ -14,6 +14,18 @@ public class LicenseCustom: NSObject, License {
     fileprivate var company: String = ""
     fileprivate var copyright: String = ""
 
+    fileprivate var privateIndetifier: String = ""
+    
+    /// The identifier of the license
+    public var identifier: String {
+        get {
+            return self.privateIndetifier
+        }
+        set {
+            self.privateIndetifier = newValue
+        }
+    }
+    
     fileprivate var privateName: String = ""
     
     /// The name of the license
@@ -81,13 +93,15 @@ public class LicenseCustom: NSObject, License {
     /// Initializer for a LicenseCustom object.
     ///
     /// - Parameters:
+    ///   - identifier: The identifier of the license
     ///   - name: The name of the license
     ///   - text: The license text
     ///   - minimalText: The minimal text of the license
     ///   - version: The license version
     ///   - url: The license URL
-    public init(name: String, text: String, minimalText: String, version: String, url: String) {
+    public init(identifier: String, name: String, text: String, minimalText: String, version: String, url: String) {
         super.init()
+        self.identifier = identifier
         self.name = name
         self.text = text
         self.minimalText = minimalText
@@ -113,5 +127,5 @@ public class LicenseCustom: NSObject, License {
 ///   - rhs: seconde license
 /// - Returns: if first license is equal to the second for property name
 public func ==(lhs: LicenseCustom, rhs: LicenseCustom) -> Bool {
-    return lhs.name == rhs.name
+    return lhs.identifier == rhs.identifier
 }
