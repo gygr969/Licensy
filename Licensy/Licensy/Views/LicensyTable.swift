@@ -222,8 +222,9 @@ extension LicensyTable: UITableViewDataSource, UITableViewDelegate {
                 self.cellsLibraries[indexPath.section].infoCollapsed = true
                 self.cellsLibraries[indexPath.section].licenseCollapsed = true
                 
-                let header = self.headerView(forSection: indexPath.section) as! HeaderView
-                header.setCollapsed(true)
+                if let header = self.headerView(forSection: indexPath.section) as? HeaderView {
+                    header.setCollapsed(true)
+                }
             }
             
             self.deleteRows(at: self.openCells, with: .fade)
