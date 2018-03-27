@@ -6,10 +6,8 @@
 //  Copyright © 2017 RetoLabs. All rights reserved.
 //
 
-import UIKit
-
 /// The Library object is made up of the its name, url, copyright, and license.
-public class LibraryEntity: NSObject {
+public class LibraryEntity {
     
     /// The name of the library
     var name: String
@@ -36,6 +34,37 @@ public class LibraryEntity: NSObject {
         self.url = url
         self.copyright = copyright
         self.license = license
-        self.license?.formatLicenseTextWithCompany(organization, andCopyRight: copyright)
+        self.license?.formatLicenseText(with: organization, copyright: copyright)
+    }
+    
+    /// The designated initializer for the LibraryEntity object
+    ///
+    /// - Parameters:
+    ///   - model: The library model to map to entity
+    public init(model: LibraryModel) {
+        self.name = model.name
+        self.organization = model.organization
+        self.url = model.url
+        self.copyright = model.copyright
+        self.license = nil
+        if let newLicense: License = LicenseOrganizer.sharedInstance.licenseForIndetifier(model.license) {
+            newLicense.formatLicenseText(with: model.organization, copyright: model.copyright)
+            self.license = newLicense
+        }
+    }
+    
+    /// The designated method for map LibraryModel into LibraryEntity object
+    ///
+    /// - Parameters:
+    ///   - libraries: An array of library model for map to entity
+    /// - Returns: An array of LibraryEntity objects
+    public class func map(libraries: [LibraryModel]) -> [LibraryEntity] {
+        var librariesEntity: [LibraryEntity] = []
+        
+        for library in libraries {
+            librariesEntity.append(LibraryEntity(model: library))
+        }
+        
+        return librariesEntity
     }
 }

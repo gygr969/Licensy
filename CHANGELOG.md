@@ -4,11 +4,17 @@ Note: This is in reverse chronological order, so newer entries are added to the 
 
 ## Licensy 1.0.9
 
-- Fixed crash due to an unsafe unwrapping optional
+- Fixed library for Swift 4 support.
+- Upgraded code for pure swift behavior.
+- Optimized code for retrive the libraries from the given JSON file.
+
+## Licensy 1.0.9
+
+- Fixed crash due to an unsafe unwrapping optional.
 
 ## Licensy 1.0.8
 
-- Fixed fold accesory of the library cells
+- Fixed fold accesory of the library cells.
 
 ## Licensy 1.0.7
 

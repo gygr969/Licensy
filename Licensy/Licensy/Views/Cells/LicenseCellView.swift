@@ -25,7 +25,6 @@ internal class LicenseCellView: UITableViewCell {
     }
     
     func applyAppearance() {
-
         let appearance = parentTable.appearance
         
         self.contentView.backgroundColor = appearance.licenseContentBackgroundColor

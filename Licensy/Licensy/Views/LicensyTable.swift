@@ -13,16 +13,10 @@ public class LicensyTable: UITableView {
 
     fileprivate var kHeaderCellHeight: CGFloat = 44.0
     fileprivate var kCellHeight: CGFloat = 125.0
-    fileprivate var openCells: Array<IndexPath> = []
+    fileprivate var openCells: [IndexPath] = []
     
-    fileprivate var cellsLibraries: Array<LibraryCell> = []
-    fileprivate var libraries: Array<LibraryEntity> = []
-    
-    fileprivate class var bundle: Bundle {
-        let podBundle =  Bundle(for: LibraryEntity.self)
-        let bundleURL = podBundle.url(forResource: "Licensy", withExtension: "bundle")
-        return Bundle(url: bundleURL!)!
-    }
+    fileprivate var cellsLibraries: [LibraryCell] = []
+    fileprivate var libraries: [LibraryEntity] = []
     
     /// The appearance of the table view
     public var appearance = Appearance()
@@ -44,7 +38,7 @@ public class LicensyTable: UITableView {
     ///
     /// - Parameter resourcePath: The file path to the JSON file containing the libraries.
     public func setLibraries(forJsonResourcePath resourcePath: String) {
-        self.libraries = LibrariesPaser().setLibrariesFromJSONFile(filepath: resourcePath)
+        self.libraries = LibrariesPaser.setLibrariesFromJSONFile(filepath: resourcePath)
         self.configureView()
     }
     
@@ -63,13 +57,11 @@ public class LicensyTable: UITableView {
         self.configureTableView()
     }
     
-    
     fileprivate func configureCellLibraries() {
         for library in self.libraries {
             self.cellsLibraries.append(LibraryCell(name: library.name, url: library.url, copyright: library.copyright, organization: library.organization, license: library.license!))
         }
     }
-    
     
     fileprivate func configureTableView() {
         self.delegate = self
@@ -81,9 +73,9 @@ public class LicensyTable: UITableView {
         
         self.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         
-        self.register(UINib(nibName: "HeaderView", bundle: LicensyTable.bundle), forHeaderFooterViewReuseIdentifier: "HeaderView")
-        self.register(UINib(nibName: "InfoCellView", bundle: LicensyTable.bundle), forCellReuseIdentifier: "infoCell")
-        self.register(UINib(nibName: "LicenseCellView", bundle: LicensyTable.bundle), forCellReuseIdentifier: "licenseCell")
+        self.register(UINib(nibName: "HeaderView", bundle: CommonMethods.libraryBundle()), forHeaderFooterViewReuseIdentifier: "HeaderView")
+        self.register(UINib(nibName: "InfoCellView", bundle: CommonMethods.libraryBundle()), forCellReuseIdentifier: "infoCell")
+        self.register(UINib(nibName: "LicenseCellView", bundle: CommonMethods.libraryBundle()), forCellReuseIdentifier: "licenseCell")
     }
 }
 
@@ -99,7 +91,6 @@ extension LicensyTable: UITableViewDataSource, UITableViewDelegate {
         return self.cellsLibraries.count
     }
     
-    
     /// The number of row in a given section of the table view
     ///
     /// - Parameters:
@@ -109,7 +100,6 @@ extension LicensyTable: UITableViewDataSource, UITableViewDelegate {
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.cellsLibraries[section].numRows
     }
-    
     
     /// The height for the header section view
     ///
@@ -121,7 +111,6 @@ extension LicensyTable: UITableViewDataSource, UITableViewDelegate {
         return kHeaderCellHeight
     }
     
-    
     /// The height for a row in a given index path
     ///
     /// - Parameters:
@@ -131,14 +120,13 @@ extension LicensyTable: UITableViewDataSource, UITableViewDelegate {
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.row {
         case 0:
-            return cellsLibraries[indexPath.section].infoCollapsed! ? 0.0 : kCellHeight
+            return cellsLibraries[indexPath.section].infoCollapsed ? 0.0 : kCellHeight
         case 1:
-            return cellsLibraries[indexPath.section].licenseCollapsed! || cellsLibraries[indexPath.section].infoCollapsed! ? 0.0 : UITableViewAutomaticDimension
+            return cellsLibraries[indexPath.section].licenseCollapsed || cellsLibraries[indexPath.section].infoCollapsed ? 0.0 : UITableViewAutomaticDimension
         default:
             return 0.0
         }
     }
-    
     
     /// The footer view for a section
     ///
@@ -150,7 +138,6 @@ extension LicensyTable: UITableViewDataSource, UITableViewDelegate {
         return UIView()
     }
     
-    
     /// The estimated cell height for the table view at a given index path
     ///
     /// - Parameters:
@@ -161,6 +148,15 @@ extension LicensyTable: UITableViewDataSource, UITableViewDelegate {
         return 128.0
     }
     
+    /// The height for the table footer for a given section
+    ///
+    /// - Parameters:
+    ///   - tableView: the table view
+    ///   - section: the given sections
+    /// - Returns: the height for the section footer
+    public func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 0.0
+    }
     
     /// The cell height for the table view at a given index path
     ///
@@ -171,7 +167,6 @@ extension LicensyTable: UITableViewDataSource, UITableViewDelegate {
     public func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
-    
     
     /// The view for a given section
     ///
@@ -187,7 +182,6 @@ extension LicensyTable: UITableViewDataSource, UITableViewDelegate {
         
         return header
     }
-    
     
     /// Method for construct the cell for a given index path
     ///

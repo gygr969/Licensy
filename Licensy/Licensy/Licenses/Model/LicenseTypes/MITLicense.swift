@@ -6,13 +6,15 @@
 //  Copyright © 2017 RetoLabs. All rights reserved.
 //
 
-import UIKit
-
 /// MIT License
-public class MITLicense: NSObject, License {
+public class MITLicense: License {
     
     fileprivate var company: String = ""
     fileprivate var copyright: String = ""
+    
+    /// The initializer of the license
+    public init() {
+    }
     
     /// The identifier of the license
     public var identifier: String {
@@ -31,14 +33,20 @@ public class MITLicense: NSObject, License {
     /// The license text
     public var text: String {
         get {
-            return LicenseParser.getContent("mit")
+            guard let value: String = LicenseParser.getContent("mit") else {
+                return ""
+            }
+            return value
         }
     }
     
     /// The minimal license text
     public var minimalText: String {
         get {
-            return LicenseParser.getContent("mit_minimal")
+            guard let value: String = LicenseParser.getContent("mit_minimal") else {
+                return ""
+            }
+            return value
         }
     }
     
@@ -61,7 +69,7 @@ public class MITLicense: NSObject, License {
     /// - Parameters:
     ///   - company: the company of the library
     ///   - copyright: the copyright of the library
-    public func formatLicenseTextWithCompany(_ company: String, andCopyRight copyright: String) {
+    public func formatLicenseText(with company: String, copyright: String) {
         self.company = company
         self.copyright = copyright
     }

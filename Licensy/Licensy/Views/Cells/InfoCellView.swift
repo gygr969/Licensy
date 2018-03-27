@@ -19,7 +19,6 @@ internal protocol InfoCellViewDelegate: NSObjectProtocol {
     func toggleLicense(license: InfoCellView, section: Int)
 }
 
-
 class InfoCellView: UITableViewCell {
 
     @IBOutlet weak var urlButton: UIButton!
