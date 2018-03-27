@@ -6,42 +6,51 @@
 //  Copyright © 2017 RetoLabs. All rights reserved.
 //
 
-import UIKit
-
 /// Parses the libraries from a given JSON
-public class LibrariesPaser: NSObject {
-    
-    private(set) var organizer = LicenseOrganizer.sharedInstance
+public class LibrariesPaser {
     
     /// Retrive libraries from a JSON file.
     ///
     /// - Parameter filepath: The file path to the JSON file containing the libraries
     /// - Returns: An array of libraries
-    public func setLibrariesFromJSONFile(filepath: String) -> Array<LibraryEntity> {
-        var libraries : Array<LibraryEntity> = []
+    public class func setLibrariesFromJSONFile(filepath: String) -> [LibraryEntity] {
+        var libraries: [LibraryEntity] = []
         
-        if let jsonData = NSData(contentsOfFile: filepath) {
-            do {
-                let jsonArray = try JSONSerialization.jsonObject(with: jsonData as Data, options: JSONSerialization.ReadingOptions(rawValue: 0)) as! [String: [[String: String]]]
-                
-                if let librariesArray = jsonArray["libraries"] {
-                    for libraryJSON in librariesArray {
-                        let name = libraryJSON["name"]!
-                        let organization = libraryJSON["organization"]!
-                        let url = libraryJSON["url"]!
-                        let copyright = libraryJSON["copyright"]!
-                        let license = self.organizer.licenseForIndetifier(libraryJSON["license"]!)
-                        
-                        if let licenseType = license {
-                            libraries.append(LibraryEntity(name: name, organization: organization, url: url, copyright: copyright, license: licenseType))
-                        }
-                    }
-                }
-            } catch let error {
-                print(error)
-            }
+        guard let jsonData: Data = self.data(for: filepath) else {
+            return libraries
         }
+        guard let models: [LibraryModel] = self.decode(data: jsonData) else {
+            return libraries
+        }
+        
+        libraries = LibraryEntity.map(libraries: models)
         return libraries
+    }
+    
+    //MARK: - Private Methods
+    
+    private class func data(for filePath: String) -> Data? {
+        guard let fileURL: URL = URL(string: filePath) else {
+            return nil
+        }
+        
+        do {
+            let jsonData: Data = try Data(contentsOf: fileURL)
+            return jsonData
+        }
+        catch {
+            return nil
+        }
+    }
+    
+    private class func decode(data: Data) -> [LibraryModel]? {
+        do {
+            let source: JSONModel = try JSONDecoder().decode(JSONModel.self, from: data)
+            return source.libraries
+        }
+        catch {
+            return nil
+        }
     }
 
 }
