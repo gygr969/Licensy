@@ -12,6 +12,7 @@
 		63A510A71E65D7F000B90D19 /* Plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A510A41E65D7F000B90D19 /* Plus.png */; };
 		990857E7206AE03600A80A79 /* LibraryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990857E6206AE03600A80A79 /* LibraryModel.swift */; };
 		990857E9206AE0A700A80A79 /* JSONModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990857E8206AE0A700A80A79 /* JSONModel.swift */; };
+		990857EC206AE52600A80A79 /* CommonMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990857EB206AE52600A80A79 /* CommonMethods.swift */; };
 		998735931E60A4B400FDEB2A /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998735881E60A4B400FDEB2A /* Appearance.swift */; };
 		998735941E60A4B400FDEB2A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998735891E60A4B400FDEB2A /* Extensions.swift */; };
 		998735971E60A4B400FDEB2A /* LicenseCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9987358D1E60A4B400FDEB2A /* LicenseCellView.swift */; };
@@ -65,6 +66,7 @@
 		63A510A41E65D7F000B90D19 /* Plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Plus.png; sourceTree = "<group>"; };
 		990857E6206AE03600A80A79 /* LibraryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryModel.swift; sourceTree = "<group>"; };
 		990857E8206AE0A700A80A79 /* JSONModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONModel.swift; sourceTree = "<group>"; };
+		990857EB206AE52600A80A79 /* CommonMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonMethods.swift; sourceTree = "<group>"; };
 		998735881E60A4B400FDEB2A /* Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
 		998735891E60A4B400FDEB2A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		9987358D1E60A4B400FDEB2A /* LicenseCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicenseCellView.swift; sourceTree = "<group>"; };
@@ -134,6 +136,14 @@
 				63A510A41E65D7F000B90D19 /* Plus.png */,
 			);
 			path = Accesory;
+			sourceTree = "<group>";
+		};
+		990857EA206AE51500A80A79 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				990857EB206AE52600A80A79 /* CommonMethods.swift */,
+			);
+			path = Commons;
 			sourceTree = "<group>";
 		};
 		9974885A1E644E6800BB1022 /* Resources */ = {
@@ -287,6 +297,7 @@
 		99BA09C11E60577900CF8074 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				990857EA206AE51500A80A79 /* Commons */,
 				99BA09CB1E60577900CF8074 /* Model */,
 				998735871E60A4B400FDEB2A /* Appearance */,
 				9987358F1E60A4B400FDEB2A /* Header */,
@@ -414,6 +425,7 @@
 				99BA099C1E60551F00CF8074 /* LibraryEntity.swift in Sources */,
 				99BA09A71E60551F00CF8074 /* LicenseOrganizer.swift in Sources */,
 				99E794661E64822500BECE1A /* InfoCellView.swift in Sources */,
+				990857EC206AE52600A80A79 /* CommonMethods.swift in Sources */,
 				99BA09AA1E60551F00CF8074 /* ApacheSoftwareLicense20.swift in Sources */,
 				99BA09AE1E60551F00CF8074 /* GnuGeneralPublicLicense30.swift in Sources */,
 				99BA09B21E60551F00CF8074 /* MITLicense.swift in Sources */,
