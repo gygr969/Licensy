@@ -12,6 +12,10 @@ public class BSD3ClauseLicense: License {
     fileprivate var company: String = ""
     fileprivate var copyright: String = ""
     
+    /// The initializer of the license
+    public init() {
+    }
+    
     /// The identifier of the license
     public var identifier: String {
         get {

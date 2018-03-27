@@ -14,6 +14,10 @@ public class LicenseCustom: License {
     fileprivate var privateText: String = ""
     fileprivate var privateMinimalText: String = ""
     
+    /// The initializer of the license
+    public init() {
+    }
+    
     /// The identifier of the license
     public var identifier: String = ""
     
@@ -34,7 +38,7 @@ public class LicenseCustom: License {
     /// The minimal license text
     public var minimalText: String {
         get {
-            return String.init(format: "%@\n", self.minimalText)
+            return String.init(format: "%@\n", self.privateMinimalText)
         }
         set {
             self.privateMinimalText = newValue
