@@ -18,12 +18,6 @@ public class LicensyTable: UITableView {
     fileprivate var cellsLibraries: [LibraryCell] = []
     fileprivate var libraries: [LibraryEntity] = []
     
-    fileprivate class var bundle: Bundle {
-        let podBundle =  Bundle(for: LibraryEntity.self)
-        let bundleURL = podBundle.url(forResource: "Licensy", withExtension: "bundle")
-        return Bundle(url: bundleURL!)!
-    }
-    
     /// The appearance of the table view
     public var appearance = Appearance()
     
@@ -79,9 +73,9 @@ public class LicensyTable: UITableView {
         
         self.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         
-        self.register(UINib(nibName: "HeaderView", bundle: LicensyTable.bundle), forHeaderFooterViewReuseIdentifier: "HeaderView")
-        self.register(UINib(nibName: "InfoCellView", bundle: LicensyTable.bundle), forCellReuseIdentifier: "infoCell")
-        self.register(UINib(nibName: "LicenseCellView", bundle: LicensyTable.bundle), forCellReuseIdentifier: "licenseCell")
+        self.register(UINib(nibName: "HeaderView", bundle: CommonMethods.libraryBundle()), forHeaderFooterViewReuseIdentifier: "HeaderView")
+        self.register(UINib(nibName: "InfoCellView", bundle: CommonMethods.libraryBundle()), forCellReuseIdentifier: "infoCell")
+        self.register(UINib(nibName: "LicenseCellView", bundle: CommonMethods.libraryBundle()), forCellReuseIdentifier: "licenseCell")
     }
 }
 
@@ -152,6 +146,16 @@ extension LicensyTable: UITableViewDataSource, UITableViewDelegate {
     /// - Returns: the estimated height for the row
     public func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 128.0
+    }
+    
+    /// The height for the table footer for a given section
+    ///
+    /// - Parameters:
+    ///   - tableView: the table view
+    ///   - section: the given sections
+    /// - Returns: the height for the section footer
+    public func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 0.0
     }
     
     /// The cell height for the table view at a given index path
