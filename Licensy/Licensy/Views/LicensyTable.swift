@@ -13,10 +13,10 @@ public class LicensyTable: UITableView {
 
     fileprivate var kHeaderCellHeight: CGFloat = 44.0
     fileprivate var kCellHeight: CGFloat = 125.0
-    fileprivate var openCells: Array<IndexPath> = []
+    fileprivate var openCells: [IndexPath] = []
     
-    fileprivate var cellsLibraries: Array<LibraryCell> = []
-    fileprivate var libraries: Array<LibraryEntity> = []
+    fileprivate var cellsLibraries: [LibraryCell] = []
+    fileprivate var libraries: [LibraryEntity] = []
     
     fileprivate class var bundle: Bundle {
         let podBundle =  Bundle(for: LibraryEntity.self)
@@ -44,7 +44,7 @@ public class LicensyTable: UITableView {
     ///
     /// - Parameter resourcePath: The file path to the JSON file containing the libraries.
     public func setLibraries(forJsonResourcePath resourcePath: String) {
-        self.libraries = LibrariesPaser().setLibrariesFromJSONFile(filepath: resourcePath)
+        self.libraries = LibrariesPaser.setLibrariesFromJSONFile(filepath: resourcePath)
         self.configureView()
     }
     
@@ -63,13 +63,11 @@ public class LicensyTable: UITableView {
         self.configureTableView()
     }
     
-    
     fileprivate func configureCellLibraries() {
         for library in self.libraries {
             self.cellsLibraries.append(LibraryCell(name: library.name, url: library.url, copyright: library.copyright, organization: library.organization, license: library.license!))
         }
     }
-    
     
     fileprivate func configureTableView() {
         self.delegate = self
@@ -99,7 +97,6 @@ extension LicensyTable: UITableViewDataSource, UITableViewDelegate {
         return self.cellsLibraries.count
     }
     
-    
     /// The number of row in a given section of the table view
     ///
     /// - Parameters:
@@ -109,7 +106,6 @@ extension LicensyTable: UITableViewDataSource, UITableViewDelegate {
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.cellsLibraries[section].numRows
     }
-    
     
     /// The height for the header section view
     ///
@@ -121,7 +117,6 @@ extension LicensyTable: UITableViewDataSource, UITableViewDelegate {
         return kHeaderCellHeight
     }
     
-    
     /// The height for a row in a given index path
     ///
     /// - Parameters:
@@ -131,14 +126,13 @@ extension LicensyTable: UITableViewDataSource, UITableViewDelegate {
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.row {
         case 0:
-            return cellsLibraries[indexPath.section].infoCollapsed! ? 0.0 : kCellHeight
+            return cellsLibraries[indexPath.section].infoCollapsed ? 0.0 : kCellHeight
         case 1:
-            return cellsLibraries[indexPath.section].licenseCollapsed! || cellsLibraries[indexPath.section].infoCollapsed! ? 0.0 : UITableViewAutomaticDimension
+            return cellsLibraries[indexPath.section].licenseCollapsed || cellsLibraries[indexPath.section].infoCollapsed ? 0.0 : UITableViewAutomaticDimension
         default:
             return 0.0
         }
     }
-    
     
     /// The footer view for a section
     ///
@@ -150,7 +144,6 @@ extension LicensyTable: UITableViewDataSource, UITableViewDelegate {
         return UIView()
     }
     
-    
     /// The estimated cell height for the table view at a given index path
     ///
     /// - Parameters:
@@ -161,7 +154,6 @@ extension LicensyTable: UITableViewDataSource, UITableViewDelegate {
         return 128.0
     }
     
-    
     /// The cell height for the table view at a given index path
     ///
     /// - Parameters:
@@ -171,7 +163,6 @@ extension LicensyTable: UITableViewDataSource, UITableViewDelegate {
     public func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
-    
     
     /// The view for a given section
     ///
@@ -187,7 +178,6 @@ extension LicensyTable: UITableViewDataSource, UITableViewDelegate {
         
         return header
     }
-    
     
     /// Method for construct the cell for a given index path
     ///

@@ -65,7 +65,7 @@ class HeaderView: UITableViewHeaderFooterView {
         let appearance = parentTable.appearance
         
         if appearance.accesory == .arrow {
-            accesoryImage.rotate(collapsed ? 0.0 : CGFloat(M_PI_2))
+            accesoryImage.rotate(collapsed ? 0.0 : CGFloat(Double.pi/2))
         } else if appearance.accesory == .plus {
             accesoryImage.image = collapsed ? UIImage(named: "Plus.png", in: bundle, compatibleWith: nil)?.withRenderingMode(.alwaysTemplate) : UIImage(named: "Minus.png", in: bundle, compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
         }
