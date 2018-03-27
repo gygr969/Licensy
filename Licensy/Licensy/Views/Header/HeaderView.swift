@@ -42,7 +42,7 @@ class HeaderView: UITableViewHeaderFooterView {
         applyAppearance()
     }
     
-    func tapHeader(gestureRecognizer: UITapGestureRecognizer) {
+    @objc func tapHeader(gestureRecognizer: UITapGestureRecognizer) {
         guard let cell = gestureRecognizer.view as? HeaderView else {
             return
         }
