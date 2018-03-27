@@ -30,9 +30,7 @@ public class LibrariesPaser {
     //MARK: - Private Methods
     
     private class func data(for filePath: String) -> Data? {
-        guard let fileURL: URL = URL(string: filePath) else {
-            return nil
-        }
+        let fileURL: URL = URL(fileURLWithPath: filePath)
         
         do {
             let jsonData: Data = try Data(contentsOf: fileURL)

@@ -19,6 +19,23 @@ public class LibraryEntity {
     var copyright: String
     /// The license of the library.
     var license: License?
+
+    /// The designated initializer for the LibraryEntity object
+    ///
+    /// - Parameters:
+    ///   - name: The name of the library
+    ///   - organization: The name of the organization creator of the library
+    ///   - url: The library url
+    ///   - copyright: The copyright info for the library.
+    ///   - license: he license of the library. Use a standard or custom license
+    public init(name: String, organization: String, url: String, copyright: String, license: License) {
+        self.name = name
+        self.organization = organization
+        self.url = url
+        self.copyright = copyright
+        self.license = license
+        self.license?.formatLicenseText(with: organization, copyright: copyright)
+    }
     
     /// The designated initializer for the LibraryEntity object
     ///
