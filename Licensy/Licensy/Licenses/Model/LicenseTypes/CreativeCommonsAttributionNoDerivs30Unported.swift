@@ -6,10 +6,8 @@
 //  Copyright © 2017 RetoLabs. All rights reserved.
 //
 
-import UIKit
-
 /// Creative Commons Attribution-NoDerivs 3.0 Unported
-public class CreativeCommonsAttributionNoDerivs30Unported: NSObject, License {
+public class CreativeCommonsAttributionNoDerivs30Unported: License {
     
     fileprivate var company: String = ""
     fileprivate var copyright: String = ""
@@ -31,14 +29,20 @@ public class CreativeCommonsAttributionNoDerivs30Unported: NSObject, License {
     /// The license text
     public var text: String {
         get {
-            return LicenseParser.getContent("ccand_30")
+            guard let value: String = LicenseParser.getContent("ccand_30") else {
+                return ""
+            }
+            return value
         }
     }
     
     /// The minimal license text
     public var minimalText: String {
         get {
-            return LicenseParser.getContent("ccand_30_minimal")
+            guard let value: String = LicenseParser.getContent("ccand_30_minimal") else {
+                return ""
+            }
+            return value
         }
     }
     
@@ -61,7 +65,7 @@ public class CreativeCommonsAttributionNoDerivs30Unported: NSObject, License {
     /// - Parameters:
     ///   - company: the company of the library
     ///   - copyright: the copyright of the library
-    public func formatLicenseTextWithCompany(_ company: String, andCopyRight copyright: String) {
+    public func formatLicenseText(with company: String, copyright: String) {
         self.company = company
         self.copyright = copyright
     }

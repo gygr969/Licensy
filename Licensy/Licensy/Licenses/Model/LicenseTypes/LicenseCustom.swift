@@ -6,39 +6,20 @@
 //  Copyright © 2017 RetoLabs. All rights reserved.
 //
 
-import UIKit
-
 /// Describes a custom license designated by the user.
-public class LicenseCustom: NSObject, License {
+public class LicenseCustom: License {
     
     fileprivate var company: String = ""
     fileprivate var copyright: String = ""
-
-    fileprivate var privateIndetifier: String = ""
+    fileprivate var privateText: String = ""
+    fileprivate var privateMinimalText: String = ""
     
     /// The identifier of the license
-    public var identifier: String {
-        get {
-            return self.privateIndetifier
-        }
-        set {
-            self.privateIndetifier = newValue
-        }
-    }
-    
-    fileprivate var privateName: String = ""
+    public var identifier: String = ""
     
     /// The name of the license
-    public var name: String {
-        get {
-            return self.privateName
-        }
-        set {
-            self.privateName = newValue
-        }
-    }
+    public var name: String = ""
     
-    fileprivate var privateText: String = ""
     
     /// The license text
     public var text: String {
@@ -50,45 +31,21 @@ public class LicenseCustom: NSObject, License {
         }
     }
     
-    fileprivate var privateMinimalText: String = ""
-    
     /// The minimal license text
     public var minimalText: String {
         get {
-            return String.init(format: "%@\n", self.privateMinimalText)
+            return String.init(format: "%@\n", self.minimalText)
         }
         set {
             self.privateMinimalText = newValue
         }
     }
     
-    fileprivate var privateVersion: String = ""
-    
     /// The license version
-    public var version: String {
-        get {
-            return self.privateVersion
-        }
-        set {
-            self.privateVersion = newValue
-        }
-    }
-    
-    fileprivate var privateURL: String = ""
+    public var version: String = ""
     
     /// The license URL
-    public var url: String {
-        get {
-            return self.privateURL
-        }
-        set {
-            self.privateURL = newValue
-        }
-    }
-    
-    fileprivate override init() {
-        
-    }
+    public var url: String = ""
     
     /// Initializer for a LicenseCustom object.
     ///
@@ -100,7 +57,6 @@ public class LicenseCustom: NSObject, License {
     ///   - version: The license version
     ///   - url: The license URL
     public init(identifier: String, name: String, text: String, minimalText: String, version: String, url: String) {
-        super.init()
         self.identifier = identifier
         self.name = name
         self.text = text
@@ -114,7 +70,7 @@ public class LicenseCustom: NSObject, License {
     /// - Parameters:
     ///   - company: the company of the library
     ///   - copyright: the copyright of the library
-    public func formatLicenseTextWithCompany(_ company: String, andCopyRight copyright: String) {
+    public func formatLicenseText(with company: String, copyright: String) {
         self.company = company
         self.copyright = copyright
     }

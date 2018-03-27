@@ -6,10 +6,8 @@
 //  Copyright © 2017 RetoLabs. All rights reserved.
 //
 
-import UIKit
-
 /// Describes a library's license
-public protocol License: NSObjectProtocol {
+public protocol License {
     
     /// The identifier of the license
     var identifier: String {
@@ -47,6 +45,6 @@ public protocol License: NSObjectProtocol {
     /// - Parameters:
     ///   - company: the name of the company of the library
     ///   - copyright: the copyright of the library
-    func formatLicenseTextWithCompany(_ company: String, andCopyRight copyright: String)
+    func formatLicenseText(with company: String, copyright: String)
     
 }

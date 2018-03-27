@@ -6,10 +6,8 @@
 //  Copyright © 2017 RetoLabs. All rights reserved.
 //
 
-import UIKit
-
 /// GNU General Public License 2.0
-public class GnuGeneralPublicLicense20: NSObject, License {
+public class GnuGeneralPublicLicense20:  License {
     
     fileprivate var company: String = ""
     fileprivate var copyright: String = ""
@@ -31,14 +29,20 @@ public class GnuGeneralPublicLicense20: NSObject, License {
     /// The license text
     public var text: String {
         get {
-            return String.init(format: LicenseParser.getContent("gpl_20"), copyright, copyright)
+            guard let value: String = LicenseParser.getContent("gpl_20") else {
+                return ""
+            }
+            return String(format: value, copyright, copyright)
         }
     }
     
     /// The minimal license text
     public var minimalText: String {
         get {
-            return LicenseParser.getContent("gpl_20_minimal")
+            guard let value: String = LicenseParser.getContent("gpl_20_minimal") else {
+                return ""
+            }
+            return value
         }
     }
     
@@ -61,7 +65,7 @@ public class GnuGeneralPublicLicense20: NSObject, License {
     /// - Parameters:
     ///   - company: the company of the library
     ///   - copyright: the copyright of the library
-    public func formatLicenseTextWithCompany(_ company: String, andCopyRight copyright: String) {
+    public func formatLicenseText(with company: String, copyright: String) {
         self.company = company
         self.copyright = copyright
     }

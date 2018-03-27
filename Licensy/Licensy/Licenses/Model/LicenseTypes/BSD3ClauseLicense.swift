@@ -6,10 +6,8 @@
 //  Copyright © 2017 RetoLabs. All rights reserved.
 //
 
-import UIKit
-
 /// BSD 3-Clause License
-public class BSD3ClauseLicense: NSObject, License {
+public class BSD3ClauseLicense: License {
     
     fileprivate var company: String = ""
     fileprivate var copyright: String = ""
@@ -31,14 +29,20 @@ public class BSD3ClauseLicense: NSObject, License {
     /// The license text
     public var text: String {
         get {
-            return String.init(format: LicenseParser.getContent("bsd3"), company)
+            guard let value: String = LicenseParser.getContent("bsd3") else {
+                return ""
+            }
+            return String(format: value, company)
         }
     }
     
     /// The minimal license text
     public var minimalText: String {
         get {
-            return String.init(format: LicenseParser.getContent("bsd3_minimal"), company)
+            guard let value: String = LicenseParser.getContent("bsd3_minimal") else {
+                return ""
+            }
+            return String(format: value, company)
         }
     }
     
@@ -61,7 +65,7 @@ public class BSD3ClauseLicense: NSObject, License {
     /// - Parameters:
     ///   - company: the company of the library
     ///   - copyright: the copyright of the library
-    public func formatLicenseTextWithCompany(_ company: String, andCopyRight copyright: String) {
+    public func formatLicenseText(with company: String, copyright: String) {
         self.company = company
         self.copyright = copyright
     }
