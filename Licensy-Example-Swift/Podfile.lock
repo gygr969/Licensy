@@ -1,12 +1,12 @@
 PODS:
-  - Licensy (1.0.7)
+  - Licensy (1.0.10)
 
 DEPENDENCIES:
   - Licensy
 
 SPEC CHECKSUMS:
-  Licensy: 7202802f5d19cf0062efad463b6befba8ed83f90
+  Licensy: 4cc59edb91b48e79df06237fc13b10ad0af3fdca
 
 PODFILE CHECKSUM: fc13bf2cf0ca2ca04f3e7c4f64a15d2ee58e9b00
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.4.0
