@@ -19,16 +19,9 @@ class HeaderView: UITableViewHeaderFooterView {
     @IBOutlet weak var footerView: UIView!
     @IBOutlet weak var containerView: UIView!
     
-    
     fileprivate var parentTable: LicensyTable!
     fileprivate var delegate: HeaderViewDelegate!
     fileprivate var section: Int = 0
-    fileprivate var bundle: Bundle {
-        let podBundle =  Bundle(for: LibraryEntity.self)
-        let bundleURL = podBundle.url(forResource: "Licensy", withExtension: "bundle")
-        return Bundle(url: bundleURL!)!
-    }
-    
     
     func configureHeader(_ name: String, section: Int, parentTable: LicensyTable, delegate: HeaderViewDelegate) {
         self.libraryLabel.text = name
@@ -42,7 +35,7 @@ class HeaderView: UITableViewHeaderFooterView {
         applyAppearance()
     }
     
-    func tapHeader(gestureRecognizer: UITapGestureRecognizer) {
+    @objc func tapHeader(gestureRecognizer: UITapGestureRecognizer) {
         guard let cell = gestureRecognizer.view as? HeaderView else {
             return
         }
@@ -53,21 +46,21 @@ class HeaderView: UITableViewHeaderFooterView {
     func applyAppearance() {
         let appearance = parentTable.appearance
         
-        accesoryImage.image = appearance.accesory == .arrow ? UIImage(named: "Arrow.png", in: bundle, compatibleWith: nil)?.withRenderingMode(.alwaysTemplate) : UIImage(named: "Plus.png", in: bundle, compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
+        self.accesoryImage.image = appearance.accesory == .arrow ? UIImage(named: "Arrow.png", in: CommonMethods.libraryBundle(), compatibleWith: nil)?.withRenderingMode(.alwaysTemplate) : UIImage(named: "Plus.png", in: CommonMethods.libraryBundle(), compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
         
-        libraryLabel.textColor = appearance.headerContentColor
-        accesoryImage.tintColor = appearance.headerContentColor
-        footerView.backgroundColor = appearance.headerContentColor
-        containerView.backgroundColor = appearance.headerBackgroundColor
+        self.libraryLabel.textColor = appearance.headerContentColor
+        self.accesoryImage.tintColor = appearance.headerContentColor
+        self.footerView.backgroundColor = appearance.headerContentColor
+        self.containerView.backgroundColor = appearance.headerBackgroundColor
     }
     
     func setCollapsed(_ collapsed: Bool) {
         let appearance = parentTable.appearance
         
         if appearance.accesory == .arrow {
-            accesoryImage.rotate(collapsed ? 0.0 : CGFloat(M_PI_2))
+            self.accesoryImage.rotate(collapsed ? 0.0 : CGFloat(Double.pi/2))
         } else if appearance.accesory == .plus {
-            accesoryImage.image = collapsed ? UIImage(named: "Plus.png", in: bundle, compatibleWith: nil)?.withRenderingMode(.alwaysTemplate) : UIImage(named: "Minus.png", in: bundle, compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
+            self.accesoryImage.image = collapsed ? UIImage(named: "Plus.png", in: CommonMethods.libraryBundle(), compatibleWith: nil)?.withRenderingMode(.alwaysTemplate) : UIImage(named: "Minus.png", in: CommonMethods.libraryBundle(), compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
         }
         
         self.isUserInteractionEnabled = false

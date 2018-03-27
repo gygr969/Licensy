@@ -6,10 +6,8 @@
 //  Copyright © 2017 RetoLabs. All rights reserved.
 //
 
-import UIKit
-
 /// The appearance of the table view
-public class Appearance: NSObject {
+public class Appearance {
     
     /// The color of the content of the headers
     public var headerContentColor: UIColor!
@@ -38,8 +36,8 @@ public class Appearance: NSObject {
     /// Licenses text size
     public var licenseSize: LicenseSize = .minimal
 
-    override init() {
-        super.init()
+    /// Initialize the appearance of the license table
+    init() {
         self.setDefaultAppearance()
     }
     

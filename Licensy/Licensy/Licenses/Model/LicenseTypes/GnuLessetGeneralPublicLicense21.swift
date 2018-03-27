@@ -6,13 +6,15 @@
 //  Copyright © 2017 RetoLabs. All rights reserved.
 //
 
-import UIKit
-
 /// GNU Lesser General Public License 2.1
-public class GnuLesserGeneralPublicLicense21: NSObject, License {
+public class GnuLesserGeneralPublicLicense21: License {
     
     fileprivate var company: String = ""
     fileprivate var copyright: String = ""
+    
+    /// The initializer of the license
+    public init() {
+    }
     
     /// The identifier of the license
     public var identifier: String {
@@ -31,14 +33,20 @@ public class GnuLesserGeneralPublicLicense21: NSObject, License {
     /// The license text
     public var text: String {
         get {
-            return String.init(format: LicenseParser.getContent("lgpl_21"), copyright)
+            guard let value: String = LicenseParser.getContent("lgpl_21") else {
+                return ""
+            }
+            return String(format: value, copyright)
         }
     }
     
     /// The minimal license text
     public var minimalText: String {
         get {
-            return LicenseParser.getContent("lgpl_21_minimal")
+            guard let value: String = LicenseParser.getContent("lgpl_21_minimal") else {
+                return ""
+            }
+            return value
         }
     }
     
@@ -61,7 +69,7 @@ public class GnuLesserGeneralPublicLicense21: NSObject, License {
     /// - Parameters:
     ///   - company: the company of the library
     ///   - copyright: the copyright of the library
-    public func formatLicenseTextWithCompany(_ company: String, andCopyRight copyright: String) {
+    public func formatLicenseText(with company: String, copyright: String) {
         self.company = company
         self.copyright = copyright
     }

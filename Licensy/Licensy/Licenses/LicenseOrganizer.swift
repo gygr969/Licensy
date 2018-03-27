@@ -6,10 +6,8 @@
 //  Copyright © 2017 RetoLabs. All rights reserved.
 //
 
-import UIKit
-
 /// Organizes the licenses of the framework and let and some more custom
-public class LicenseOrganizer: NSObject {
+public class LicenseOrganizer {
     
     /// The shared instance of the license organizer
     public static let sharedInstance = LicenseOrganizer()
@@ -36,8 +34,8 @@ public class LicenseOrganizer: NSObject {
         self.licenses.updateValue(license, forKey: license.identifier)
     }
     
-    override init() {
-        super.init()
+    /// Initialize the license organizer
+    init() {
         self.registerCommonLicenses()
     }
     

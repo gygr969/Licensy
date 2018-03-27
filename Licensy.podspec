@@ -6,11 +6,11 @@ Pod::Spec.new do |s|
               Licensy lets an user to list all 3rd Party Libraries which use in his project.
               DESC
   s.requires_arc = true
-  s.version = '1.0.9'
+  s.version = '1.0.10'
   s.license = { :type => 'MIT', :file => 'LICENSE' }
   s.authors = { 'David Jimenez Guinaldo' => 'djimenezgu@gmail.com', 'Guillermo Garcia Rebolo' => 'guillermogarcia_18@hotmail.com' }
-  s.homepage = 'https://github.com/guille969/Licensy'
-  s.source = { :git => 'https://github.com/guille969/Licensy.git', :tag => s.version.to_s}
+  s.homepage = 'https://github.com/gygr969/Licensy'
+  s.source = { :git => 'https://github.com/gygr969/Licensy.git', :tag => s.version.to_s}
   s.framework = 'UIKit'
   s.source_files = 'Licensy/Licensy/**/*.{swift}'
   s.resource_bundles = {
