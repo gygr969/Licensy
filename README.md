@@ -1,15 +1,15 @@
 <p align="center">
-<img src="readme-resources/logo.png" style="max-height: 300px;" alt="Licensy for iOS">
+  <img src="readme-resources/logo.png" style="max-height: 300px;" alt="Licensy for iOS">
 </p>
 
-
-
-[![CocoaPods compatible](https://img.shields.io/cocoapods/v/Licensy.svg?style=flat)](https://cocoapods.org/pods/Licensy) [![License: MIT](https://img.shields.io/cocoapods/l/Licensy.svg?style=flat)](http://opensource.org/licenses/MIT) [![Swift Version](https://img.shields.io/badge/Swift-4.1.0-orange.svg?style=flat)](https://developer.apple.com/swift/) [![Platform](https://img.shields.io/badge/platform-iOS-lightgrey.svg)](https://developer.apple.com/ios/)
-
-
+[![Build Status](https://travis-ci.org/gygr969/Licensy.svg?branch=master)](https://travis-ci.org/gygr969/Licensy)
+[![CocoaPods compatible](https://img.shields.io/cocoapods/v/Licensy.svg?style=flat)](https://cocoapods.org/pods/Licensy) 
+[![License: MIT](https://img.shields.io/cocoapods/l/Licensy.svg?style=flat)](http://opensource.org/licenses/MIT) 
+[![Swift Version](https://img.shields.io/badge/Swift-4.1-orange.svg?style=flat)](https://developer.apple.com/swift/) 
+[![Platform](https://img.shields.io/badge/platform-iOS-lightgrey.svg)](https://developer.apple.com/ios/)
 
 <p align="center">
-<img src="readme-resources/example.gif" style="max-height: 569px;" alt="Licensy for iOS">
+  <img src="readme-resources/example.gif" style="max-height: 569px;" alt="Licensy for iOS">
 </p>
 
 Copyright © David Jimenez Guinaldo & Guillermo Garcia Rebolo.
@@ -36,7 +36,7 @@ pod 'Licensy'
 2. Include Licensy wherever you need it with `@import Licensy` if your project is in Objective-C or `import Licensy` if your project is in Swift.
 
 ## Usage
-Basic usage of this library involves creating a `UITableView` with the class `LicensyTable that provides our pod and adding the libraries included in your app.
+Basic usage of this library involves creating a `UITableView` with the class `LicensyTable` that provides our pod and adding the libraries included in your app.
 
 ### 'Libraries' Structure
 A `Library` is an object containing all the information about the library being used and its license:
@@ -143,15 +143,15 @@ tableView.appearance.licenseSize = .extended
 We provide you 3 different predefined styles:
 
 <table align="center", cellpadding=10>
-<tr>
-   <td><img src="readme-resources/default-style.png" style="max-height: 1100px;" alt="Licensy for iOS"></td>
+  <tr>
+    <td><img src="readme-resources/default-style.png" style="max-height: 1100px;" alt="Licensy for iOS"></td>
     <td><img src="readme-resources/ios-style.png" style="max-height: 1100px;" alt="Licensy for iOS"></td>
     <td><img src="readme-resources/orangefit-style.png" style="max-height: 1100px;" alt="Licensy for iOS"></td>
   </tr>
   <tr>
-       <td align="center">Default style</td>
-       <td align="center">iOS style</td>
-       <td align="center">Orange fit</td>
+    <td align="center">Default style</td>
+    <td align="center">iOS style</td>
+    <td align="center">Orange fit</td>
   </tr>
 </table>
 

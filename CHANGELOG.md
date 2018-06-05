@@ -2,6 +2,14 @@
 
 Note: This is in reverse chronological order, so newer entries are added to the top.
 
+## Licensy 1.1.0
+
+- Refactor library structure and optimized code.
+
+## Licensy 1.0.9
+
+- Optimized code and fixed some errors.
+
 ## Licensy 1.0.9
 
 - Fixed library for Swift 4 support.

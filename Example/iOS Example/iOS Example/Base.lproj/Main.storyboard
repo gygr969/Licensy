@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CN2-xC-O8c">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="0UC-fG-oVN">
+            <objects>
+                <viewController id="CN2-xC-O8c" customClass="ViewController" customModule="Licensy_Example_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aBw-Xj-fi6"/>
+                        <viewControllerLayoutGuide type="bottom" id="fxl-ZW-Nfa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IL7-pE-MgN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eDy-BK-3ho" customClass="LicensyTable" customModule="Licensy">
+                                <rect key="frame" x="0.0" y="148" width="375" height="519"/>
+                                <color key="backgroundColor" red="0.050980392159999999" green="0.43529411759999997" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="M9B-CO-ag1">
+                                <rect key="frame" x="0.0" y="20" width="375" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="M9B-CO-ag1" secondAttribute="height" multiplier="375:128" id="scs-Kv-Z2U"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.062745098040000002" green="0.23137254900000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="eDy-BK-3ho" firstAttribute="leading" secondItem="IL7-pE-MgN" secondAttribute="leading" id="ECO-ZN-LCL"/>
+                            <constraint firstItem="fxl-ZW-Nfa" firstAttribute="top" secondItem="eDy-BK-3ho" secondAttribute="bottom" id="LUz-K0-S4h"/>
+                            <constraint firstAttribute="trailing" secondItem="M9B-CO-ag1" secondAttribute="trailing" id="MJX-dF-ZkR"/>
+                            <constraint firstItem="M9B-CO-ag1" firstAttribute="top" secondItem="aBw-Xj-fi6" secondAttribute="bottom" id="WNg-cS-VRG"/>
+                            <constraint firstItem="eDy-BK-3ho" firstAttribute="top" secondItem="M9B-CO-ag1" secondAttribute="bottom" id="aq1-s3-oWz"/>
+                            <constraint firstAttribute="trailing" secondItem="eDy-BK-3ho" secondAttribute="trailing" id="x1u-nO-7aK"/>
+                            <constraint firstItem="M9B-CO-ag1" firstAttribute="leading" secondItem="IL7-pE-MgN" secondAttribute="leading" id="xsO-Mx-3lz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yZa-iR-GLG"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="eDy-BK-3ho" id="yhp-ip-GRz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PcV-fx-kic" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="369" y="-215"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Logo" width="384" height="128"/>
+    </resources>
+</document>
