@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="infoCell" id="KGk-i7-Jjw" customClass="InfoCellView" customModule="Licensy" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="125"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="124"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oMq-6C-MGa">
+                        <rect key="frame" x="20" y="13" width="280" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="82H-AZ-pTa"/>
+                        </constraints>
+                        <color key="tintColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="0.5" colorSpace="calibratedRGB"/>
+                        <state key="normal" title="https://github.com/guille969/Licensy">
+                            <color key="titleColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="openUrlLink:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="kxZ-Ap-gZp"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M9h-xy-qoU">
+                        <rect key="frame" x="20" y="83" width="280" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="G2z-0v-ovM"/>
+                        </constraints>
+                        <size key="titleShadowOffset" width="0.0" height="1"/>
+                        <state key="normal" title="Ver licencia">
+                            <color key="titleColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="collapseLicense:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="mgM-zM-l6u"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright (C) 2017 RetoLabs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TE0-fr-eMP">
+                        <rect key="frame" x="20" y="49.5" width="280" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="M9h-xy-qoU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="4tc-z2-g4i"/>
+                    <constraint firstAttribute="trailing" secondItem="M9h-xy-qoU" secondAttribute="trailing" constant="20" id="5RU-Ks-sMj"/>
+                    <constraint firstAttribute="trailing" secondItem="TE0-fr-eMP" secondAttribute="trailing" constant="20" id="ByH-5a-5HP"/>
+                    <constraint firstItem="oMq-6C-MGa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="DYA-Co-r1z"/>
+                    <constraint firstItem="TE0-fr-eMP" firstAttribute="top" relation="lessThanOrEqual" secondItem="oMq-6C-MGa" secondAttribute="bottom" constant="12" id="TTe-lN-cWy"/>
+                    <constraint firstItem="oMq-6C-MGa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="Yaj-Jj-aof"/>
+                    <constraint firstItem="TE0-fr-eMP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="koO-T0-cSI"/>
+                    <constraint firstAttribute="trailing" secondItem="oMq-6C-MGa" secondAttribute="trailing" constant="20" id="sve-Zh-Xpb"/>
+                    <constraint firstItem="M9h-xy-qoU" firstAttribute="top" relation="lessThanOrEqual" secondItem="TE0-fr-eMP" secondAttribute="bottom" constant="12.5" id="uHd-n7-rul"/>
+                    <constraint firstAttribute="bottom" secondItem="M9h-xy-qoU" secondAttribute="bottom" constant="16" id="vrZ-LY-2CG"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="copyrightLabel" destination="TE0-fr-eMP" id="LfQ-V6-zUC"/>
+                <outlet property="copyrightUrlButtonTopConstraint" destination="TTe-lN-cWy" id="IO7-8u-hcJ"/>
+                <outlet property="licenseButton" destination="M9h-xy-qoU" id="8QJ-Lx-Rgb"/>
+                <outlet property="licenseButtonBottomConstraint" destination="vrZ-LY-2CG" id="4WT-Zp-1L1"/>
+                <outlet property="licenseButtonHeightConstraint" destination="G2z-0v-ovM" id="Gfy-1j-Z7P"/>
+                <outlet property="licenseButtonTopConstraint" destination="uHd-n7-rul" id="rJM-0q-h0z"/>
+                <outlet property="urlButton" destination="oMq-6C-MGa" id="cQv-LG-fIY"/>
+                <outlet property="urlButtonHeightConstraint" destination="82H-AZ-pTa" id="rSg-E0-5oj"/>
+                <outlet property="urlButtonTopConstraint" destination="Yaj-Jj-aof" id="P59-H3-oSw"/>
+            </connections>
+            <point key="canvasLocation" x="25" y="18.5"/>
+        </tableViewCell>
+    </objects>
+</document>
