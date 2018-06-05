@@ -11,6 +11,7 @@ Pod::Spec.new do |s|
   s.authors = { 'David Jimenez Guinaldo' => 'djimenezgu@gmail.com', 'Guillermo Garcia Rebolo' => 'guillermogarcia_18@hotmail.com' }
   s.homepage = 'https://github.com/gygr969/Licensy'
   s.source = { :git => 'https://github.com/gygr969/Licensy.git', :tag => s.version.to_s}
+  s.swift_version = "4.1"
   s.framework = 'UIKit'
   s.source_files = 'Licensy/Licensy/**/*.{swift}'
   s.resource_bundles = {

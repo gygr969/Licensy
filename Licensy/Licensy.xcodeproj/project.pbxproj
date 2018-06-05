@@ -7,187 +7,88 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		63A510A51E65D7F000B90D19 /* Arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A510A21E65D7F000B90D19 /* Arrow.png */; };
-		63A510A61E65D7F000B90D19 /* Minus.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A510A31E65D7F000B90D19 /* Minus.png */; };
-		63A510A71E65D7F000B90D19 /* Plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A510A41E65D7F000B90D19 /* Plus.png */; };
-		990857E7206AE03600A80A79 /* LibraryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990857E6206AE03600A80A79 /* LibraryModel.swift */; };
-		990857E9206AE0A700A80A79 /* JSONModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990857E8206AE0A700A80A79 /* JSONModel.swift */; };
-		990857EC206AE52600A80A79 /* CommonMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990857EB206AE52600A80A79 /* CommonMethods.swift */; };
-		998735931E60A4B400FDEB2A /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998735881E60A4B400FDEB2A /* Appearance.swift */; };
-		998735941E60A4B400FDEB2A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998735891E60A4B400FDEB2A /* Extensions.swift */; };
-		998735971E60A4B400FDEB2A /* LicenseCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9987358D1E60A4B400FDEB2A /* LicenseCellView.swift */; };
-		998735981E60A4B400FDEB2A /* LicenseCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9987358E1E60A4B400FDEB2A /* LicenseCellView.xib */; };
-		998735991E60A4B400FDEB2A /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998735901E60A4B400FDEB2A /* HeaderView.swift */; };
-		9987359A1E60A4B400FDEB2A /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 998735911E60A4B400FDEB2A /* HeaderView.xib */; };
-		9987359B1E60A4B400FDEB2A /* LicensyTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998735921E60A4B400FDEB2A /* LicensyTable.swift */; };
-		99BA09681E60538300CF8074 /* Licensy.h in Headers */ = {isa = PBXBuildFile; fileRef = 99BA09661E60538300CF8074 /* Licensy.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		99BA099B1E60551F00CF8074 /* LibrariesPaser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA096F1E60551F00CF8074 /* LibrariesPaser.swift */; };
-		99BA099C1E60551F00CF8074 /* LibraryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA09711E60551F00CF8074 /* LibraryEntity.swift */; };
-		99BA099E1E60551F00CF8074 /* asl_20.txt in Resources */ = {isa = PBXBuildFile; fileRef = 99BA09751E60551F00CF8074 /* asl_20.txt */; };
-		99BA099F1E60551F00CF8074 /* bsd3.txt in Resources */ = {isa = PBXBuildFile; fileRef = 99BA09761E60551F00CF8074 /* bsd3.txt */; };
-		99BA09A01E60551F00CF8074 /* ccand_30.txt in Resources */ = {isa = PBXBuildFile; fileRef = 99BA09771E60551F00CF8074 /* ccand_30.txt */; };
-		99BA09A11E60551F00CF8074 /* gpl_20.txt in Resources */ = {isa = PBXBuildFile; fileRef = 99BA09781E60551F00CF8074 /* gpl_20.txt */; };
-		99BA09A21E60551F00CF8074 /* gpl_30.txt in Resources */ = {isa = PBXBuildFile; fileRef = 99BA09791E60551F00CF8074 /* gpl_30.txt */; };
-		99BA09A31E60551F00CF8074 /* isc.txt in Resources */ = {isa = PBXBuildFile; fileRef = 99BA097A1E60551F00CF8074 /* isc.txt */; };
-		99BA09A41E60551F00CF8074 /* lgpl_21.txt in Resources */ = {isa = PBXBuildFile; fileRef = 99BA097B1E60551F00CF8074 /* lgpl_21.txt */; };
-		99BA09A51E60551F00CF8074 /* mit.txt in Resources */ = {isa = PBXBuildFile; fileRef = 99BA097C1E60551F00CF8074 /* mit.txt */; };
-		99BA09A61E60551F00CF8074 /* mpl_20.txt in Resources */ = {isa = PBXBuildFile; fileRef = 99BA097D1E60551F00CF8074 /* mpl_20.txt */; };
-		99BA09A71E60551F00CF8074 /* LicenseOrganizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA097E1E60551F00CF8074 /* LicenseOrganizer.swift */; };
-		99BA09A81E60551F00CF8074 /* LicenseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA097F1E60551F00CF8074 /* LicenseParser.swift */; };
-		99BA09A91E60551F00CF8074 /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA09811E60551F00CF8074 /* License.swift */; };
-		99BA09AA1E60551F00CF8074 /* ApacheSoftwareLicense20.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA09831E60551F00CF8074 /* ApacheSoftwareLicense20.swift */; };
-		99BA09AB1E60551F00CF8074 /* BSD3ClauseLicense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA09841E60551F00CF8074 /* BSD3ClauseLicense.swift */; };
-		99BA09AC1E60551F00CF8074 /* CreativeCommonsAttributionNoDerivs30Unported.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA09851E60551F00CF8074 /* CreativeCommonsAttributionNoDerivs30Unported.swift */; };
-		99BA09AD1E60551F00CF8074 /* GnuGeneralPublicLicense20.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA09861E60551F00CF8074 /* GnuGeneralPublicLicense20.swift */; };
-		99BA09AE1E60551F00CF8074 /* GnuGeneralPublicLicense30.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA09871E60551F00CF8074 /* GnuGeneralPublicLicense30.swift */; };
-		99BA09AF1E60551F00CF8074 /* GnuLessetGeneralPublicLicense21.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA09881E60551F00CF8074 /* GnuLessetGeneralPublicLicense21.swift */; };
-		99BA09B01E60551F00CF8074 /* ISCLicense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA09891E60551F00CF8074 /* ISCLicense.swift */; };
-		99BA09B11E60551F00CF8074 /* LicenseCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA098A1E60551F00CF8074 /* LicenseCustom.swift */; };
-		99BA09B21E60551F00CF8074 /* MITLicense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA098B1E60551F00CF8074 /* MITLicense.swift */; };
-		99BA09B31E60551F00CF8074 /* MozillaPublicLincese20.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA098C1E60551F00CF8074 /* MozillaPublicLincese20.swift */; };
-		99BA09D91E60577900CF8074 /* LibraryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA09CC1E60577900CF8074 /* LibraryCell.swift */; };
-		99C6C5491E66FBFE00E57A58 /* asl_20_minimal.txt in Resources */ = {isa = PBXBuildFile; fileRef = 99C6C5401E66FBFE00E57A58 /* asl_20_minimal.txt */; };
-		99C6C54A1E66FBFE00E57A58 /* bsd3_minimal.txt in Resources */ = {isa = PBXBuildFile; fileRef = 99C6C5411E66FBFE00E57A58 /* bsd3_minimal.txt */; };
-		99C6C54B1E66FBFE00E57A58 /* ccand_30_minimal.txt in Resources */ = {isa = PBXBuildFile; fileRef = 99C6C5421E66FBFE00E57A58 /* ccand_30_minimal.txt */; };
-		99C6C54C1E66FBFE00E57A58 /* gpl_20_minimal.txt in Resources */ = {isa = PBXBuildFile; fileRef = 99C6C5431E66FBFE00E57A58 /* gpl_20_minimal.txt */; };
-		99C6C54D1E66FBFE00E57A58 /* gpl_30_minimal.txt in Resources */ = {isa = PBXBuildFile; fileRef = 99C6C5441E66FBFE00E57A58 /* gpl_30_minimal.txt */; };
-		99C6C54E1E66FBFE00E57A58 /* isc_minimal.txt in Resources */ = {isa = PBXBuildFile; fileRef = 99C6C5451E66FBFE00E57A58 /* isc_minimal.txt */; };
-		99C6C54F1E66FBFE00E57A58 /* lgpl_21_minimal.txt in Resources */ = {isa = PBXBuildFile; fileRef = 99C6C5461E66FBFE00E57A58 /* lgpl_21_minimal.txt */; };
-		99C6C5501E66FBFE00E57A58 /* mit_minimal.txt in Resources */ = {isa = PBXBuildFile; fileRef = 99C6C5471E66FBFE00E57A58 /* mit_minimal.txt */; };
-		99C6C5511E66FBFE00E57A58 /* mpl_20_minimal.txt in Resources */ = {isa = PBXBuildFile; fileRef = 99C6C5481E66FBFE00E57A58 /* mpl_20_minimal.txt */; };
-		99E794661E64822500BECE1A /* InfoCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E794641E64822500BECE1A /* InfoCellView.swift */; };
-		99E794671E64822500BECE1A /* InfoCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99E794651E64822500BECE1A /* InfoCellView.xib */; };
-		99E794741E648C2300BECE1A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 99E794761E648C2300BECE1A /* Localizable.strings */; };
+		7E4938FB20C6D994009D360D /* Licensy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E4938F220C6D993009D360D /* Licensy.framework */; };
+		7E49390020C6D994009D360D /* LicensyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4938FF20C6D994009D360D /* LicensyTests.swift */; };
+		7E49390220C6D994009D360D /* Licensy.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E4938F420C6D993009D360D /* Licensy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		7E4938FC20C6D994009D360D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 99BA095A1E60538300CF8074 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7E4938F120C6D993009D360D;
+			remoteInfo = Licensy;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		63A510A21E65D7F000B90D19 /* Arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Arrow.png; sourceTree = "<group>"; };
-		63A510A31E65D7F000B90D19 /* Minus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Minus.png; sourceTree = "<group>"; };
-		63A510A41E65D7F000B90D19 /* Plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Plus.png; sourceTree = "<group>"; };
-		990857E6206AE03600A80A79 /* LibraryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryModel.swift; sourceTree = "<group>"; };
-		990857E8206AE0A700A80A79 /* JSONModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONModel.swift; sourceTree = "<group>"; };
-		990857EB206AE52600A80A79 /* CommonMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonMethods.swift; sourceTree = "<group>"; };
-		998735881E60A4B400FDEB2A /* Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
-		998735891E60A4B400FDEB2A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		9987358D1E60A4B400FDEB2A /* LicenseCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicenseCellView.swift; sourceTree = "<group>"; };
-		9987358E1E60A4B400FDEB2A /* LicenseCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LicenseCellView.xib; sourceTree = "<group>"; };
-		998735901E60A4B400FDEB2A /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
-		998735911E60A4B400FDEB2A /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
-		998735921E60A4B400FDEB2A /* LicensyTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicensyTable.swift; sourceTree = "<group>"; };
-		99BA09631E60538300CF8074 /* Licensy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Licensy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		99BA09661E60538300CF8074 /* Licensy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Licensy.h; sourceTree = "<group>"; };
-		99BA09671E60538300CF8074 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		99BA096F1E60551F00CF8074 /* LibrariesPaser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibrariesPaser.swift; sourceTree = "<group>"; };
-		99BA09711E60551F00CF8074 /* LibraryEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryEntity.swift; sourceTree = "<group>"; };
-		99BA09751E60551F00CF8074 /* asl_20.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = asl_20.txt; sourceTree = "<group>"; };
-		99BA09761E60551F00CF8074 /* bsd3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bsd3.txt; sourceTree = "<group>"; };
-		99BA09771E60551F00CF8074 /* ccand_30.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ccand_30.txt; sourceTree = "<group>"; };
-		99BA09781E60551F00CF8074 /* gpl_20.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gpl_20.txt; sourceTree = "<group>"; };
-		99BA09791E60551F00CF8074 /* gpl_30.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gpl_30.txt; sourceTree = "<group>"; };
-		99BA097A1E60551F00CF8074 /* isc.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = isc.txt; sourceTree = "<group>"; };
-		99BA097B1E60551F00CF8074 /* lgpl_21.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lgpl_21.txt; sourceTree = "<group>"; };
-		99BA097C1E60551F00CF8074 /* mit.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mit.txt; sourceTree = "<group>"; };
-		99BA097D1E60551F00CF8074 /* mpl_20.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mpl_20.txt; sourceTree = "<group>"; };
-		99BA097E1E60551F00CF8074 /* LicenseOrganizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicenseOrganizer.swift; sourceTree = "<group>"; };
-		99BA097F1E60551F00CF8074 /* LicenseParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicenseParser.swift; sourceTree = "<group>"; };
-		99BA09811E60551F00CF8074 /* License.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
-		99BA09831E60551F00CF8074 /* ApacheSoftwareLicense20.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApacheSoftwareLicense20.swift; sourceTree = "<group>"; };
-		99BA09841E60551F00CF8074 /* BSD3ClauseLicense.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BSD3ClauseLicense.swift; sourceTree = "<group>"; };
-		99BA09851E60551F00CF8074 /* CreativeCommonsAttributionNoDerivs30Unported.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreativeCommonsAttributionNoDerivs30Unported.swift; sourceTree = "<group>"; };
-		99BA09861E60551F00CF8074 /* GnuGeneralPublicLicense20.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GnuGeneralPublicLicense20.swift; sourceTree = "<group>"; };
-		99BA09871E60551F00CF8074 /* GnuGeneralPublicLicense30.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GnuGeneralPublicLicense30.swift; sourceTree = "<group>"; };
-		99BA09881E60551F00CF8074 /* GnuLessetGeneralPublicLicense21.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GnuLessetGeneralPublicLicense21.swift; sourceTree = "<group>"; };
-		99BA09891E60551F00CF8074 /* ISCLicense.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISCLicense.swift; sourceTree = "<group>"; };
-		99BA098A1E60551F00CF8074 /* LicenseCustom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicenseCustom.swift; sourceTree = "<group>"; };
-		99BA098B1E60551F00CF8074 /* MITLicense.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MITLicense.swift; sourceTree = "<group>"; };
-		99BA098C1E60551F00CF8074 /* MozillaPublicLincese20.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MozillaPublicLincese20.swift; sourceTree = "<group>"; };
-		99BA09CC1E60577900CF8074 /* LibraryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryCell.swift; sourceTree = "<group>"; };
-		99C6C5401E66FBFE00E57A58 /* asl_20_minimal.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = asl_20_minimal.txt; sourceTree = "<group>"; };
-		99C6C5411E66FBFE00E57A58 /* bsd3_minimal.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bsd3_minimal.txt; sourceTree = "<group>"; };
-		99C6C5421E66FBFE00E57A58 /* ccand_30_minimal.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ccand_30_minimal.txt; sourceTree = "<group>"; };
-		99C6C5431E66FBFE00E57A58 /* gpl_20_minimal.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gpl_20_minimal.txt; sourceTree = "<group>"; };
-		99C6C5441E66FBFE00E57A58 /* gpl_30_minimal.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gpl_30_minimal.txt; sourceTree = "<group>"; };
-		99C6C5451E66FBFE00E57A58 /* isc_minimal.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = isc_minimal.txt; sourceTree = "<group>"; };
-		99C6C5461E66FBFE00E57A58 /* lgpl_21_minimal.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lgpl_21_minimal.txt; sourceTree = "<group>"; };
-		99C6C5471E66FBFE00E57A58 /* mit_minimal.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mit_minimal.txt; sourceTree = "<group>"; };
-		99C6C5481E66FBFE00E57A58 /* mpl_20_minimal.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mpl_20_minimal.txt; sourceTree = "<group>"; };
-		99E794641E64822500BECE1A /* InfoCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCellView.swift; sourceTree = "<group>"; };
-		99E794651E64822500BECE1A /* InfoCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoCellView.xib; sourceTree = "<group>"; };
-		99E794751E648C2300BECE1A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		99E794771E648C5500BECE1A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7E4938F220C6D993009D360D /* Licensy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Licensy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E4938F420C6D993009D360D /* Licensy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Licensy.h; sourceTree = "<group>"; };
+		7E4938F520C6D993009D360D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E4938FA20C6D994009D360D /* Licensy iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Licensy iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E4938FF20C6D994009D360D /* LicensyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicensyTests.swift; sourceTree = "<group>"; };
+		7E49390120C6D994009D360D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		99BA095F1E60538300CF8074 /* Frameworks */ = {
+		7E4938EE20C6D993009D360D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7E4938F720C6D994009D360D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E4938FB20C6D994009D360D /* Licensy.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		63A510A11E65D7F000B90D19 /* Accesory */ = {
+		7E4938F320C6D993009D360D /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				63A510A21E65D7F000B90D19 /* Arrow.png */,
-				63A510A31E65D7F000B90D19 /* Minus.png */,
-				63A510A41E65D7F000B90D19 /* Plus.png */,
+				7E49390920C6DA06009D360D /* Supporting Files */,
 			);
-			path = Accesory;
+			path = Sources;
 			sourceTree = "<group>";
 		};
-		990857EA206AE51500A80A79 /* Commons */ = {
+		7E4938FE20C6D994009D360D /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				990857EB206AE52600A80A79 /* CommonMethods.swift */,
+				7E4938FF20C6D994009D360D /* LicensyTests.swift */,
+				7E49390A20C6DAA6009D360D /* Supporting Files */,
 			);
-			path = Commons;
+			path = Tests;
 			sourceTree = "<group>";
 		};
-		9974885A1E644E6800BB1022 /* Resources */ = {
+		7E49390920C6DA06009D360D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				63A510A11E65D7F000B90D19 /* Accesory */,
-				99E794761E648C2300BECE1A /* Localizable.strings */,
+				7E4938F420C6D993009D360D /* Licensy.h */,
+				7E4938F520C6D993009D360D /* Info.plist */,
 			);
-			path = Resources;
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		998735871E60A4B400FDEB2A /* Appearance */ = {
+		7E49390A20C6DAA6009D360D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				998735881E60A4B400FDEB2A /* Appearance.swift */,
-				998735891E60A4B400FDEB2A /* Extensions.swift */,
+				7E49390120C6D994009D360D /* Info.plist */,
 			);
-			path = Appearance;
-			sourceTree = "<group>";
-		};
-		9987358A1E60A4B400FDEB2A /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				99E794641E64822500BECE1A /* InfoCellView.swift */,
-				99E794651E64822500BECE1A /* InfoCellView.xib */,
-				9987358D1E60A4B400FDEB2A /* LicenseCellView.swift */,
-				9987358E1E60A4B400FDEB2A /* LicenseCellView.xib */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
-		9987358F1E60A4B400FDEB2A /* Header */ = {
-			isa = PBXGroup;
-			children = (
-				998735901E60A4B400FDEB2A /* HeaderView.swift */,
-				998735911E60A4B400FDEB2A /* HeaderView.xib */,
-			);
-			path = Header;
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		99BA09591E60538300CF8074 = {
 			isa = PBXGroup;
 			children = (
-				99BA09651E60538300CF8074 /* Licensy */,
+				7E4938F320C6D993009D360D /* Sources */,
+				7E4938FE20C6D994009D360D /* Tests */,
 				99BA09641E60538300CF8074 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -195,157 +96,61 @@
 		99BA09641E60538300CF8074 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				99BA09631E60538300CF8074 /* Licensy.framework */,
+				7E4938F220C6D993009D360D /* Licensy.framework */,
+				7E4938FA20C6D994009D360D /* Licensy iOS Tests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		99BA09651E60538300CF8074 /* Licensy */ = {
-			isa = PBXGroup;
-			children = (
-				99BA09661E60538300CF8074 /* Licensy.h */,
-				99BA09C11E60577900CF8074 /* Views */,
-				99BA096E1E60551F00CF8074 /* Library */,
-				99BA09731E60551F00CF8074 /* Licenses */,
-				9974885A1E644E6800BB1022 /* Resources */,
-				99BA09671E60538300CF8074 /* Info.plist */,
-			);
-			path = Licensy;
-			sourceTree = "<group>";
-		};
-		99BA096E1E60551F00CF8074 /* Library */ = {
-			isa = PBXGroup;
-			children = (
-				99BA096F1E60551F00CF8074 /* LibrariesPaser.swift */,
-				99BA09701E60551F00CF8074 /* Model */,
-			);
-			path = Library;
-			sourceTree = "<group>";
-		};
-		99BA09701E60551F00CF8074 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				990857E8206AE0A700A80A79 /* JSONModel.swift */,
-				99BA09711E60551F00CF8074 /* LibraryEntity.swift */,
-				990857E6206AE03600A80A79 /* LibraryModel.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		99BA09731E60551F00CF8074 /* Licenses */ = {
-			isa = PBXGroup;
-			children = (
-				99BA09741E60551F00CF8074 /* Files */,
-				99BA097E1E60551F00CF8074 /* LicenseOrganizer.swift */,
-				99BA097F1E60551F00CF8074 /* LicenseParser.swift */,
-				99BA09801E60551F00CF8074 /* Model */,
-			);
-			path = Licenses;
-			sourceTree = "<group>";
-		};
-		99BA09741E60551F00CF8074 /* Files */ = {
-			isa = PBXGroup;
-			children = (
-				99C6C5401E66FBFE00E57A58 /* asl_20_minimal.txt */,
-				99C6C5411E66FBFE00E57A58 /* bsd3_minimal.txt */,
-				99C6C5421E66FBFE00E57A58 /* ccand_30_minimal.txt */,
-				99C6C5431E66FBFE00E57A58 /* gpl_20_minimal.txt */,
-				99C6C5441E66FBFE00E57A58 /* gpl_30_minimal.txt */,
-				99C6C5451E66FBFE00E57A58 /* isc_minimal.txt */,
-				99C6C5461E66FBFE00E57A58 /* lgpl_21_minimal.txt */,
-				99C6C5471E66FBFE00E57A58 /* mit_minimal.txt */,
-				99C6C5481E66FBFE00E57A58 /* mpl_20_minimal.txt */,
-				99BA09751E60551F00CF8074 /* asl_20.txt */,
-				99BA09761E60551F00CF8074 /* bsd3.txt */,
-				99BA09771E60551F00CF8074 /* ccand_30.txt */,
-				99BA09781E60551F00CF8074 /* gpl_20.txt */,
-				99BA09791E60551F00CF8074 /* gpl_30.txt */,
-				99BA097A1E60551F00CF8074 /* isc.txt */,
-				99BA097B1E60551F00CF8074 /* lgpl_21.txt */,
-				99BA097C1E60551F00CF8074 /* mit.txt */,
-				99BA097D1E60551F00CF8074 /* mpl_20.txt */,
-			);
-			path = Files;
-			sourceTree = "<group>";
-		};
-		99BA09801E60551F00CF8074 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				99BA09811E60551F00CF8074 /* License.swift */,
-				99BA09821E60551F00CF8074 /* LicenseTypes */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		99BA09821E60551F00CF8074 /* LicenseTypes */ = {
-			isa = PBXGroup;
-			children = (
-				99BA09831E60551F00CF8074 /* ApacheSoftwareLicense20.swift */,
-				99BA09841E60551F00CF8074 /* BSD3ClauseLicense.swift */,
-				99BA09851E60551F00CF8074 /* CreativeCommonsAttributionNoDerivs30Unported.swift */,
-				99BA09861E60551F00CF8074 /* GnuGeneralPublicLicense20.swift */,
-				99BA09871E60551F00CF8074 /* GnuGeneralPublicLicense30.swift */,
-				99BA09881E60551F00CF8074 /* GnuLessetGeneralPublicLicense21.swift */,
-				99BA09891E60551F00CF8074 /* ISCLicense.swift */,
-				99BA098A1E60551F00CF8074 /* LicenseCustom.swift */,
-				99BA098B1E60551F00CF8074 /* MITLicense.swift */,
-				99BA098C1E60551F00CF8074 /* MozillaPublicLincese20.swift */,
-			);
-			path = LicenseTypes;
-			sourceTree = "<group>";
-		};
-		99BA09C11E60577900CF8074 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				990857EA206AE51500A80A79 /* Commons */,
-				99BA09CB1E60577900CF8074 /* Model */,
-				998735871E60A4B400FDEB2A /* Appearance */,
-				9987358F1E60A4B400FDEB2A /* Header */,
-				9987358A1E60A4B400FDEB2A /* Cells */,
-				998735921E60A4B400FDEB2A /* LicensyTable.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		99BA09CB1E60577900CF8074 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				99BA09CC1E60577900CF8074 /* LibraryCell.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		99BA09601E60538300CF8074 /* Headers */ = {
+		7E4938EF20C6D993009D360D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99BA09681E60538300CF8074 /* Licensy.h in Headers */,
+				7E49390220C6D994009D360D /* Licensy.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		99BA09621E60538300CF8074 /* Licensy */ = {
+		7E4938F120C6D993009D360D /* Licensy iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 99BA096B1E60538300CF8074 /* Build configuration list for PBXNativeTarget "Licensy" */;
+			buildConfigurationList = 7E49390320C6D994009D360D /* Build configuration list for PBXNativeTarget "Licensy iOS" */;
 			buildPhases = (
-				99BA095E1E60538300CF8074 /* Sources */,
-				99BA095F1E60538300CF8074 /* Frameworks */,
-				99BA09601E60538300CF8074 /* Headers */,
-				99BA09611E60538300CF8074 /* Resources */,
+				7E4938ED20C6D993009D360D /* Sources */,
+				7E4938EE20C6D993009D360D /* Frameworks */,
+				7E4938EF20C6D993009D360D /* Headers */,
+				7E4938F020C6D993009D360D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Licensy;
+			name = "Licensy iOS";
 			productName = Licensy;
-			productReference = 99BA09631E60538300CF8074 /* Licensy.framework */;
+			productReference = 7E4938F220C6D993009D360D /* Licensy.framework */;
 			productType = "com.apple.product-type.framework";
+		};
+		7E4938F920C6D994009D360D /* Licensy iOS Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E49390620C6D994009D360D /* Build configuration list for PBXNativeTarget "Licensy iOS Tests" */;
+			buildPhases = (
+				7E4938F620C6D994009D360D /* Sources */,
+				7E4938F720C6D994009D360D /* Frameworks */,
+				7E4938F820C6D994009D360D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7E4938FD20C6D994009D360D /* PBXTargetDependency */,
+			);
+			name = "Licensy iOS Tests";
+			productName = LicensyTests;
+			productReference = 7E4938FA20C6D994009D360D /* Licensy iOS Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -353,12 +158,18 @@
 		99BA095A1E60538300CF8074 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = RetoLabs;
 				TargetAttributes = {
-					99BA09621E60538300CF8074 = {
-						CreatedOnToolsVersion = 8.2.1;
-						LastSwiftMigration = 0920;
+					7E4938F120C6D993009D360D = {
+						CreatedOnToolsVersion = 9.4;
+						DevelopmentTeam = FUTCARWTT6;
+						ProvisioningStyle = Automatic;
+					};
+					7E4938F920C6D994009D360D = {
+						CreatedOnToolsVersion = 9.4;
+						DevelopmentTeam = FUTCARWTT6;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -376,94 +187,160 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				99BA09621E60538300CF8074 /* Licensy */,
+				7E4938F120C6D993009D360D /* Licensy iOS */,
+				7E4938F920C6D994009D360D /* Licensy iOS Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		99BA09611E60538300CF8074 /* Resources */ = {
+		7E4938F020C6D993009D360D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99E794671E64822500BECE1A /* InfoCellView.xib in Resources */,
-				99C6C5491E66FBFE00E57A58 /* asl_20_minimal.txt in Resources */,
-				9987359A1E60A4B400FDEB2A /* HeaderView.xib in Resources */,
-				99BA09A61E60551F00CF8074 /* mpl_20.txt in Resources */,
-				99C6C54E1E66FBFE00E57A58 /* isc_minimal.txt in Resources */,
-				99C6C5501E66FBFE00E57A58 /* mit_minimal.txt in Resources */,
-				99E794741E648C2300BECE1A /* Localizable.strings in Resources */,
-				99C6C54B1E66FBFE00E57A58 /* ccand_30_minimal.txt in Resources */,
-				99C6C54D1E66FBFE00E57A58 /* gpl_30_minimal.txt in Resources */,
-				63A510A51E65D7F000B90D19 /* Arrow.png in Resources */,
-				63A510A71E65D7F000B90D19 /* Plus.png in Resources */,
-				99BA09A51E60551F00CF8074 /* mit.txt in Resources */,
-				99BA09A21E60551F00CF8074 /* gpl_30.txt in Resources */,
-				99C6C5511E66FBFE00E57A58 /* mpl_20_minimal.txt in Resources */,
-				99C6C54C1E66FBFE00E57A58 /* gpl_20_minimal.txt in Resources */,
-				63A510A61E65D7F000B90D19 /* Minus.png in Resources */,
-				99BA09A41E60551F00CF8074 /* lgpl_21.txt in Resources */,
-				99BA09A01E60551F00CF8074 /* ccand_30.txt in Resources */,
-				99C6C54A1E66FBFE00E57A58 /* bsd3_minimal.txt in Resources */,
-				998735981E60A4B400FDEB2A /* LicenseCellView.xib in Resources */,
-				99C6C54F1E66FBFE00E57A58 /* lgpl_21_minimal.txt in Resources */,
-				99BA09A11E60551F00CF8074 /* gpl_20.txt in Resources */,
-				99BA099F1E60551F00CF8074 /* bsd3.txt in Resources */,
-				99BA09A31E60551F00CF8074 /* isc.txt in Resources */,
-				99BA099E1E60551F00CF8074 /* asl_20.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E4938F820C6D994009D360D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		99BA095E1E60538300CF8074 /* Sources */ = {
+		7E4938ED20C6D993009D360D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				998735971E60A4B400FDEB2A /* LicenseCellView.swift in Sources */,
-				99BA099C1E60551F00CF8074 /* LibraryEntity.swift in Sources */,
-				99BA09A71E60551F00CF8074 /* LicenseOrganizer.swift in Sources */,
-				99E794661E64822500BECE1A /* InfoCellView.swift in Sources */,
-				990857EC206AE52600A80A79 /* CommonMethods.swift in Sources */,
-				99BA09AA1E60551F00CF8074 /* ApacheSoftwareLicense20.swift in Sources */,
-				99BA09AE1E60551F00CF8074 /* GnuGeneralPublicLicense30.swift in Sources */,
-				99BA09B21E60551F00CF8074 /* MITLicense.swift in Sources */,
-				99BA09AB1E60551F00CF8074 /* BSD3ClauseLicense.swift in Sources */,
-				99BA09D91E60577900CF8074 /* LibraryCell.swift in Sources */,
-				99BA09B01E60551F00CF8074 /* ISCLicense.swift in Sources */,
-				99BA09AD1E60551F00CF8074 /* GnuGeneralPublicLicense20.swift in Sources */,
-				99BA09A91E60551F00CF8074 /* License.swift in Sources */,
-				9987359B1E60A4B400FDEB2A /* LicensyTable.swift in Sources */,
-				99BA09B31E60551F00CF8074 /* MozillaPublicLincese20.swift in Sources */,
-				990857E7206AE03600A80A79 /* LibraryModel.swift in Sources */,
-				99BA09A81E60551F00CF8074 /* LicenseParser.swift in Sources */,
-				99BA099B1E60551F00CF8074 /* LibrariesPaser.swift in Sources */,
-				998735941E60A4B400FDEB2A /* Extensions.swift in Sources */,
-				998735931E60A4B400FDEB2A /* Appearance.swift in Sources */,
-				99BA09B11E60551F00CF8074 /* LicenseCustom.swift in Sources */,
-				99BA09AF1E60551F00CF8074 /* GnuLessetGeneralPublicLicense21.swift in Sources */,
-				990857E9206AE0A700A80A79 /* JSONModel.swift in Sources */,
-				99BA09AC1E60551F00CF8074 /* CreativeCommonsAttributionNoDerivs30Unported.swift in Sources */,
-				998735991E60A4B400FDEB2A /* HeaderView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E4938F620C6D994009D360D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E49390020C6D994009D360D /* LicensyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		99E794761E648C2300BECE1A /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				99E794751E648C2300BECE1A /* en */,
-				99E794771E648C5500BECE1A /* es */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
+/* Begin PBXTargetDependency section */
+		7E4938FD20C6D994009D360D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7E4938F120C6D993009D360D /* Licensy iOS */;
+			targetProxy = 7E4938FC20C6D994009D360D /* PBXContainerItemProxy */;
 		};
-/* End PBXVariantGroup section */
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		7E49390420C6D994009D360D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = FUTCARWTT6;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gygr969.Licensy;
+				PRODUCT_NAME = Licensy;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7E49390520C6D994009D360D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = FUTCARWTT6;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gygr969.Licensy;
+				PRODUCT_NAME = Licensy;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7E49390720C6D994009D360D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FUTCARWTT6;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gygr969.LicensyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7E49390820C6D994009D360D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FUTCARWTT6;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gygr969.LicensyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		99BA09691E60538300CF8074 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -577,63 +454,32 @@
 			};
 			name = Release;
 		};
-		99BA096C1E60538300CF8074 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Licensy/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.RetoLabs.Licensy;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
-			};
-			name = Debug;
-		};
-		99BA096D1E60538300CF8074 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Licensy/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.RetoLabs.Licensy;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7E49390320C6D994009D360D /* Build configuration list for PBXNativeTarget "Licensy iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E49390420C6D994009D360D /* Debug */,
+				7E49390520C6D994009D360D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E49390620C6D994009D360D /* Build configuration list for PBXNativeTarget "Licensy iOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E49390720C6D994009D360D /* Debug */,
+				7E49390820C6D994009D360D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		99BA095D1E60538300CF8074 /* Build configuration list for PBXProject "Licensy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				99BA09691E60538300CF8074 /* Debug */,
 				99BA096A1E60538300CF8074 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		99BA096B1E60538300CF8074 /* Build configuration list for PBXNativeTarget "Licensy" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				99BA096C1E60538300CF8074 /* Debug */,
-				99BA096D1E60538300CF8074 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
