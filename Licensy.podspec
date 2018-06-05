@@ -15,6 +15,6 @@ Pod::Spec.new do |s|
   s.framework = 'UIKit'
   s.source_files = 'Licensy/Sources/**/*.{swift}'
   s.resource_bundles = {
-    'Licensy' => ['Licensy/Sources/**/*.{storyboard,xib,png,strings,txt}']
+    s.name => ['Licensy/Sources/**/*.{storyboard,xib,png,strings,txt}']
   }
 end

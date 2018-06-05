@@ -13,7 +13,16 @@ public class CommonMethods {
     ///
     /// Returns: The library bundle
     public class func libraryBundle() -> Bundle {
-        let podBundle: Bundle = Bundle(for: LibraryEntity.self)
+        let bundle: Bundle = Bundle(for: LibraryEntity.self)
+        guard let podBundle: Bundle = self.podBundle(fromBundle: bundle) else { return bundle }
+        return podBundle
+    }
+    
+    //MARK: - Private Methods
+    
+    private class func podBundle(fromBundle bundle: Bundle) -> Bundle? {
+        guard let bundleURL: URL = bundle.url(forResource: "Licensy", withExtension: "bundle") else { return nil }
+        guard let podBundle: Bundle = Bundle(url: bundleURL) else { return nil }
         return podBundle
     }
 }
