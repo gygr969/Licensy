@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7E4938F120C6D993009D360D"
-               BuildableName = "Licensy_iOS.framework"
-               BlueprintName = "Licensy iOS"
-               ReferencedContainer = "container:Licensy.xcodeproj">
+               BlueprintIdentifier = "7E4938B620C6D5E4009D360D"
+               BuildableName = "iOS Example.app"
+               BlueprintName = "iOS Example"
+               ReferencedContainer = "container:iOS Example.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -26,27 +26,16 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      codeCoverageEnabled = "YES"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7E4938F920C6D994009D360D"
-               BuildableName = "Licensy iOS Tests.xctest"
-               BlueprintName = "Licensy iOS Tests"
-               ReferencedContainer = "container:Licensy.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7E4938F120C6D993009D360D"
-            BuildableName = "Licensy_iOS.framework"
-            BlueprintName = "Licensy iOS"
-            ReferencedContainer = "container:Licensy.xcodeproj">
+            BlueprintIdentifier = "7E4938B620C6D5E4009D360D"
+            BuildableName = "iOS Example.app"
+            BlueprintName = "iOS Example"
+            ReferencedContainer = "container:iOS Example.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -62,15 +51,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7E4938F120C6D993009D360D"
-            BuildableName = "Licensy_iOS.framework"
-            BlueprintName = "Licensy iOS"
-            ReferencedContainer = "container:Licensy.xcodeproj">
+            BlueprintIdentifier = "7E4938B620C6D5E4009D360D"
+            BuildableName = "iOS Example.app"
+            BlueprintName = "iOS Example"
+            ReferencedContainer = "container:iOS Example.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -80,15 +70,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7E4938F120C6D993009D360D"
-            BuildableName = "Licensy_iOS.framework"
-            BlueprintName = "Licensy iOS"
-            ReferencedContainer = "container:Licensy.xcodeproj">
+            BlueprintIdentifier = "7E4938B620C6D5E4009D360D"
+            BuildableName = "iOS Example.app"
+            BlueprintName = "iOS Example"
+            ReferencedContainer = "container:iOS Example.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

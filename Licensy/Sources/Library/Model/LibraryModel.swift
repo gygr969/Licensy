@@ -18,4 +18,14 @@ public class LibraryModel: Decodable {
     var copyright: String
     /// The license of the library.
     var license: String
+    
+    init(entity: LibraryEntity) {
+        self.name = entity.name
+        self.organization = entity.organization
+        self.url = entity.organization
+        self.copyright = entity.copyright
+        self.license = "MIT"
+        guard let licenseEntity: License = entity.license else { return }
+        self.license = licenseEntity.identifier
+    }
 }
