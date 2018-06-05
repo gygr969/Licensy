@@ -60,6 +60,7 @@
 		7E49397C20C6DC35009D360D /* LicenseCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E49394A20C6DC34009D360D /* LicenseCustom.swift */; };
 		7E49397D20C6DC35009D360D /* MITLicense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E49394B20C6DC34009D360D /* MITLicense.swift */; };
 		7E49397E20C6DC35009D360D /* MozillaPublicLincese20.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E49394C20C6DC34009D360D /* MozillaPublicLincese20.swift */; };
+		7E49398320C6DFC8009D360D /* Lincesy.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7E49398520C6DFC8009D360D /* Lincesy.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +131,8 @@
 		7E49394A20C6DC34009D360D /* LicenseCustom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicenseCustom.swift; sourceTree = "<group>"; };
 		7E49394B20C6DC34009D360D /* MITLicense.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MITLicense.swift; sourceTree = "<group>"; };
 		7E49394C20C6DC34009D360D /* MozillaPublicLincese20.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MozillaPublicLincese20.swift; sourceTree = "<group>"; };
+		7E49398420C6DFC8009D360D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Lincesy.strings; sourceTree = "<group>"; };
+		7E49398620C6DFCA009D360D /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Lincesy.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,8 +178,9 @@
 		7E49390920C6DA06009D360D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				7E4938F420C6D993009D360D /* Licensy.h */,
 				7E4938F520C6D993009D360D /* Info.plist */,
+				7E4938F420C6D993009D360D /* Licensy.h */,
+				7E49398520C6DFC8009D360D /* Lincesy.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -234,8 +238,8 @@
 				7E49391D20C6DC34009D360D /* Cells */,
 				7E49392220C6DC34009D360D /* Commons */,
 				7E49392420C6DC34009D360D /* Header */,
-				7E49392720C6DC34009D360D /* LicensyTable.swift */,
 				7E49392820C6DC34009D360D /* Model */,
+				7E49392720C6DC34009D360D /* LicensyTable.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -485,6 +489,7 @@
 				7E49396420C6DC35009D360D /* ccand_30.txt in Resources */,
 				7E49396820C6DC35009D360D /* gpl_30.txt in Resources */,
 				7E49395820C6DC35009D360D /* InfoCellView.xib in Resources */,
+				7E49398320C6DFC8009D360D /* Lincesy.strings in Resources */,
 				7E49395D20C6DC35009D360D /* HeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -557,6 +562,15 @@
 				7E49391820C6DC34009D360D /* es */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		7E49398520C6DFC8009D360D /* Lincesy.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7E49398420C6DFC8009D360D /* en */,
+				7E49398620C6DFCA009D360D /* es */,
+			);
+			name = Lincesy.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

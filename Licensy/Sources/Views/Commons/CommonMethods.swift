@@ -13,8 +13,7 @@ public class CommonMethods {
     ///
     /// Returns: The library bundle
     public class func libraryBundle() -> Bundle {
-        let podBundle = Bundle(for: LibraryEntity.self)
-        let bundleURL = podBundle.url(forResource: "Licensy", withExtension: "bundle")
-        return Bundle(url: bundleURL!)!
+        let podBundle: Bundle = Bundle(for: LibraryEntity.self)
+        return podBundle
     }
 }

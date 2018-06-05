@@ -1,0 +1,10 @@
+/* 
+  Lincesy.strings
+  Licensy
+
+  Created by Guillermo García Rebolo on 5/6/18.
+  Copyright © 2018 RetoLabs. All rights reserved.
+*/
+
+"licensy.general.app.libraries.button.show_license" = "Mostrar Licencia";
+"licensy.general.app.libraries.button.hide_license" = "Ocultar Licencia";
