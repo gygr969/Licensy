@@ -2,6 +2,7 @@
   <img src="readme-resources/logo.png" style="max-height: 300px;" alt="Licensy for iOS">
 </p>
 
+[![Build Status](https://travis-ci.org/gygr969/Licensy.svg?branch=master)](https://travis-ci.org/gygr969/Licensy)
 [![CocoaPods compatible](https://img.shields.io/cocoapods/v/Licensy.svg?style=flat)](https://cocoapods.org/pods/Licensy) 
 [![License: MIT](https://img.shields.io/cocoapods/l/Licensy.svg?style=flat)](http://opensource.org/licenses/MIT) 
 [![Swift Version](https://img.shields.io/badge/Swift-4.1-orange.svg?style=flat)](https://developer.apple.com/swift/) 
