@@ -13,8 +13,8 @@ Pod::Spec.new do |s|
   s.source = { :git => 'https://github.com/gygr969/Licensy.git', :tag => s.version.to_s}
   s.swift_version = "4.1"
   s.framework = 'UIKit'
-  s.source_files = 'Licensy/Licensy/**/*.{swift}'
+  s.source_files = 'Licensy/Sources/**/*.{swift}'
   s.resource_bundles = {
-    'Licensy' => ['Licensy/Licensy/**/*.{storyboard,xib,png,strings,txt}']
+    'Licensy' => ['Licensy/Sources/**/*.{storyboard,xib,png,strings,txt}']
   }
 end
