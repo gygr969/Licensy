@@ -1,0 +1,39 @@
+{
+    "libraries": [
+        {
+            "name": "Library 1",
+            "url": "https://github.com/guille969/Licensy",
+            "copyright": "Copyright (C) 2017 David Jimenez Guinaldo",
+            "organization": "RetoLabs",
+            "license": "ASL20"
+        },
+        {
+            "name": "Library 2",
+            "url": "https://github.com/guille969/Licensy",
+            "copyright": "Copyright (C) 2017 David Jimenez Guinaldo",
+            "organization": "RetoLabs",
+            "license": "MIT"
+        },
+        {
+            "name": "Library 3",
+            "url": "https://github.com/guille969/Licensy",
+            "copyright": "Copyright (C) 2017 Guillermo Garcia Rebolo",
+            "organization": "RetoLabs",
+            "license": "ASL20"
+        },
+        {
+            "name": "Library 4",
+            "url": "https://github.com/guille969/Licensy",
+            "copyright": "Copyright (C) 2017 Guillermo Garcia Rebolo",
+            "organization": "RetoLabs",
+            "license": "MIT"
+        },
+        {
+            "name": "Library 5",
+            "url": "https://github.com/guille969/Licensy",
+            "copyright": "Copyright (C) 2017",
+            "organization": "RetoLabs",
+            "license": "MY_CUSTOM_LICENSE"
+        }
+    ]
+}
