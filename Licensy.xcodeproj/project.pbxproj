@@ -59,7 +59,7 @@
 		7E4938FB20C6D994009D360D /* Licensy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E4938F220C6D993009D360D /* Licensy.framework */; };
 		7E49390020C6D994009D360D /* LicensyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4938FF20C6D994009D360D /* LicensyTests.swift */; };
 		7E49390220C6D994009D360D /* Licensy.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E4938F420C6D993009D360D /* Licensy.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7E70BC4A20C7DBB10009AE33 /* Licensy.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7E70BC4C20C7DBB10009AE33 /* Licensy.strings */; };
+		7E70BC6D20C7E61F0009AE33 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7E70BC6B20C7E61F0009AE33 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,8 +111,6 @@
 		7E45F58420C7D9BA00643D8F /* Arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Arrow.png; sourceTree = "<group>"; };
 		7E45F58520C7D9BA00643D8F /* Minus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Minus.png; sourceTree = "<group>"; };
 		7E45F58620C7D9BA00643D8F /* Plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Plus.png; sourceTree = "<group>"; };
-		7E45F58820C7D9BA00643D8F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		7E45F58920C7D9BA00643D8F /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7E45F58C20C7D9BA00643D8F /* Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
 		7E45F58D20C7D9BA00643D8F /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		7E45F58F20C7D9BA00643D8F /* InfoCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCellView.swift; sourceTree = "<group>"; };
@@ -130,10 +128,8 @@
 		7E4938FA20C6D994009D360D /* Licensy iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Licensy iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E4938FF20C6D994009D360D /* LicensyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicensyTests.swift; sourceTree = "<group>"; };
 		7E49390120C6D994009D360D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7E49398420C6DFC8009D360D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Lincesy.strings; sourceTree = "<group>"; };
-		7E49398620C6DFCA009D360D /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Lincesy.strings; sourceTree = "<group>"; };
-		7E70BC4B20C7DBB10009AE33 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Licensy.strings; sourceTree = "<group>"; };
-		7E70BC4D20C7DBB30009AE33 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Licensy.strings; sourceTree = "<group>"; };
+		7E70BC6C20C7E61F0009AE33 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7E70BC6E20C7E62A0009AE33 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,7 +158,6 @@
 				7E45F55F20C7D9BA00643D8F /* Licenses */,
 				7E45F58220C7D9BA00643D8F /* Resources */,
 				7E45F58A20C7D9BA00643D8F /* Views */,
-				7E70BC4C20C7DBB10009AE33 /* Licensy.strings */,
 			);
 			path = Licensy;
 			sourceTree = "<group>";
@@ -251,8 +246,8 @@
 		7E45F58220C7D9BA00643D8F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7E70BC6B20C7E61F0009AE33 /* Localizable.strings */,
 				7E45F58320C7D9BA00643D8F /* Accesory */,
-				7E45F58720C7D9BA00643D8F /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -348,7 +343,6 @@
 			children = (
 				7E4938F520C6D993009D360D /* Info.plist */,
 				7E4938F420C6D993009D360D /* Licensy.h */,
-				7E49398520C6DFC8009D360D /* Lincesy.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -485,9 +479,9 @@
 				7E45F5BF20C7D9BA00643D8F /* Arrow.png in Resources */,
 				7E45F5C120C7D9BA00643D8F /* Plus.png in Resources */,
 				7E45F5B120C7D9BA00643D8F /* mpl_20_minimal.txt in Resources */,
+				7E70BC6D20C7E61F0009AE33 /* Localizable.strings in Resources */,
 				7E45F5AD20C7D9BA00643D8F /* lgpl_21_minimal.txt in Resources */,
 				7E45F5A520C7D9BA00643D8F /* ccand_30_minimal.txt in Resources */,
-				7E70BC4A20C7DBB10009AE33 /* Licensy.strings in Resources */,
 				7E45F5C820C7D9BA00643D8F /* LicenseCellView.xib in Resources */,
 				7E45F5C620C7D9BA00643D8F /* InfoCellView.xib in Resources */,
 				7E45F5A820C7D9BA00643D8F /* gpl_30.txt in Resources */,
@@ -564,31 +558,13 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7E45F58720C7D9BA00643D8F /* Localizable.strings */ = {
+		7E70BC6B20C7E61F0009AE33 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7E45F58820C7D9BA00643D8F /* en */,
-				7E45F58920C7D9BA00643D8F /* es */,
+				7E70BC6C20C7E61F0009AE33 /* en */,
+				7E70BC6E20C7E62A0009AE33 /* es */,
 			);
 			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-		7E49398520C6DFC8009D360D /* Lincesy.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7E49398420C6DFC8009D360D /* en */,
-				7E49398620C6DFCA009D360D /* es */,
-			);
-			name = Lincesy.strings;
-			sourceTree = "<group>";
-		};
-		7E70BC4C20C7DBB10009AE33 /* Licensy.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7E70BC4B20C7DBB10009AE33 /* en */,
-				7E70BC4D20C7DBB30009AE33 /* es */,
-			);
-			name = Licensy.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
