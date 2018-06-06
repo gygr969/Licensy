@@ -6,6 +6,8 @@
 //  Copyright © 2017 RetoLabs. All rights reserved.
 //
 
+import Foundation
+
 /// Parses the libraries from a given JSON
 public class LibrariesPaser {
     
