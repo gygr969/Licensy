@@ -6,7 +6,7 @@
 //  Copyright © 2017 RetoLabs. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 internal class LicenseParser {
     
