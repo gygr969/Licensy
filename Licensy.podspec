@@ -13,8 +13,8 @@ Pod::Spec.new do |s|
   s.swift_version = "4.1"
   s.ios.deployment_target = '9.0'
   s.framework = 'UIKit'
-  s.source_files = 'Licensy/Sources/**/*.{swift}'
+  s.source_files = 'Sources/**/*.{swift}'
   s.resource_bundles = {
-    s.name => ['Licensy/Sources/**/*.{storyboard,xib,png,strings,txt}']
+    s.name => ['Sources/**/*.{storyboard,xib,png,strings,txt}']
   }
 end
