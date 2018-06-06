@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="readme-resources/logo.png" style="max-height: 300px;" alt="Licensy for iOS">
+  <img src="Screenshots/logo.png" style="max-height: 300px;" alt="Licensy for iOS">
 </p>
 
 [![Build Status](https://travis-ci.org/gygr969/Licensy.svg?branch=master)](https://travis-ci.org/gygr969/Licensy)
@@ -9,7 +9,7 @@
 [![Platform](https://img.shields.io/badge/platform-iOS-lightgrey.svg)](https://developer.apple.com/ios/)
 
 <p align="center">
-  <img src="readme-resources/example.gif" style="max-height: 569px;" alt="Licensy for iOS">
+  <img src="Screenshots/example.gif" style="max-height: 569px;" alt="Licensy for iOS">
 </p>
 
 Copyright © David Jimenez Guinaldo & Guillermo Garcia Rebolo.
@@ -144,9 +144,9 @@ We provide you 3 different predefined styles:
 
 <table align="center", cellpadding=10>
   <tr>
-    <td><img src="readme-resources/default-style.png" style="max-height: 1100px;" alt="Licensy for iOS"></td>
-    <td><img src="readme-resources/ios-style.png" style="max-height: 1100px;" alt="Licensy for iOS"></td>
-    <td><img src="readme-resources/orangefit-style.png" style="max-height: 1100px;" alt="Licensy for iOS"></td>
+    <td><img src="Screenshots/default-style.png" style="max-height: 1100px;" alt="Licensy for iOS"></td>
+    <td><img src="Screenshots/ios-style.png" style="max-height: 1100px;" alt="Licensy for iOS"></td>
+    <td><img src="Screenshots/orangefit-style.png" style="max-height: 1100px;" alt="Licensy for iOS"></td>
   </tr>
   <tr>
     <td align="center">Default style</td>
