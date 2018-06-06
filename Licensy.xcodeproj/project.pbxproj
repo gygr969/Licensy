@@ -45,7 +45,6 @@
 		7E45F5BF20C7D9BA00643D8F /* Arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E45F58420C7D9BA00643D8F /* Arrow.png */; };
 		7E45F5C020C7D9BA00643D8F /* Minus.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E45F58520C7D9BA00643D8F /* Minus.png */; };
 		7E45F5C120C7D9BA00643D8F /* Plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E45F58620C7D9BA00643D8F /* Plus.png */; };
-		7E45F5C220C7D9BA00643D8F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7E45F58720C7D9BA00643D8F /* Localizable.strings */; };
 		7E45F5C320C7D9BA00643D8F /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E45F58C20C7D9BA00643D8F /* Appearance.swift */; };
 		7E45F5C420C7D9BA00643D8F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E45F58D20C7D9BA00643D8F /* Extensions.swift */; };
 		7E45F5C520C7D9BA00643D8F /* InfoCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E45F58F20C7D9BA00643D8F /* InfoCellView.swift */; };
@@ -60,8 +59,7 @@
 		7E4938FB20C6D994009D360D /* Licensy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E4938F220C6D993009D360D /* Licensy.framework */; };
 		7E49390020C6D994009D360D /* LicensyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4938FF20C6D994009D360D /* LicensyTests.swift */; };
 		7E49390220C6D994009D360D /* Licensy.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E4938F420C6D993009D360D /* Licensy.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7E49398320C6DFC8009D360D /* Lincesy.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7E49398520C6DFC8009D360D /* Lincesy.strings */; };
-		7E70BC4220C7DA0B0009AE33 /* Lincesy.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7E70BC4020C7DA0B0009AE33 /* Lincesy.strings */; };
+		7E70BC4A20C7DBB10009AE33 /* Licensy.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7E70BC4C20C7DBB10009AE33 /* Licensy.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,8 +132,8 @@
 		7E49390120C6D994009D360D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E49398420C6DFC8009D360D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Lincesy.strings; sourceTree = "<group>"; };
 		7E49398620C6DFCA009D360D /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Lincesy.strings; sourceTree = "<group>"; };
-		7E70BC4120C7DA0B0009AE33 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Lincesy.strings; sourceTree = "<group>"; };
-		7E70BC4320C7DA100009AE33 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Lincesy.strings; sourceTree = "<group>"; };
+		7E70BC4B20C7DBB10009AE33 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Licensy.strings; sourceTree = "<group>"; };
+		7E70BC4D20C7DBB30009AE33 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Licensy.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,7 +162,7 @@
 				7E45F55F20C7D9BA00643D8F /* Licenses */,
 				7E45F58220C7D9BA00643D8F /* Resources */,
 				7E45F58A20C7D9BA00643D8F /* Views */,
-				7E70BC4020C7DA0B0009AE33 /* Lincesy.strings */,
+				7E70BC4C20C7DBB10009AE33 /* Licensy.strings */,
 			);
 			path = Licensy;
 			sourceTree = "<group>";
@@ -489,17 +487,15 @@
 				7E45F5B120C7D9BA00643D8F /* mpl_20_minimal.txt in Resources */,
 				7E45F5AD20C7D9BA00643D8F /* lgpl_21_minimal.txt in Resources */,
 				7E45F5A520C7D9BA00643D8F /* ccand_30_minimal.txt in Resources */,
-				7E45F5C220C7D9BA00643D8F /* Localizable.strings in Resources */,
+				7E70BC4A20C7DBB10009AE33 /* Licensy.strings in Resources */,
 				7E45F5C820C7D9BA00643D8F /* LicenseCellView.xib in Resources */,
 				7E45F5C620C7D9BA00643D8F /* InfoCellView.xib in Resources */,
 				7E45F5A820C7D9BA00643D8F /* gpl_30.txt in Resources */,
 				7E45F5AF20C7D9BA00643D8F /* mit_minimal.txt in Resources */,
-				7E70BC4220C7DA0B0009AE33 /* Lincesy.strings in Resources */,
 				7E45F5C020C7D9BA00643D8F /* Minus.png in Resources */,
 				7E45F5AC20C7D9BA00643D8F /* lgpl_21.txt in Resources */,
 				7E45F5AE20C7D9BA00643D8F /* mit.txt in Resources */,
 				7E45F5A020C7D9BA00643D8F /* asl_20.txt in Resources */,
-				7E49398320C6DFC8009D360D /* Lincesy.strings in Resources */,
 				7E45F5A120C7D9BA00643D8F /* asl_20_minimal.txt in Resources */,
 				7E45F5CB20C7D9BA00643D8F /* HeaderView.xib in Resources */,
 				7E45F5A220C7D9BA00643D8F /* bsd3.txt in Resources */,
@@ -586,13 +582,13 @@
 			name = Lincesy.strings;
 			sourceTree = "<group>";
 		};
-		7E70BC4020C7DA0B0009AE33 /* Lincesy.strings */ = {
+		7E70BC4C20C7DBB10009AE33 /* Licensy.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7E70BC4120C7DA0B0009AE33 /* es */,
-				7E70BC4320C7DA100009AE33 /* en */,
+				7E70BC4B20C7DBB10009AE33 /* en */,
+				7E70BC4D20C7DBB30009AE33 /* es */,
 			);
-			name = Lincesy.strings;
+			name = Licensy.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
